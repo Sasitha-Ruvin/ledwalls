@@ -1,0 +1,25 @@
+{
+  "name": "YC Events | LED Wall Rental Sri Lanka",
+  "short_name": "YC Events",
+  "description": "LED screen rental and LED wall hire in Sri Lanka with operator included.",
+  "start_url": "/",
+  "scope": "/",
+  "lang": "en-LK",
+  "icons": [
+    {
+      "src": "/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "theme_color": "#D01B1B",
+  "background_color": "#0D0D0D",
+  "display": "standalone"
+}

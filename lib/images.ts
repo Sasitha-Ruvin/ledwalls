@@ -1,0 +1,30 @@
+/** Published image paths. SEO-named copies in `public/images/`; sync from `assets/` via `node scripts/sync-asset-images.mjs`. */
+export const images = {
+  hero: "/images/heroimages/homehero.webp",
+  hero2: "/images/led-wall-rental-concert-stage-sri-lanka.jpg",
+  heroLedRental: "/images/heroimages/ledrentalhero.webp",
+  pricingHero: "/images/heroimages/pricing_hero.webp",
+  crowd: "/images/portfolio/led-wall/led-wall-concert-stage-sri-lanka-08.webp",
+  concert2: "/images/service-assets/led-wall-concert-outdoor-stage-sri-lanka.webp",
+  concert3: "/images/portfolio/led-wall/led-wall-concert-stage-sri-lanka-06.webp",
+  wedding: "/images/service-assets/wedding-led-wall.webp",
+  corporate: "/images/service-assets/corporate-led-wall.webp",
+  corporate2: "/images/portfolio/led-wall/led-wall-corporate-event-sri-lanka-02.webp",
+  stage: "/images/portfolio/stage/stage-truss-setup-sri-lanka-01.webp",
+  stageIndoor: "/images/portfolio/stage/indoor-stage-rental-sri-lanka.jpg",
+  stageCarpet: "/images/portfolio/stage/event-stage-carpet-hire-sri-lanka.jpg",
+  stageWedding: "/images/portfolio/stage/wedding-stage-platform-carpet-sri-lanka.jpg",
+  brand: "/images/service-assets/award-ceremony-led-wall.webp",
+  why: "/images/led-wall-rental-video-wall-sri-lanka.jpg",
+  svcHero: "/images/heroimages/ledrentalhero.webp",
+  stage2: "/images/portfolio/stage/stage-truss-setup-sri-lanka-02.webp",
+  sound: "/images/service-assets/sound-system.webp",
+  wedding2: "/images/portfolio/led-wall/led-wall-wedding-backdrop-sri-lanka-02.webp",
+  exhibition: "/images/service-assets/exhibition-stall.webp",
+  podium: "/images/portfolio/podium/digital-podium-rental-sri-lanka-01.webp",
+  aboutHero: "/images/about.webp",
+  aboutCrew: "/images/logo.webp",
+  logo: "/images/logo.webp",
+} as const;
+
+export type ImageKey = keyof typeof images;
