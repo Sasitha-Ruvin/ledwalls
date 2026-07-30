@@ -3,31 +3,17 @@ import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/shared/JsonLd";
 import { LedWallCityPageContent } from "@/components/services/LedWallCityPageContent";
 import {
+  buildLedWallCityMetadata,
   buildLedWallCitySchema,
   getLedWallCityBySlug,
 } from "@/lib/data/led-wall-cities";
-import { SITE_URL } from "@/lib/site";
 
 const CITY_SLUG = "jaffna";
 
 export function generateMetadata(): Metadata {
-  const city = getLedWallCityBySlug(CITY_SLUG);
-  if (!city) return { title: "Not found" };
-
-  const canonical = `${SITE_URL}/led-wall-rental-${city.slug}`;
-
-  return {
-    title: city.title,
-    description: city.description,
-    keywords: city.keywords,
-    alternates: { canonical },
-    openGraph: {
-      title: city.title,
-      description: city.description,
-      url: canonical,
-      type: "website",
-    },
-  };
+  const meta = buildLedWallCityMetadata(CITY_SLUG);
+  if (!meta) return { title: "Not found" };
+  return meta;
 }
 
 export default function LedWallRentalJaffnaPage() {

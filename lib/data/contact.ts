@@ -29,6 +29,9 @@ export const SECONDARY_WHATSAPP_HREF = buildWhatsAppHref(SECONDARY_PHONE_RAW);
 export const SITE_EMAIL = "yasithacreations@gmail.com";
 export const SITE_EMAIL_HREF = `mailto:${SITE_EMAIL}`;
 
+export const SITE_FACEBOOK_URL = "https://www.facebook.com/kandyLED";
+export const SITE_FACEBOOK_DISPLAY = "facebook.com/kandyLED";
+
 export const OFFICE_NAME = "Yasitha Creations (Pvt) Ltd";
 export const OFFICE_LEGAL_NAME = "YC Events";
 export const OFFICE_STREET = "No 114, Barigama Road";

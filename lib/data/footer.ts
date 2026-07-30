@@ -1,4 +1,4 @@
-import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { Mail, MapPin, MessageCircle, Phone, Share2 } from "lucide-react";
 import { ServicesList } from "@/lib/data/services";
 import {
   PRIMARY_PHONE_DISPLAY,
@@ -9,6 +9,8 @@ import {
   SECONDARY_WHATSAPP_HREF,
   SITE_EMAIL,
   SITE_EMAIL_HREF,
+  SITE_FACEBOOK_DISPLAY,
+  SITE_FACEBOOK_URL,
 } from "@/lib/data/contact";
 
 export const FooterBlurb =
@@ -55,6 +57,12 @@ export const FooterContacts = [
     icon: Mail,
     label: SITE_EMAIL,
     href: SITE_EMAIL_HREF,
+  },
+  {
+    icon: Share2,
+    label: `Facebook · ${SITE_FACEBOOK_DISPLAY}`,
+    href: SITE_FACEBOOK_URL,
+    external: true,
   },
   {
     icon: MapPin,

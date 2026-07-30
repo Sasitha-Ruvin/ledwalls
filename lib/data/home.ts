@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { images } from "@/lib/images";
 import { SITE_URL } from "@/lib/site";
+import { SITE_OG_IMAGE } from "@/lib/seo";
 import {
   PRIMARY_PHONE_DISPLAY,
   PRIMARY_PHONE_E164,
@@ -354,6 +355,11 @@ export const Faqs: FaqItem[] = [
       "Yes. We provide big LED screen rent and large screen hire for outdoor concerts, festivals and political rallies. Outdoor LED wall builds use IP65 panels up to 7,000 nit with certified rigging crew.",
   },
   {
+    question: "Do you offer jumbo screen rental in Sri Lanka?",
+    answer:
+      "Yes. Jumbo screen rental Sri Lanka bookings use modular outdoor IP65 LED panels scaled to your venue, from medium conference walls to large concert backdrops. Every jumbo LED screen hire includes delivery, rigging and an on-site operator.",
+  },
+  {
     question: "Do you rent LED promotion trucks in Sri Lanka?",
     answer:
       "Our main focus is LED wall and LED screen rental for events. If your campaign needs a mobile truck-mounted LED screen, mention it on enquiry and we will advise on the best fit for your budget and route.",
@@ -482,7 +488,7 @@ export function buildHomeSchema() {
         telephone: PRIMARY_PHONE_E164,
         email: "yasithacreations@gmail.com",
         areaServed: "Sri Lanka",
-        image: HeroContentData.imageSrc,
+        image: SITE_OG_IMAGE.startsWith("http") ? SITE_OG_IMAGE : `${SITE_URL}${SITE_OG_IMAGE}`,
         hasOfferCatalog: {
           "@type": "OfferCatalog",
           name: "Event Production Services",

@@ -5,10 +5,17 @@ import {
   PRIMARY_PHONE_E164,
   SECONDARY_PHONE_E164,
   SITE_EMAIL,
+  SITE_FACEBOOK_URL,
 } from "@/lib/data/contact";
 import { SITE_URL } from "@/lib/site";
 
 export const SITE_NAME = "YC Events";
+export const SITE_OG_IMAGE = "/images/og/yc-events-led-wall-rental-sri-lanka-og.jpeg";
+export const SITE_OG_IMAGE_ALT =
+  "LED wall rental Sri Lanka outdoor concert LED screen hire by YC Events";
+export const SITE_OG_IMAGE_WIDTH = 1200;
+export const SITE_OG_IMAGE_HEIGHT = 630;
+
 export const SITE_DEFAULT_DESCRIPTION =
   "LED screen rental and LED wall hire in Sri Lanka. Indoor P3 and outdoor IP65 LED video walls with operator included. Colombo, Kandy and all 25 districts.";
 
@@ -18,8 +25,17 @@ export const SITE_DEFAULT_KEYWORDS = [
   "LED screen rent Sri Lanka",
   "LED video wall rental Sri Lanka",
   "LED wall hire Colombo",
+  "LED screen rental Colombo",
   "outdoor LED screen rental Sri Lanka",
   "wedding LED screen rental Sri Lanka",
+  "jumbo screen rental Sri Lanka",
+  "LED display rental Sri Lanka",
+  "big LED screen rent Sri Lanka",
+] as const;
+
+export const SITE_SOCIAL_LINKS = [
+  SITE_FACEBOOK_URL,
+  "https://yasithacreations.lk",
 ] as const;
 
 /** Build absolute URLs for canonical, Open Graph, and sitemap entries. */
@@ -45,8 +61,8 @@ export function buildPageMetadata({
   description,
   path,
   keywords,
-  ogImage = "/images/heroimages/homehero.webp",
-  ogImageAlt,
+  ogImage = SITE_OG_IMAGE,
+  ogImageAlt = SITE_OG_IMAGE_ALT,
   noIndex = false,
 }: PageMetadataInput): Metadata {
   const canonical = absoluteUrl(path);
@@ -60,7 +76,7 @@ export function buildPageMetadata({
     alternates: { canonical },
     robots: noIndex
       ? { index: false, follow: false }
-      : { index: true, follow: true },
+      : { index: true, follow: true, googleBot: { index: true, follow: true } },
     openGraph: {
       title,
       description,
@@ -68,7 +84,14 @@ export function buildPageMetadata({
       type: "website",
       siteName: SITE_NAME,
       locale: "en_LK",
-      images: [{ url: imagePath, alt: imageAlt }],
+      images: [
+        {
+          url: imagePath,
+          alt: imageAlt,
+          width: SITE_OG_IMAGE_WIDTH,
+          height: SITE_OG_IMAGE_HEIGHT,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
@@ -88,7 +111,7 @@ export function buildOrganizationSchema() {
     legalName: OFFICE_NAME,
     url: SITE_URL,
     logo: absoluteUrl("/images/logo.webp"),
-    image: absoluteUrl("/images/heroimages/homehero.webp"),
+    image: absoluteUrl(SITE_OG_IMAGE),
     telephone: [PRIMARY_PHONE_E164, SECONDARY_PHONE_E164],
     email: SITE_EMAIL,
     address: {
@@ -105,7 +128,7 @@ export function buildOrganizationSchema() {
     },
     hasMap: OFFICE_GOOGLE_MAPS_URL,
     description: SITE_DEFAULT_DESCRIPTION,
-    sameAs: [],
+    sameAs: [...SITE_SOCIAL_LINKS],
   };
 }
 
@@ -119,6 +142,11 @@ export function buildWebSiteSchema() {
     description: SITE_DEFAULT_DESCRIPTION,
     publisher: { "@id": `${SITE_URL}/#organization` },
     inLanguage: "en-LK",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: `${SITE_URL}/services?q={search_term_string}`,
+      "query-input": "required name=search_term_string",
+    },
   };
 }
 

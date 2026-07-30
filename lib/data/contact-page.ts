@@ -1,4 +1,4 @@
-import { Mail, MessageCircle, Phone } from "lucide-react";
+import { Mail, MessageCircle, Phone, Share2 } from "lucide-react";
 import {
   OFFICE_ADDRESS_DISPLAY,
   OFFICE_GOOGLE_MAPS_URL,
@@ -13,6 +13,8 @@ import {
   SECONDARY_WHATSAPP_HREF,
   SITE_EMAIL,
   SITE_EMAIL_HREF,
+  SITE_FACEBOOK_DISPLAY,
+  SITE_FACEBOOK_URL,
 } from "@/lib/data/contact";
 import { CoverageContent } from "@/lib/data/services";
 import { SITE_URL } from "@/lib/site";
@@ -86,6 +88,14 @@ export const ContactPageMethods = [
     label: "Email",
     detail: SITE_EMAIL,
     href: SITE_EMAIL_HREF,
+    iconClassName: "text-brand",
+  },
+  {
+    id: "facebook",
+    icon: Share2,
+    label: "Facebook",
+    detail: SITE_FACEBOOK_DISPLAY,
+    href: SITE_FACEBOOK_URL,
     iconClassName: "text-brand",
   },
 ] as const;
@@ -174,6 +184,7 @@ export function buildContactPageSchema() {
         ],
         areaServed: "Sri Lanka",
         hasMap: OFFICE_GOOGLE_MAPS_URL,
+        sameAs: [SITE_FACEBOOK_URL, "https://yasithacreations.lk"],
       },
     ],
   };

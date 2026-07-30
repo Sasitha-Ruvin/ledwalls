@@ -1,7 +1,7 @@
 import { GalleryPageContent } from "@/components/gallery/GalleryPageContent";
 import { JsonLd } from "@/components/shared/JsonLd";
 import { buildGallerySchema, GalleryPageMeta } from "@/lib/data/gallery";
-import { buildPageMetadata } from "@/lib/seo";
+import { buildPageMetadata, SITE_OG_IMAGE, SITE_OG_IMAGE_ALT } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -9,9 +9,8 @@ export const metadata: Metadata = buildPageMetadata({
   description: GalleryPageMeta.description,
   path: "/gallery",
   keywords: GalleryPageMeta.keywords,
-  ogImage:
-    "/images/portfolio/led-wall/led-wall-concert-stage-sri-lanka-01.webp",
-  ogImageAlt: GalleryPageMeta.description,
+  ogImage: SITE_OG_IMAGE,
+  ogImageAlt: SITE_OG_IMAGE_ALT,
 });
 
 export default function GalleryPage() {

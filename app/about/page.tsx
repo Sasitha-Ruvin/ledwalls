@@ -6,7 +6,7 @@ import AboutValuesSection from "@/components/about/AboutValuesSection";
 import TickerBar from "@/components/home/TickerBar";
 import { JsonLd } from "@/components/shared/JsonLd";
 import { AboutPageMetaData, buildAboutSchema } from "@/lib/data/about";
-import { buildPageMetadata } from "@/lib/seo";
+import { buildPageMetadata, SITE_OG_IMAGE, SITE_OG_IMAGE_ALT } from "@/lib/seo";
 import { Metadata } from "next";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -14,8 +14,8 @@ export const metadata: Metadata = buildPageMetadata({
   description: AboutPageMetaData.description,
   path: "/about",
   keywords: AboutPageMetaData.keywords,
-  ogImage: "/images/about.webp",
-  ogImageAlt: "YC Events LED wall rental Sri Lanka",
+  ogImage: SITE_OG_IMAGE,
+  ogImageAlt: SITE_OG_IMAGE_ALT,
 });
 
 export default function AboutPage(){

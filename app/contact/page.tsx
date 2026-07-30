@@ -4,7 +4,7 @@ import {
   buildContactPageSchema,
   ContactPageMeta,
 } from "@/lib/data/contact-page";
-import { buildPageMetadata } from "@/lib/seo";
+import { buildPageMetadata, SITE_OG_IMAGE, SITE_OG_IMAGE_ALT } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -12,6 +12,8 @@ export const metadata: Metadata = buildPageMetadata({
   description: ContactPageMeta.description,
   path: "/contact",
   keywords: ContactPageMeta.keywords,
+  ogImage: SITE_OG_IMAGE,
+  ogImageAlt: SITE_OG_IMAGE_ALT,
 });
 
 export default function ContactPage() {

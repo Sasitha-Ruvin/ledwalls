@@ -20,7 +20,7 @@ import {
   ServicesList,
   ServicesPageMetaData,
 } from "@/lib/data/services";
-import { buildPageMetadata } from "@/lib/seo";
+import { buildPageMetadata, SITE_OG_IMAGE, SITE_OG_IMAGE_ALT } from "@/lib/seo";
 
 const [ledWallService] = ServicesList;
 
@@ -29,8 +29,8 @@ export const metadata: Metadata = buildPageMetadata({
   description: ServicesPageMetaData.description,
   path: "/services",
   keywords: ServicesPageMetaData.keywords,
-  ogImage: "/images/heroimages/ledrentalhero.webp",
-  ogImageAlt: "LED video wall rental Sri Lanka by YC Events",
+  ogImage: SITE_OG_IMAGE,
+  ogImageAlt: SITE_OG_IMAGE_ALT,
 });
 
 const ServicesPage = () => {

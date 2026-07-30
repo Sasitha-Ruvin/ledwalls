@@ -1,6 +1,12 @@
 import { images } from "@/lib/images";
 import { SITE_URL } from "@/lib/site";
+import {
+  buildPageMetadata,
+  SITE_OG_IMAGE,
+  SITE_OG_IMAGE_ALT,
+} from "@/lib/seo";
 import { LedWallRatesFootnote, LedWallRatesSummary } from "@/lib/data/led-wall-pricing";
+import type { Metadata } from "next";
 import type { FaqItem } from "@/types/site";
 
 export interface LedWallCity {
@@ -18,6 +24,48 @@ export interface LedWallCity {
 }
 
 export const LedWallCities: LedWallCity[] = [
+  {
+    slug: "colombo",
+    name: "Colombo",
+    title: "LED Wall Rental Colombo | LED Screen Hire Sri Lanka",
+    description:
+      "LED wall rental Colombo and LED screen hire across the capital. Indoor P3 and outdoor IP65 LED video walls with operator included for weddings, corporate events and concerts.",
+    keywords: [
+      "LED screen rental Colombo",
+      "LED wall rent Colombo",
+      "LED screen hire Colombo",
+      "LED wall hire Colombo",
+      "wedding LED screen Colombo",
+    ],
+    eyebrow: "LED wall rental Colombo",
+    heroImage: images.corporate,
+    heroBody:
+      "LED wall rent Colombo for weddings, corporate conferences, award nights and outdoor concerts. YC Events delivers, builds and operates indoor and outdoor LED screens across Colombo and the greater Western Province.",
+    intro:
+      "Colombo is where most Sri Lankan events happen, from BMICH conferences to hotel weddings and stadium concerts. LED screen hire Colombo bookings from YC Events include delivery, rigging, cabling and an on-site operator for the full event.",
+    venues: [
+      "BMICH and convention centres",
+      "Five-star hotels across Colombo",
+      "Outdoor concert grounds and stadiums",
+      "Corporate offices and exhibition halls",
+    ],
+    faqs: [
+      {
+        question: "Do you rent LED walls in Colombo?",
+        answer:
+          "Yes. LED wall rental Colombo is our primary service area with the fastest delivery and setup across the capital and suburbs.",
+      },
+      {
+        question: "How much does LED screen hire cost in Colombo?",
+        answer: `${LedWallRatesSummary} Colombo rates match our published pricing page with no hidden fees.`,
+      },
+      {
+        question: "Is an operator included for LED wall rental in Colombo?",
+        answer:
+          "Yes. Every LED wall rent Colombo booking includes a trained video technician for setup, live operation and breakdown at no extra charge.",
+      },
+    ],
+  },
   {
     slug: "kandy",
     name: "Kandy",
@@ -294,10 +342,12 @@ export function buildLedWallCitySchema(city: LedWallCity) {
         "@type": "Service",
         name: `LED wall rental ${city.name}`,
         description: city.description,
+        image: `${SITE_URL}${SITE_OG_IMAGE}`,
         provider: {
           "@type": "LocalBusiness",
           name: "YC Events",
           areaServed: "Sri Lanka",
+          url: SITE_URL,
         },
         areaServed: city.name,
         url: canonical,
@@ -312,4 +362,18 @@ export function buildLedWallCitySchema(city: LedWallCity) {
       },
     ],
   };
+}
+
+export function buildLedWallCityMetadata(slug: string): Metadata | null {
+  const city = getLedWallCityBySlug(slug);
+  if (!city) return null;
+
+  return buildPageMetadata({
+    title: city.title,
+    description: city.description,
+    path: `/led-wall-rental-${city.slug}`,
+    keywords: city.keywords,
+    ogImage: SITE_OG_IMAGE,
+    ogImageAlt: `${SITE_OG_IMAGE_ALT} · LED wall rental ${city.name}`,
+  });
 }

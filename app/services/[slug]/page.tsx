@@ -7,7 +7,7 @@ import {
   getServiceBySlug,
   getServiceSlugs,
 } from "@/lib/data/services";
-import { buildPageMetadata } from "@/lib/seo";
+import { buildPageMetadata, SITE_OG_IMAGE, SITE_OG_IMAGE_ALT } from "@/lib/seo";
 
 interface ServicePageProps {
   params: Promise<{ slug: string }>;
@@ -32,8 +32,8 @@ export async function generateMetadata({
     description: service.seo.description,
     path: service.href,
     keywords: service.seo.keywords,
-    ogImage: service.img,
-    ogImageAlt: service.seo.h1,
+    ogImage: SITE_OG_IMAGE,
+    ogImageAlt: `${SITE_OG_IMAGE_ALT} · ${service.seo.h1}`,
   });
 }
 

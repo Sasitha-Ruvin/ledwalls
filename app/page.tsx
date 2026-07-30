@@ -13,15 +13,15 @@ import StatsBar from "@/components/home/StatsBar";
 import TickerBar from "@/components/home/TickerBar";
 import WhyUsSection from "@/components/home/WhyUsSection";
 import { buildHomeSchema, HomePageMetaData } from "@/lib/data/home";
-import { buildPageMetadata } from "@/lib/seo";
+import { buildPageMetadata, SITE_OG_IMAGE, SITE_OG_IMAGE_ALT } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
   title: HomePageMetaData.title,
   description: HomePageMetaData.description,
   path: "/",
   keywords: HomePageMetaData.keywords,
-  ogImage: "/images/heroimages/homehero.webp",
-  ogImageAlt: "LED wall rental Sri Lanka by YC Events",
+  ogImage: SITE_OG_IMAGE,
+  ogImageAlt: SITE_OG_IMAGE_ALT,
 });
 
 export default function Page() {

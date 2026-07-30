@@ -8,7 +8,7 @@ import {
   getLedWallCityBySlug,
 } from "@/lib/data/led-wall-cities";
 
-const CITY_SLUG = "negombo";
+const CITY_SLUG = "colombo";
 
 export function generateMetadata(): Metadata {
   const meta = buildLedWallCityMetadata(CITY_SLUG);
@@ -16,7 +16,7 @@ export function generateMetadata(): Metadata {
   return meta;
 }
 
-export default function LedWallRentalNegomboPage() {
+export default function LedWallRentalColomboPage() {
   const city = getLedWallCityBySlug(CITY_SLUG);
   if (!city) notFound();
 

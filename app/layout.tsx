@@ -9,6 +9,10 @@ import {
   SITE_DEFAULT_DESCRIPTION,
   SITE_DEFAULT_KEYWORDS,
   SITE_NAME,
+  SITE_OG_IMAGE,
+  SITE_OG_IMAGE_ALT,
+  SITE_OG_IMAGE_HEIGHT,
+  SITE_OG_IMAGE_WIDTH,
   rootJsonLd,
 } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
@@ -43,8 +47,10 @@ export const metadata: Metadata = {
     locale: "en_LK",
     images: [
       {
-        url: absoluteUrl("/images/heroimages/homehero.webp"),
-        alt: "LED wall rental Sri Lanka outdoor concert stage by YC Events",
+        url: absoluteUrl(SITE_OG_IMAGE),
+        alt: SITE_OG_IMAGE_ALT,
+        width: SITE_OG_IMAGE_WIDTH,
+        height: SITE_OG_IMAGE_HEIGHT,
       },
     ],
   },
@@ -52,7 +58,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${SITE_NAME} | LED Wall Rental Sri Lanka`,
     description: SITE_DEFAULT_DESCRIPTION,
-    images: [absoluteUrl("/images/heroimages/homehero.webp")],
+    images: [absoluteUrl(SITE_OG_IMAGE)],
   },
 };
 

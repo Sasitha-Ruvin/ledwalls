@@ -61,6 +61,8 @@ export default function SiteFooter({ className }: SiteFooterProps) {
             {FooterContacts.map((item) => {
               const Icon = item.icon;
               const href = "href" in item ? item.href : undefined;
+              const external =
+                "external" in item && item.external || href?.startsWith("http");
               const content = (
                 <span className="flex items-center gap-2.5 text-sm text-muted-yc">
                   <Icon className="size-3.5 shrink-0 text-brand" aria-hidden />
@@ -72,6 +74,8 @@ export default function SiteFooter({ className }: SiteFooterProps) {
                   {href ? (
                     <a
                       href={href}
+                      target={external ? "_blank" : undefined}
+                      rel={external ? "noopener noreferrer" : undefined}
                       className="transition-colors hover:text-white"
                     >
                       {content}

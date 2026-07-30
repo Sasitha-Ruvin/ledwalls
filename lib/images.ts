@@ -25,6 +25,7 @@ export const images = {
   aboutHero: "/images/about.webp",
   aboutCrew: "/images/logo.webp",
   logo: "/images/logo.webp",
+  og: "/images/og/yc-events-led-wall-rental-sri-lanka-og.jpeg",
 } as const;
 
 export type ImageKey = keyof typeof images;
