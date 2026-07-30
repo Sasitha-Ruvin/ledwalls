@@ -29,5 +29,5 @@ export default function AboutPage(){
             <AboutTimelineSection/>
             <AboutClosingSection/>
         </main>
-    )
-}c
+    );
+}
