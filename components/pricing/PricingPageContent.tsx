@@ -171,6 +171,7 @@ export function PricingPageContent() {
 
       <FAQSection
         items={PricingFaqs}
+        listId="faq"
         intro={{
           eyebrow: "LED rental FAQ",
           titleLine1: "LED screen rent",

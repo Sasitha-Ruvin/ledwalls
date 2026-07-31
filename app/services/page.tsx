@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { CoverageSection } from "@/components/services/CoverageSection";
-import { LedWallCityLinks } from "@/components/services/LedWallCityLinks";
 import { LedWallEventFocusSection } from "@/components/services/LedWallEventFocusSection";
 import { OtherServicesStrip } from "@/components/services/OtherServicesStrip";
 import ServiceDetailsRow from "@/components/services/ServiceDetailsRow";
@@ -47,7 +46,6 @@ const ServicesPage = () => {
       <OtherServicesStrip services={LedWallAddonServices} />
 
       <CoverageSection />
-      <LedWallCityLinks />
 
       <ServicePortfolioGallery
         items={GalleryImages}

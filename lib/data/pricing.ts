@@ -1,5 +1,6 @@
 import type { FaqItem, LedUseCaseBlock, PricingPageMeta } from "@/types/site";
 import { images } from "@/lib/images";
+import { buildPageJsonLd, LOCAL_BUSINESS_ID } from "@/lib/json-ld";
 import {
   LedWallRates,
   LedWallRatesFootnote,
@@ -204,37 +205,29 @@ export {
 };
 
 export function buildPricingSchema() {
-  return {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebPage",
-        "@id": `${PricingPageMetaData.canonical}#webpage`,
-        url: PricingPageMetaData.canonical,
-        name: PricingPageMetaData.title,
-        description: PricingPageMetaData.description,
-      },
-      {
-        "@type": "FAQPage",
-        mainEntity: PricingFaqs.map((faq) => ({
-          "@type": "Question",
-          name: faq.question,
-          acceptedAnswer: { "@type": "Answer", text: faq.answer },
-        })),
-      },
+  return buildPageJsonLd({
+    path: "/pricing",
+    name: PricingPageMetaData.title,
+    description: PricingPageMetaData.description,
+    faqs: PricingFaqs,
+    localBusinessExtra: {
+      makesOffer: LedWallRates.map((rate) => ({
+        "@type": "Offer",
+        name: `LED video wall ${rate.size}`,
+        price: rate.priceLkr,
+        priceCurrency: "LKR",
+        description:
+          "Per 8-hour business day LED screen rental with operator included",
+      })),
+    },
+    extra: [
       {
         "@type": "Service",
         name: "LED wall rental Sri Lanka",
-        provider: { "@type": "LocalBusiness", name: "YC Events" },
+        provider: { "@id": LOCAL_BUSINESS_ID },
         areaServed: "Sri Lanka",
-        offers: LedWallRates.map((rate) => ({
-          "@type": "Offer",
-          name: `LED video wall ${rate.size}`,
-          price: rate.priceLkr,
-          priceCurrency: "LKR",
-          description: "Per 8-hour business day LED screen rental with operator included",
-        })),
+        url: `${SITE_URL}/services/led-wall`,
       },
     ],
-  };
+  });
 }

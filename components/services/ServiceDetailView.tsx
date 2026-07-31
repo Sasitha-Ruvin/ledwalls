@@ -4,17 +4,13 @@ import { ArrowRight } from "lucide-react";
 import TickerBar from "@/components/home/TickerBar";
 import QuoteDialog from "@/components/layout/QuoteDialog";
 import { PageHero } from "@/components/shared/PageHero";
+import { FaqList } from "@/components/shared/FaqList";
 import { SpecTable } from "@/components/shared/SpecTable";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { ServicesList, LedWallAddonServices } from "@/lib/data/services";
 import { LedWallPortfolioIntro } from "@/lib/data/led-wall-portfolio";
 import { LedWallServicePricingSection } from "@/components/pricing/LedWallServicePricingSection";
+import { LedWallCityLinks } from "@/components/services/LedWallCityLinks";
 import { OtherServicesStrip } from "@/components/services/OtherServicesStrip";
 import type { ServiceDetailData } from "@/types/site";
 import { ServicePortfolioGallery } from "@/components/services/ServicePortfolioGallery";
@@ -82,6 +78,8 @@ export function ServiceDetailView({ service }: ServiceDetailViewProps) {
       {service.id === "led-wall" ? (
         <OtherServicesStrip services={LedWallAddonServices} />
       ) : null}
+
+      {service.id === "led-wall" ? <LedWallCityLinks /> : null}
 
       {service.useCases?.length ? (
         <section
@@ -152,18 +150,7 @@ export function ServiceDetailView({ service }: ServiceDetailViewProps) {
           >
             Common questions
           </h2>
-          <Accordion defaultValue={["faq-0"]} className="w-full border-t border-line">
-            {service.faqs.map((faq, index) => (
-              <AccordionItem key={faq.question} value={`faq-${index}`}>
-                <AccordionTrigger className="text-base font-semibold text-ink">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-sm leading-relaxed text-muted-yc">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+          <FaqList items={service.faqs} listId="service-faq-list" />
         </section>
       ) : null}
 

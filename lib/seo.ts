@@ -1,12 +1,5 @@
 import type { Metadata } from "next";
-import {
-  OFFICE_GOOGLE_MAPS_URL,
-  OFFICE_NAME,
-  PRIMARY_PHONE_E164,
-  SECONDARY_PHONE_E164,
-  SITE_EMAIL,
-  SITE_FACEBOOK_URL,
-} from "@/lib/data/contact";
+import { SITE_FACEBOOK_URL } from "@/lib/data/contact";
 import { SITE_URL } from "@/lib/site";
 
 export const SITE_NAME = "YC Events";
@@ -101,56 +94,3 @@ export function buildPageMetadata({
     },
   };
 }
-
-export function buildOrganizationSchema() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": `${SITE_URL}/#organization`,
-    name: SITE_NAME,
-    legalName: OFFICE_NAME,
-    url: SITE_URL,
-    logo: absoluteUrl("/images/logo.webp"),
-    image: absoluteUrl(SITE_OG_IMAGE),
-    telephone: [PRIMARY_PHONE_E164, SECONDARY_PHONE_E164],
-    email: SITE_EMAIL,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "No 114, Barigama Road",
-      addressLocality: "Halloluwa",
-      addressRegion: "Kandy",
-      postalCode: "20000",
-      addressCountry: "LK",
-    },
-    areaServed: {
-      "@type": "Country",
-      name: "Sri Lanka",
-    },
-    hasMap: OFFICE_GOOGLE_MAPS_URL,
-    description: SITE_DEFAULT_DESCRIPTION,
-    sameAs: [...SITE_SOCIAL_LINKS],
-  };
-}
-
-export function buildWebSiteSchema() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "@id": `${SITE_URL}/#website`,
-    url: SITE_URL,
-    name: SITE_NAME,
-    description: SITE_DEFAULT_DESCRIPTION,
-    publisher: { "@id": `${SITE_URL}/#organization` },
-    inLanguage: "en-LK",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: `${SITE_URL}/services?q={search_term_string}`,
-      "query-input": "required name=search_term_string",
-    },
-  };
-}
-
-export const rootJsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [buildOrganizationSchema(), buildWebSiteSchema()],
-};

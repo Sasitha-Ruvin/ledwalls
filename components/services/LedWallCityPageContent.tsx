@@ -91,6 +91,7 @@ export function LedWallCityPageContent({ city }: LedWallCityPageContentProps) {
 
       <FAQSection
         items={city.faqs}
+        listId="faq"
         intro={{
           eyebrow: `LED wall rental ${city.name} FAQ`,
           titleLine1: "Questions about LED wall",

@@ -4,11 +4,9 @@ import {
   OFFICE_GOOGLE_MAPS_URL,
   OFFICE_NAME,
   PRIMARY_PHONE_DISPLAY,
-  PRIMARY_PHONE_E164,
   PRIMARY_PHONE_HREF,
   PRIMARY_WHATSAPP_HREF,
   SECONDARY_PHONE_DISPLAY,
-  SECONDARY_PHONE_E164,
   SECONDARY_PHONE_HREF,
   SECONDARY_WHATSAPP_HREF,
   SITE_EMAIL,
@@ -17,6 +15,7 @@ import {
   SITE_FACEBOOK_URL,
 } from "@/lib/data/contact";
 import { CoverageContent } from "@/lib/data/services";
+import { buildPageJsonLd } from "@/lib/json-ld";
 import { SITE_URL } from "@/lib/site";
 
 export const ContactPageMeta = {
@@ -139,53 +138,44 @@ export const ContactCoverageContent = {
 };
 
 export function buildContactPageSchema() {
-  return {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "ContactPage",
-        "@id": `${ContactPageMeta.canonical}/#webpage`,
-        url: ContactPageMeta.canonical,
-        name: ContactPageMeta.title,
-        description: ContactPageMeta.description,
-        isPartOf: { "@id": `${SITE_URL}/#website` },
-      },
-      {
-        "@type": "LocalBusiness",
-        "@id": `${SITE_URL}/#organization`,
-        name: "YC Events",
-        legalName: OFFICE_NAME,
-        url: SITE_URL,
-        telephone: [PRIMARY_PHONE_E164, SECONDARY_PHONE_E164],
-        email: SITE_EMAIL,
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: "No 114, Barigama Road",
-          addressLocality: "Halloluwa",
-          addressRegion: "Kandy",
-          postalCode: "20000",
-          addressCountry: "LK",
+  return buildPageJsonLd({
+    path: "/contact",
+    name: ContactPageMeta.title,
+    description: ContactPageMeta.description,
+    pageType: "ContactPage",
+    localBusinessExtra: {
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday",
+          ],
+          opens: "09:00",
+          closes: "20:00",
         },
-        openingHoursSpecification: [
-          {
-            "@type": "OpeningHoursSpecification",
-            dayOfWeek: [
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Friday",
-              "Saturday",
-              "Sunday",
-            ],
-            opens: "09:00",
-            closes: "20:00",
-          },
-        ],
-        areaServed: "Sri Lanka",
-        hasMap: OFFICE_GOOGLE_MAPS_URL,
-        sameAs: [SITE_FACEBOOK_URL, "https://yasithacreations.lk"],
-      },
-    ],
-  };
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday",
+          ],
+          opens: "06:00",
+          closes: "23:59",
+          description: "Event days from 6am onwards",
+        },
+      ],
+      sameAs: [SITE_FACEBOOK_URL, "https://yasithacreations.lk"],
+    },
+  });
 }

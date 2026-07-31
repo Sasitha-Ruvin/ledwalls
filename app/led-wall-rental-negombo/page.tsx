@@ -21,9 +21,9 @@ export default function LedWallRentalNegomboPage() {
   if (!city) notFound();
 
   return (
-    <main>
-      <JsonLd data={buildLedWallCitySchema(city)} />
+    <>
+      <JsonLd data={buildLedWallCitySchema(city)} id="json-ld-led-wall-negombo" />
       <LedWallCityPageContent city={city} />
-    </main>
+    </>
   );
 }

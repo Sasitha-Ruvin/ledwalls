@@ -38,7 +38,7 @@ export default function Page() {
       <StatsBar />
       <EventTypeSection />
       <ProcessSection />
-      <FAQSection />
+      <FAQSection listId="faq" />
       <CtaSection />
     </>
   );

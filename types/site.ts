@@ -238,10 +238,12 @@ export interface ServicesPageMeta {
   keywords: string[];
   canonical: string;
 }
+export type DistrictEntry = string | { name: string; href: string };
+
 export interface CoverageSectionContent {
   eyebrow: string;
   title: string;
-  districts: string[];
+  districts: DistrictEntry[];
   highlightLabel: string;
 }
 export interface ServicesQuoteContent {

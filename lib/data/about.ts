@@ -1,4 +1,5 @@
 import { images } from "@/lib/images";
+import { buildPageJsonLd } from "@/lib/json-ld";
 import { SERVICE_SITE_URL } from "@/lib/data/services";
 import type {
   AboutClosingContent,
@@ -127,29 +128,14 @@ export const AboutClosingData: AboutClosingContent = {
 };
 
 export function buildAboutSchema() {
-  return {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "AboutPage",
-        "@id": `${AboutPageMetaData.canonical}#webpage`,
-        url: AboutPageMetaData.canonical,
-        name: AboutPageMetaData.title,
-        description: AboutPageMetaData.description,
-        isPartOf: { "@id": `${SERVICE_SITE_URL}/#website` },
-        about: { "@id": `${SERVICE_SITE_URL}/#organization` },
-      },
-      {
-        "@type": "Organization",
-        "@id": `${SERVICE_SITE_URL}/#organization`,
-        name: "YC Events",
-        description: AboutPageMetaData.description,
-        url: SERVICE_SITE_URL,
-        foundingDate: "2018",
-        areaServed: "Sri Lanka",
-        logo: `${SERVICE_SITE_URL}${images.aboutCrew}`,
-        image: `${SERVICE_SITE_URL}${images.aboutHero}`,
-      },
-    ],
-  };
+  return buildPageJsonLd({
+    path: "/about",
+    name: AboutPageMetaData.title,
+    description: AboutPageMetaData.description,
+    pageType: "AboutPage",
+    localBusinessExtra: {
+      foundingDate: "2018",
+      image: `${SERVICE_SITE_URL}${images.aboutHero}`,
+    },
+  });
 }

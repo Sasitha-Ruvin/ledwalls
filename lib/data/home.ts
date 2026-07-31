@@ -12,10 +12,9 @@ import {
 } from "lucide-react";
 import { images } from "@/lib/images";
 import { SITE_URL } from "@/lib/site";
-import { SITE_OG_IMAGE } from "@/lib/seo";
+import { buildPageJsonLd } from "@/lib/json-ld";
 import {
   PRIMARY_PHONE_DISPLAY,
-  PRIMARY_PHONE_E164,
   PRIMARY_PHONE_HREF,
   PRIMARY_WHATSAPP_HREF,
   SECONDARY_PHONE_DISPLAY,
@@ -476,51 +475,26 @@ export const EmptyQuoteForm: QuoteFormValues = {
 };
 
 export function buildHomeSchema() {
-  return {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "LocalBusiness",
-        "@id": `${SITE_URL}/#organization`,
-        name: "YC Events",
-        description: HomePageMetaData.description,
-        url: SITE_URL,
-        telephone: PRIMARY_PHONE_E164,
-        email: "yasithacreations@gmail.com",
-        areaServed: "Sri Lanka",
-        image: SITE_OG_IMAGE.startsWith("http") ? SITE_OG_IMAGE : `${SITE_URL}${SITE_OG_IMAGE}`,
-        hasOfferCatalog: {
-          "@type": "OfferCatalog",
-          name: "Event Production Services",
-          itemListElement: HomeServices.map((service, index) => ({
-            "@type": "Offer",
-            position: index + 1,
-            itemOffered: {
-              "@type": "Service",
-              name: service.title,
-              description: service.sub,
-              url: `${SITE_URL}${service.href}`,
-            },
-          })),
-        },
-      },
-      {
-        "@type": "WebSite",
-        "@id": `${SITE_URL}/#website`,
-        url: SITE_URL,
-        name: "YC Events",
-        description: HomePageMetaData.description,
-        publisher: { "@id": `${SITE_URL}/#organization` },
-      },
-      {
-        "@type": "FAQPage",
-        "@id": `${SITE_URL}/#faq`,
-        mainEntity: Faqs.map((faq) => ({
-          "@type": "Question",
-          name: faq.question,
-          acceptedAnswer: { "@type": "Answer", text: faq.answer },
+  return buildPageJsonLd({
+    path: "/",
+    name: HomePageMetaData.title,
+    description: HomePageMetaData.description,
+    faqs: Faqs,
+    localBusinessExtra: {
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Event Production Services",
+        itemListElement: HomeServices.map((service, index) => ({
+          "@type": "Offer",
+          position: index + 1,
+          itemOffered: {
+            "@type": "Service",
+            name: service.title,
+            description: service.sub,
+            url: `${SITE_URL}${service.href}`,
+          },
         })),
       },
-    ],
-  };
+    },
+  });
 }

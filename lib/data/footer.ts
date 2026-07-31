@@ -21,16 +21,14 @@ export const FooterServiceLinks = ServicesList.map((service) => ({
   href: service.href,
 }));
 
+/** Key districts in the footer; full city list lives on the LED wall service page. */
 export const FooterCoverage = [
-  "Colombo",
-  "Kandy",
-  "Galle",
-  "Negombo",
-  "Jaffna",
-  "Anuradhapura",
-  "Matara",
-  "All 25 Districts",
-];
+  { label: "Colombo", href: "/led-wall-rental-colombo" },
+  { label: "Kandy", href: "/led-wall-rental-kandy" },
+  { label: "Galle", href: "/led-wall-rental-galle" },
+  { label: "Kurunegala", href: "/led-wall-rental-kurunegala" },
+  { label: "All 25 Districts", href: "/services/led-wall#led-wall-cities" },
+] as const;
 
 export const FooterContacts = [
   {

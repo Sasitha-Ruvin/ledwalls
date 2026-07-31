@@ -4,6 +4,7 @@ import SiteFooter from "@/components/layout/SiteFooter";
 import SiteNavbar from "@/components/layout/SiteNavbar";
 import { WhatsAppFloat } from "@/components/layout/WhatsAppFloat";
 import { JsonLd } from "@/components/shared/JsonLd";
+import { buildSiteRootJsonLd } from "@/lib/json-ld";
 import {
   absoluteUrl,
   SITE_DEFAULT_DESCRIPTION,
@@ -13,7 +14,6 @@ import {
   SITE_OG_IMAGE_ALT,
   SITE_OG_IMAGE_HEIGHT,
   SITE_OG_IMAGE_WIDTH,
-  rootJsonLd,
 } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
 import { cn } from "@/lib/utils";
@@ -65,13 +65,17 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  const siteJsonLd = buildSiteRootJsonLd();
+
   return (
     <html
       lang="en-LK"
       className={cn("h-full antialiased font-sans", inter.variable)}
     >
+      <head>
+        <JsonLd data={siteJsonLd} id="json-ld-site" />
+      </head>
       <body className="flex min-h-full flex-col bg-white text-ink">
-        <JsonLd data={rootJsonLd} />
         <SiteNavbar />
         <main className="flex-1 pt-18">{children}</main>
         <SiteFooter />

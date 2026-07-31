@@ -21,9 +21,9 @@ export default function LedWallRentalColomboPage() {
   if (!city) notFound();
 
   return (
-    <main>
-      <JsonLd data={buildLedWallCitySchema(city)} />
+    <>
+      <JsonLd data={buildLedWallCitySchema(city)} id="json-ld-led-wall-colombo" />
       <LedWallCityPageContent city={city} />
-    </main>
+    </>
   );
 }

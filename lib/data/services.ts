@@ -15,6 +15,7 @@ import {
   StagePortfolio,
 } from "@/lib/data/gallery";
 import { LedWallPortfolio, LedWallPortfolioIntro } from "@/lib/data/led-wall-portfolio";
+import { buildPageJsonLd, LOCAL_BUSINESS_ID } from "@/lib/json-ld";
 import { SITE_URL } from "@/lib/site";
 import { QuoteDialogContacts } from "@/lib/data/contact";
 import type {
@@ -517,14 +518,14 @@ export const CoverageContent: CoverageSectionContent = {
   eyebrow: "Island-wide service coverage",
   title: "Every service. Every district. Colombo to Jaffna.",
   districts: [
-    "Colombo",
-    "Kandy",
-    "Galle",
-    "Negombo",
-    "Jaffna",
-    "Anuradhapura",
-    "Matara",
-    "Kurunegala",
+    { name: "Colombo", href: "/led-wall-rental-colombo" },
+    { name: "Kandy", href: "/led-wall-rental-kandy" },
+    { name: "Galle", href: "/led-wall-rental-galle" },
+    { name: "Negombo", href: "/led-wall-rental-negombo" },
+    { name: "Jaffna", href: "/led-wall-rental-jaffna" },
+    { name: "Anuradhapura", href: "/led-wall-rental-anuradhapura" },
+    { name: "Matara", href: "/led-wall-rental-matara" },
+    { name: "Kurunegala", href: "/led-wall-rental-kurunegala" },
     "Ratnapura",
     "Badulla",
     "Trincomalee",
@@ -564,59 +565,44 @@ export function getServiceSlugs(): string[] {
 }
 
 export function buildServicesSchema() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: "YC Events",
+  return buildPageJsonLd({
+    path: "/services",
+    name: ServicesPageMetaData.title,
     description: ServicesPageMetaData.description,
-    url: SERVICE_SITE_URL,
-    areaServed: "Sri Lanka",
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "Event Production Services",
-      itemListElement: ServicesList.map((s, i) => ({
-        "@type": "Offer",
-        position: i + 1,
-        itemOffered: {
-          "@type": "Service",
-          name: s.title,
-          description: s.sub,
-          url: `${SERVICE_SITE_URL}${s.href}`,
-        },
-      })),
+    localBusinessExtra: {
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Event Production Services",
+        itemListElement: ServicesList.map((s, i) => ({
+          "@type": "Offer",
+          position: i + 1,
+          itemOffered: {
+            "@type": "Service",
+            name: s.title,
+            description: s.sub,
+            url: `${SERVICE_SITE_URL}${s.href}`,
+          },
+        })),
+      },
     },
-  };
+  });
 }
 
 export function buildServiceDetailSchema(service: ServiceDetailData) {
-  const graph: Record<string, unknown>[] = [
-    {
-      "@type": "Service",
-      name: service.seo.h1,
-      description: service.seo.description,
-      provider: {
-        "@type": "LocalBusiness",
-        name: "YC Events",
+  return buildPageJsonLd({
+    path: service.href,
+    name: service.seo.title,
+    description: service.seo.description,
+    faqs: service.faqs,
+    extra: [
+      {
+        "@type": "Service",
+        name: service.seo.h1,
+        description: service.seo.description,
+        provider: { "@id": LOCAL_BUSINESS_ID },
         areaServed: "Sri Lanka",
+        url: `${SERVICE_SITE_URL}${service.href}`,
       },
-      areaServed: "Sri Lanka",
-      url: `${SERVICE_SITE_URL}${service.href}`,
-    },
-  ];
-
-  if (service.faqs?.length) {
-    graph.push({
-      "@type": "FAQPage",
-      mainEntity: service.faqs.map((faq) => ({
-        "@type": "Question",
-        name: faq.question,
-        acceptedAnswer: { "@type": "Answer", text: faq.answer },
-      })),
-    });
-  }
-
-  return {
-    "@context": "https://schema.org",
-    "@graph": graph,
-  };
+    ],
+  });
 }

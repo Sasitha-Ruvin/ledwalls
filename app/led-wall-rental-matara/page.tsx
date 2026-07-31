@@ -21,9 +21,9 @@ export default function LedWallRentalMataraPage() {
   if (!city) notFound();
 
   return (
-    <main>
-      <JsonLd data={buildLedWallCitySchema(city)} />
+    <>
+      <JsonLd data={buildLedWallCitySchema(city)} id="json-ld-led-wall-matara" />
       <LedWallCityPageContent city={city} />
-    </main>
+    </>
   );
 }

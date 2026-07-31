@@ -1,11 +1,15 @@
 import { images } from "@/lib/images";
-import { SITE_URL } from "@/lib/site";
+import {
+  buildPageJsonLd,
+  LOCAL_BUSINESS_ID,
+  pageUrl,
+} from "@/lib/json-ld";
+import { LedWallRatesFootnote, LedWallRatesSummary } from "@/lib/data/led-wall-pricing";
 import {
   buildPageMetadata,
   SITE_OG_IMAGE,
   SITE_OG_IMAGE_ALT,
 } from "@/lib/seo";
-import { LedWallRatesFootnote, LedWallRatesSummary } from "@/lib/data/led-wall-pricing";
 import type { Metadata } from "next";
 import type { FaqItem } from "@/types/site";
 
@@ -333,35 +337,26 @@ export function getLedWallCitySlugs(): string[] {
 }
 
 export function buildLedWallCitySchema(city: LedWallCity) {
-  const canonical = `${SITE_URL}/led-wall-rental-${city.slug}`;
+  const path = `/led-wall-rental-${city.slug}`;
 
-  return {
-    "@context": "https://schema.org",
-    "@graph": [
+  return buildPageJsonLd({
+    path,
+    name: city.title,
+    description: city.description,
+    faqs: city.faqs,
+    areaServed: city.name,
+    extra: [
       {
         "@type": "Service",
         name: `LED wall rental ${city.name}`,
         description: city.description,
-        image: `${SITE_URL}${SITE_OG_IMAGE}`,
-        provider: {
-          "@type": "LocalBusiness",
-          name: "YC Events",
-          areaServed: "Sri Lanka",
-          url: SITE_URL,
-        },
+        image: pageUrl(SITE_OG_IMAGE),
+        provider: { "@id": LOCAL_BUSINESS_ID },
         areaServed: city.name,
-        url: canonical,
-      },
-      {
-        "@type": "FAQPage",
-        mainEntity: city.faqs.map((faq) => ({
-          "@type": "Question",
-          name: faq.question,
-          acceptedAnswer: { "@type": "Answer", text: faq.answer },
-        })),
+        url: pageUrl(path),
       },
     ],
-  };
+  });
 }
 
 export function buildLedWallCityMetadata(slug: string): Metadata | null {

@@ -21,9 +21,9 @@ export default function LedWallRentalKurunegalaPage() {
   if (!city) notFound();
 
   return (
-    <main>
-      <JsonLd data={buildLedWallCitySchema(city)} />
+    <>
+      <JsonLd data={buildLedWallCitySchema(city)} id="json-ld-led-wall-kurunegala" />
       <LedWallCityPageContent city={city} />
-    </main>
+    </>
   );
 }

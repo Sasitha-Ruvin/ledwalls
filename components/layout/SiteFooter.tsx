@@ -47,9 +47,23 @@ export default function SiteFooter({ className }: SiteFooterProps) {
             Coverage
           </h2>
           <ul className="space-y-2 text-sm leading-relaxed text-muted-yc">
-            {FooterCoverage.map((place) => (
-              <li key={place}>{place}</li>
-            ))}
+            {FooterCoverage.map((place) => {
+              const href = "href" in place ? place.href : undefined;
+              return (
+                <li key={place.label}>
+                  {href ? (
+                    <Link
+                      href={href}
+                      className="transition-colors hover:text-white"
+                    >
+                      {place.label}
+                    </Link>
+                  ) : (
+                    place.label
+                  )}
+                </li>
+              );
+            })}
           </ul>
         </div>
 

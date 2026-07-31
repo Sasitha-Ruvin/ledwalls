@@ -5,6 +5,7 @@ import { LedWallCities } from "@/lib/data/led-wall-cities";
 export function LedWallCityLinks() {
   return (
     <section
+      id="led-wall-cities"
       aria-labelledby="city-links-heading"
       className="bg-white px-4 py-14 sm:px-8 sm:py-16 lg:px-16"
     >

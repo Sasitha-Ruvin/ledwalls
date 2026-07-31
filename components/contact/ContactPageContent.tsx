@@ -198,13 +198,28 @@ export function ContactPageContent() {
             className="mt-6 flex flex-wrap gap-2"
             aria-label="Districts we serve"
           >
-            {ContactCoverageContent.districts.map((district) => (
-              <li key={district}>
-                <span className="inline-flex rounded-full border border-line bg-white px-3.5 py-1.5 text-sm text-ink">
-                  {district}
-                </span>
-              </li>
-            ))}
+            {ContactCoverageContent.districts.map((district) => {
+              const key =
+                typeof district === "string" ? district : district.name;
+              const name =
+                typeof district === "string" ? district : district.name;
+              const href =
+                typeof district === "string" ? undefined : district.href;
+              const pillClass =
+                "inline-flex rounded-full border border-line bg-white px-3.5 py-1.5 text-sm text-ink";
+
+              return (
+                <li key={key}>
+                  {href ? (
+                    <Link href={href} className={pillClass}>
+                      {name}
+                    </Link>
+                  ) : (
+                    <span className={pillClass}>{name}</span>
+                  )}
+                </li>
+              );
+            })}
             {ContactCoverageContent.highlightLabel ? (
               <li>
                 <span className="inline-flex rounded-full border border-brand bg-white px-3.5 py-1.5 text-sm font-medium text-brand">

@@ -21,9 +21,9 @@ export default function LedWallRentalGallePage() {
   if (!city) notFound();
 
   return (
-    <main>
-      <JsonLd data={buildLedWallCitySchema(city)} />
+    <>
+      <JsonLd data={buildLedWallCitySchema(city)} id="json-ld-led-wall-galle" />
       <LedWallCityPageContent city={city} />
-    </main>
+    </>
   );
 }

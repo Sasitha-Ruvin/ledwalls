@@ -1,4 +1,5 @@
 import type { PortfolioImage } from "@/types/site";
+import { buildPageJsonLd, LOCAL_BUSINESS_ID } from "@/lib/json-ld";
 import { SITE_URL } from "@/lib/site";
 import manifest from "./gallery-manifest.json";
 
@@ -83,16 +84,18 @@ export const GalleryPageIntro = {
 };
 
 export function buildGallerySchema() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "ImageGallery",
-    name: "YC Events LED wall rental portfolio",
+  return buildPageJsonLd({
+    path: "/gallery",
+    name: GalleryPageMeta.title,
     description: GalleryPageMeta.description,
-    url: GalleryPageMeta.canonical,
-    publisher: {
-      "@type": "Organization",
-      name: "YC Events",
-      url: SITE_URL,
-    },
-  };
+    extra: [
+      {
+        "@type": "ImageGallery",
+        name: "YC Events LED wall rental portfolio",
+        description: GalleryPageMeta.description,
+        url: GalleryPageMeta.canonical,
+        publisher: { "@id": LOCAL_BUSINESS_ID },
+      },
+    ],
+  });
 }

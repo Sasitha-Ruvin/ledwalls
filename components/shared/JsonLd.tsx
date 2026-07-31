@@ -1,12 +1,27 @@
+type JsonLdValue = Record<string, unknown>;
+
 interface JsonLdProps {
-  data: Record<string, unknown>;
+  data: JsonLdValue | JsonLdValue[];
+  id?: string;
 }
 
-export function JsonLd({ data }: JsonLdProps) {
+function serializeJsonLd(data: unknown): string {
+  return JSON.stringify(data).replace(/</g, "\\u003c");
+}
+
+export function JsonLd({ data, id }: JsonLdProps) {
+  const payload: JsonLdValue = Array.isArray(data)
+    ? {
+        "@context": "https://schema.org",
+        "@graph": data,
+      }
+    : data;
+
   return (
     <script
+      id={id}
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+      dangerouslySetInnerHTML={{ __html: serializeJsonLd(payload) }}
     />
   );
 }

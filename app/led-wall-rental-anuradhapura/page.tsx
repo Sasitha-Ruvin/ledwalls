@@ -21,9 +21,9 @@ export default function LedWallRentalAnuradhapuraPage() {
   if (!city) notFound();
 
   return (
-    <main>
-      <JsonLd data={buildLedWallCitySchema(city)} />
+    <>
+      <JsonLd data={buildLedWallCitySchema(city)} id="json-ld-led-wall-anuradhapura" />
       <LedWallCityPageContent city={city} />
-    </main>
+    </>
   );
 }
