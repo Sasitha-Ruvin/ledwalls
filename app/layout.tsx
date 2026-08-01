@@ -31,6 +31,19 @@ export const metadata: Metadata = {
   keywords: [...SITE_DEFAULT_KEYWORDS],
   alternates: { canonical: "/" },
   robots: { index: true, follow: true },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48", type: "image/x-icon" },
+      { url: "/favicon-48x48.png", sizes: "48x48", type: "image/png" },
+      {
+        url: "/web-app-manifest-192x192.png",
+        sizes: "192x192",
+        type: "image/png",
+      },
+    ],
+    apple: { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+    shortcut: "/favicon.ico",
+  },
   applicationName: SITE_NAME,
   category: "business",
   formatDetection: {
