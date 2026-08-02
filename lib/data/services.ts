@@ -31,6 +31,9 @@ import type {
 
 export const SERVICE_SITE_URL = SITE_URL;
 
+export const LED_WALL_SERVICE_ID = "led-wall-hire";
+export const LED_WALL_SERVICE_HREF = `/services/${LED_WALL_SERVICE_ID}`;
+
 export const ServicesPageMetaData: ServicesPageMeta = {
   title: "LED Video Wall Rental Sri Lanka | LED Screen Hire",
   description:
@@ -66,16 +69,16 @@ export const ServicesHeroData: ServicesPageHero = {
 
 export const ServicesList: ServiceDetailData[] = [
   {
-    id: "led-wall",
+    id: LED_WALL_SERVICE_ID,
     num: "01",
-    title: "LED Wall Rental",
+    title: "LED Wall Hire",
     sub: "LED screen hire with stage, sound & stall add-ons",
-    href: "/services/led-wall",
+    href: LED_WALL_SERVICE_HREF,
     img: images.heroLedRental,
     tone: "light",
     icon: Monitor,
-    quickNavLabel: "LED Walls",
-    cta: "Full LED wall rental details",
+    quickNavLabel: "LED Wall Hire",
+    cta: "Full LED wall hire details",
     body: "YC Events is Sri Lanka's specialist LED wall rental company. We LED screen rent and LED wall hire for weddings, corporate events, concerts, political rallies, product launches and exhibitions across all 25 districts. Indoor LED screen rental uses fine-pitch P3 panels for crystal-clear wedding backdrops, award nights, conference halls and trade show booths. Outdoor LED screen rental uses IP65-rated P4 weatherproof panels up to 7,000 nit, fully readable in direct Sri Lankan sunlight. Every LED video wall rental includes delivery, full assembly, video processor setup, content testing and a dedicated on-site operator. Big LED screen rent builds from 6×4 ft to 40×20 ft+ are sized for your venue, not a fixed catalogue size. Add stage and truss, sound systems, exhibition stalls or digital podiums on the same booking for a single crew, one quote and one delivery.",
     specs: [
       ["Indoor pixel pitch", "P3, wedding & corporate"],
@@ -89,9 +92,9 @@ export const ServicesList: ServiceDetailData[] = [
       ["Outdoor rating", "IP65, weatherproof LED wall rent"],
     ],
     seo: {
-      title: "LED Wall Rental Sri Lanka | LED Screen Rent & Hire",
+      title: "LED Wall Hire Sri Lanka | LED Screen Rent & Hire",
       description:
-        "LED wall rental and LED screen rent in Sri Lanka. Indoor P3 wedding and corporate walls, outdoor IP65 concert screens, LED backdrop rental. LED screen hire Colombo and island-wide. Operator included.",
+        "LED wall hire and LED screen rent in Sri Lanka. Indoor P3 wedding and corporate walls, outdoor IP65 concert screens, LED backdrop rental. LED screen hire Colombo and island-wide. Operator included.",
       keywords: [
         "LED wall rental Sri Lanka",
         "LED screen rent Sri Lanka",
@@ -110,7 +113,7 @@ export const ServicesList: ServiceDetailData[] = [
         "LED screen rental trade shows Colombo",
         "LED screen rental with operator included Sri Lanka",
       ],
-      h1: "LED Wall Rental Sri Lanka",
+      h1: "LED Wall Hire Sri Lanka",
     },
     faqs: [
       {
@@ -302,7 +305,7 @@ export const ServicesList: ServiceDetailData[] = [
       ["Operator", "Trained audio technician included"],
     ],
     seo: {
-      title: "Sound System Rental Sri Lanka | Add-on to LED Wall Rental",
+      title: "Sound System Rental Sri Lanka | Add-on to LED Wall Hire",
       description:
         "JBL and RCF sound system hire for events in Sri Lanka, available as an add-on to LED wall rental. Trained audio operator included. Island-wide.",
       keywords: [
@@ -442,7 +445,7 @@ export const ServicesList: ServiceDetailData[] = [
 ];
 
 export const LedWallAddonServices: ServiceDetailData[] = ServicesList.filter(
-  (service) => service.id !== "led-wall"
+  (service) => service.id !== LED_WALL_SERVICE_ID
 );
 
 export const LedWallEventFocusIntro = {
@@ -459,7 +462,7 @@ export const IndoorLedWallEvents: LedWallEventCard[] = [
     description:
       "P3 indoor LED backdrop rental for receptions and ceremonies. Wedding LED screen Colombo and island-wide with planner coordination.",
     img: images.wedding,
-    href: "/services/led-wall",
+    href: LED_WALL_SERVICE_HREF,
   },
   {
     id: "corporate",
@@ -467,7 +470,7 @@ export const IndoorLedWallEvents: LedWallEventCard[] = [
     description:
       "P3 indoor LED wall corporate event hire for conferences, AGMs and product launches with AV integration.",
     img: images.corporate,
-    href: "/services/led-wall",
+    href: LED_WALL_SERVICE_HREF,
   },
   {
     id: "award-nights",
@@ -475,7 +478,7 @@ export const IndoorLedWallEvents: LedWallEventCard[] = [
     description:
       "P3 indoor LED backdrop rental for gala nights and convocations, fine-pitch walls for close-up stage shots.",
     img: images.brand,
-    href: "/services/led-wall",
+    href: LED_WALL_SERVICE_HREF,
   },
 ];
 
@@ -486,7 +489,7 @@ export const OutdoorLedWallEvents: LedWallEventCard[] = [
     description:
       "P4 outdoor IP65 LED screen rental for live shows, weatherproof and bright enough for daylight and night sets.",
     img: images.concert2,
-    href: "/services/led-wall",
+    href: LED_WALL_SERVICE_HREF,
   },
   {
     id: "political-rallies",
@@ -494,7 +497,7 @@ export const OutdoorLedWallEvents: LedWallEventCard[] = [
     description:
       "P4 outdoor LED screen political rally Sri Lanka, weatherproof big screen rent for campaign events island-wide.",
     img: images.crowd,
-    href: "/services/led-wall",
+    href: LED_WALL_SERVICE_HREF,
   },
   {
     id: "festivals",
@@ -502,7 +505,7 @@ export const OutdoorLedWallEvents: LedWallEventCard[] = [
     description:
       "P4 outdoor LED wall rent for festivals and open grounds, IP65 rated and rigged by certified crew.",
     img: images.concert3,
-    href: "/services/led-wall",
+    href: LED_WALL_SERVICE_HREF,
   },
 ];
 

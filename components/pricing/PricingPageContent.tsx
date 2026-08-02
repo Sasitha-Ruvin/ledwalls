@@ -19,6 +19,7 @@ import {
   PricingIncludes,
   PricingSeoSections,
 } from "@/lib/data/pricing";
+import { LED_WALL_SERVICE_HREF } from "@/lib/data/services";
 
 export function PricingPageContent() {
   return (
@@ -83,11 +84,11 @@ export function PricingPageContent() {
             </p>
             <Button
               nativeButton={false}
-              render={<Link href="/services/led-wall" />}
+              render={<Link href={LED_WALL_SERVICE_HREF} />}
               variant="outline"
               className="mt-8 h-11 border-line bg-white text-ink hover:bg-surface"
             >
-              LED wall rental service
+              LED wall hire
               <ArrowRight className="size-4" aria-hidden />
             </Button>
           </div>

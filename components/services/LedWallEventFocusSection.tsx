@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import {
   IndoorLedWallEvents,
+  LED_WALL_SERVICE_HREF,
   LedWallEventFocusIntro,
   OutdoorLedWallEvents,
 } from "@/lib/data/services";
@@ -85,10 +86,10 @@ export function LedWallEventFocusSection() {
 
       <div className="mt-10">
         <Link
-          href="/services/led-wall"
+          href={LED_WALL_SERVICE_HREF}
           className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand transition-opacity hover:opacity-80"
         >
-          Full LED wall rental details
+          Full LED wall hire details
           <ArrowRight className="size-3.5" aria-hidden />
         </Link>
       </div>

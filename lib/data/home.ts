@@ -11,8 +11,9 @@ import {
   Volume2,
 } from "lucide-react";
 import { images } from "@/lib/images";
-import { SITE_URL } from "@/lib/site";
+import { LED_WALL_SERVICE_HREF } from "@/lib/data/services";
 import { buildPageJsonLd } from "@/lib/json-ld";
+import { SITE_URL } from "@/lib/site";
 import {
   PRIMARY_PHONE_DISPLAY,
   PRIMARY_PHONE_HREF,
@@ -89,10 +90,10 @@ export const HeroStats: StatItemData[] = [
 export const HomeServices: ServiceCardData[] = [
   {
     num: "01",
-    title: "LED Wall Rental",
+    title: "LED Wall Hire",
     sub: "LED screen hire · P3 indoor · IP65 outdoor",
     img: images.hero2,
-    href: "/services/led-wall",
+    href: LED_WALL_SERVICE_HREF,
     icon: Monitor,
   },
   {
@@ -434,7 +435,7 @@ export const QuoteNeedOptions = [
 ] as const;
 
 export const QuoteServiceOptions = [
-  "LED Wall Rental",
+  "LED Wall Hire",
   "Stage & Truss Setup",
   "Sound System",
   "Exhibition Stalls",

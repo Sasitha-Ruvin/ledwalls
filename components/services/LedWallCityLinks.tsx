@@ -10,7 +10,7 @@ export function LedWallCityLinks() {
       className="bg-white px-4 py-14 sm:px-8 sm:py-16 lg:px-16"
     >
       <p className="mb-3 text-xs font-medium tracking-widest text-brand uppercase">
-        LED wall rental by city
+        LED wall hire by city
       </p>
       <h2
         id="city-links-heading"
@@ -25,7 +25,7 @@ export function LedWallCityLinks() {
               href={`/led-wall-rental-${city.slug}`}
               className="flex items-center justify-between gap-2 rounded-lg border border-line bg-surface px-4 py-3 text-sm font-medium text-ink transition-colors hover:border-brand hover:text-brand"
             >
-              LED wall rental {city.name}
+              LED wall hire {city.name}
               <ArrowUpRight className="size-3.5 shrink-0" aria-hidden />
             </Link>
           </li>

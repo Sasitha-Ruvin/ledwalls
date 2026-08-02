@@ -85,7 +85,7 @@ const ServicesGrid = ({
               {ledWall.sub}
             </p>
             <span className="mt-5 inline-flex items-center gap-1.5 rounded bg-brand px-4 py-2 text-sm font-semibold text-white transition-opacity group-hover:opacity-90">
-              View LED wall rental
+              View LED wall hire
               <ArrowRight className="size-4" aria-hidden />
             </span>
           </div>

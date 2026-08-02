@@ -1,5 +1,5 @@
 import { Mail, MapPin, MessageCircle, Phone, Share2 } from "lucide-react";
-import { ServicesList } from "@/lib/data/services";
+import { LED_WALL_SERVICE_HREF, ServicesList } from "@/lib/data/services";
 import {
   PRIMARY_PHONE_DISPLAY,
   PRIMARY_PHONE_HREF,
@@ -27,7 +27,7 @@ export const FooterCoverage = [
   { label: "Kandy", href: "/led-wall-rental-kandy" },
   { label: "Galle", href: "/led-wall-rental-galle" },
   { label: "Kurunegala", href: "/led-wall-rental-kurunegala" },
-  { label: "All 25 Districts", href: "/services/led-wall#led-wall-cities" },
+  { label: "All 25 Districts", href: `${LED_WALL_SERVICE_HREF}#led-wall-cities` },
 ] as const;
 
 export const FooterContacts = [

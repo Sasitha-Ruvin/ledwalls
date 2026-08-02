@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { getServiceSlugs } from "@/lib/data/services";
+import { getServiceSlugs, LED_WALL_SERVICE_ID } from "@/lib/data/services";
 import { getLedWallCitySlugs } from "@/lib/data/led-wall-cities";
 import { SITE_URL } from "@/lib/site";
 
@@ -21,7 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${SITE_URL}/services/${slug}`,
     lastModified: now,
     changeFrequency: "weekly",
-    priority: slug === "led-wall" ? 0.9 : 0.6,
+    priority: slug === LED_WALL_SERVICE_ID ? 0.9 : 0.6,
   }));
 
   const cityRoutes: MetadataRoute.Sitemap = getLedWallCitySlugs().map((slug) => ({

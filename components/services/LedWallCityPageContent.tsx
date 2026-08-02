@@ -6,6 +6,7 @@ import { LedWallRatesPanel } from "@/components/pricing/PricingRatesGrid";
 import { PageHero } from "@/components/shared/PageHero";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { Button } from "@/components/ui/button";
+import { LED_WALL_SERVICE_HREF } from "@/lib/data/services";
 import { LedWallCitiesFootnote } from "@/lib/data/led-wall-cities";
 import type { LedWallCity } from "@/lib/data/led-wall-cities";
 
@@ -74,11 +75,11 @@ export function LedWallCityPageContent({ city }: LedWallCityPageContentProps) {
               </QuoteDialog>
               <Button
                 nativeButton={false}
-                render={<Link href="/services/led-wall" />}
+                render={<Link href={LED_WALL_SERVICE_HREF} />}
                 variant="outline"
                 className="h-11 border-line bg-white text-ink hover:bg-surface"
               >
-                LED wall rental service
+                LED wall hire
               </Button>
             </div>
           </div>

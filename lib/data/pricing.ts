@@ -10,6 +10,7 @@ import {
   LedWallCustomSizesNote,
   formatLedWallRatePerDay,
 } from "@/lib/data/led-wall-pricing";
+import { LED_WALL_SERVICE_HREF } from "@/lib/data/services";
 import { SITE_URL } from "@/lib/site";
 
 export const PricingPageMetaData: PricingPageMeta = {
@@ -157,42 +158,42 @@ export const LedUseCases: LedUseCaseBlock[] = [
     title: "Wedding LED screen rental Sri Lanka",
     description:
       "LED backdrop rental for receptions and ceremonies. Wedding LED screen Colombo and island-wide, indoor P3 panels with planner coordination and an all-night operator.",
-    href: "/services/led-wall",
+    href: LED_WALL_SERVICE_HREF,
   },
   {
     id: "corporate",
     title: "LED screen corporate event Sri Lanka",
     description:
       "LED wall corporate event hire for product launches, AGMs and conferences. LED screen hire Colombo with AV integration and full-day technician support.",
-    href: "/services/led-wall",
+    href: LED_WALL_SERVICE_HREF,
   },
   {
     id: "outdoor",
     title: "Outdoor LED screen rental Sri Lanka",
     description:
       "IP65 outdoor LED wall rent for concerts, festivals and rallies. Weatherproof big LED screen rent with certified rigging crew, readable in direct Sri Lankan sunlight.",
-    href: "/services/led-wall",
+    href: LED_WALL_SERVICE_HREF,
   },
   {
     id: "indoor",
     title: "Indoor LED screen rental Sri Lanka",
     description:
       "Indoor LED wall rent with P3 fine-pitch panels for hotels, ballrooms and conference halls. Crystal-clear LED video wall rental for close viewing distances.",
-    href: "/services/led-wall",
+    href: LED_WALL_SERVICE_HREF,
   },
   {
     id: "exhibition",
     title: "LED wall rental for exhibitions Sri Lanka",
     description:
       "LED screen rental for trade shows and expos, fitted into custom exhibition stalls or as standalone displays. Operator included for the full run of the event.",
-    href: "/services/led-wall",
+    href: LED_WALL_SERVICE_HREF,
   },
   {
     id: "backdrop",
     title: "LED backdrop rental Sri Lanka",
     description:
       "LED backdrop rent for weddings, award nights and stage sets. Custom sizes from 10×8 ft to 40×12 ft with operator and delivery included.",
-    href: "/services/led-wall",
+    href: LED_WALL_SERVICE_HREF,
   },
 ];
 
@@ -223,10 +224,10 @@ export function buildPricingSchema() {
     extra: [
       {
         "@type": "Service",
-        name: "LED wall rental Sri Lanka",
+        name: "LED wall hire Sri Lanka",
         provider: { "@id": LOCAL_BUSINESS_ID },
         areaServed: "Sri Lanka",
-        url: `${SITE_URL}/services/led-wall`,
+        url: `${SITE_URL}${LED_WALL_SERVICE_HREF}`,
       },
     ],
   });

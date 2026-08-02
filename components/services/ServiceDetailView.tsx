@@ -7,7 +7,7 @@ import { PageHero } from "@/components/shared/PageHero";
 import { FaqList } from "@/components/shared/FaqList";
 import { SpecTable } from "@/components/shared/SpecTable";
 import { Button } from "@/components/ui/button";
-import { ServicesList, LedWallAddonServices } from "@/lib/data/services";
+import { LED_WALL_SERVICE_ID, LED_WALL_SERVICE_HREF, ServicesList, LedWallAddonServices } from "@/lib/data/services";
 import { LedWallPortfolioIntro } from "@/lib/data/led-wall-portfolio";
 import { LedWallServicePricingSection } from "@/components/pricing/LedWallServicePricingSection";
 import { LedWallCityLinks } from "@/components/services/LedWallCityLinks";
@@ -73,13 +73,13 @@ export function ServiceDetailView({ service }: ServiceDetailViewProps) {
         </div>
       </section>
 
-      {service.id === "led-wall" ? <LedWallServicePricingSection /> : null}
+      {service.id === LED_WALL_SERVICE_ID ? <LedWallServicePricingSection /> : null}
 
-      {service.id === "led-wall" ? (
+      {service.id === LED_WALL_SERVICE_ID ? (
         <OtherServicesStrip services={LedWallAddonServices} />
       ) : null}
 
-      {service.id === "led-wall" ? <LedWallCityLinks /> : null}
+      {service.id === LED_WALL_SERVICE_ID ? <LedWallCityLinks /> : null}
 
       {service.useCases?.length ? (
         <section
@@ -122,17 +122,17 @@ export function ServiceDetailView({ service }: ServiceDetailViewProps) {
         <ServicePortfolioGallery
           items={service.portfolio}
           eyebrow={
-            service.id === "led-wall"
+            service.id === LED_WALL_SERVICE_ID
               ? LedWallPortfolioIntro.eyebrow
               : "Portfolio"
           }
           title={
-            service.id === "led-wall"
+            service.id === LED_WALL_SERVICE_ID
               ? LedWallPortfolioIntro.title
               : "Recent work from YC Events"
           }
           description={
-            service.id === "led-wall"
+            service.id === LED_WALL_SERVICE_ID
               ? LedWallPortfolioIntro.description
               : undefined
           }
