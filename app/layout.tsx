@@ -24,7 +24,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} | LED Wall Rental Sri Lanka`,
+    default: `${SITE_NAME} | LED Wall Hire & Rent Sri Lanka`,
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DEFAULT_DESCRIPTION,
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    title: `${SITE_NAME} | LED Wall Rental Sri Lanka`,
+    title: `${SITE_NAME} | LED Wall Hire & Rent Sri Lanka`,
     description: SITE_DEFAULT_DESCRIPTION,
     url: SITE_URL,
     type: "website",
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE_NAME} | LED Wall Rental Sri Lanka`,
+    title: `${SITE_NAME} | LED Wall Hire & Rent Sri Lanka`,
     description: SITE_DEFAULT_DESCRIPTION,
     images: [absoluteUrl(SITE_OG_IMAGE)],
   },

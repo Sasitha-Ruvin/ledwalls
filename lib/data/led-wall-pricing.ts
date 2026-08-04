@@ -70,10 +70,10 @@ export const LedWallPricingHighlights = [
 ] as const;
 
 export const LedWallRatesIntro = {
-  eyebrow: "LED wall rent price Sri Lanka",
-  title: "LED video wall rental rates",
+  eyebrow: "LED wall hire price Sri Lanka",
+  title: "LED wall hire and rent rates",
   description:
-    "Published LED wall rental cost for standard sizes below. Operator, delivery, setup and breakdown included across Colombo, Kandy and all 25 districts.",
+    "Published LED wall hire and LED wall rent prices for standard sizes below. Operator, delivery, setup and breakdown included. Add truss, rotating lights and fog machines on the same quote across Colombo, Kandy and all 25 districts.",
 };
 
 export const LedWallCustomSizesNote = {
@@ -99,4 +99,4 @@ export const LedWallRatesFootnote =
   "All rates are for one 8-hour working business day on standard event hire. Final LED screen rent price may vary for extended hours, multi-day bookings, pixel pitch upgrades or complex rigging. Custom sizes quoted separately. Itemised quote within 60 minutes.";
 
 export const LedWallRatesSummary =
-  "LED screen rent in Sri Lanka from LKR 55,000 per 8-hour business day for a 10×8 ft LED video wall. Custom sizes and extended hire are quoted to your event requirements.";
+  "LED wall hire and LED screen rent in Sri Lanka from LKR 55,000 per 8-hour business day for a 10×8 ft LED video wall. Custom sizes and extended hire are quoted to your event requirements.";

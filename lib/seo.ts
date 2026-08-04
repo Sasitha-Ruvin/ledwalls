@@ -5,25 +5,29 @@ import { SITE_URL } from "@/lib/site";
 export const SITE_NAME = "YC Events";
 export const SITE_OG_IMAGE = "/images/og/yc-events-led-wall-rental-sri-lanka-og.jpeg";
 export const SITE_OG_IMAGE_ALT =
-  "LED wall rental Sri Lanka outdoor concert LED screen hire by YC Events";
+  "LED wall hire Sri Lanka LED wall rent outdoor concert LED screen by YC Events";
 export const SITE_OG_IMAGE_WIDTH = 1200;
 export const SITE_OG_IMAGE_HEIGHT = 630;
 
 export const SITE_DEFAULT_DESCRIPTION =
-  "LED screen rental and LED wall hire in Sri Lanka. Indoor P3 and outdoor IP65 LED video walls with operator included. Colombo, Kandy and all 25 districts.";
+  "LED wall hire, LED wall rent and LED screen rental in Sri Lanka. Indoor P3 and outdoor IP65 LED walls with operator included. Stage truss, rotating lights and fog machines available. Colombo, Kandy and all 25 districts.";
 
 export const SITE_DEFAULT_KEYWORDS = [
+  "LED wall hire Sri Lanka",
+  "LED wall rent Sri Lanka",
   "LED wall rental Sri Lanka",
+  "LED wall hire Colombo",
+  "LED wall rent Colombo",
   "LED screen hire Sri Lanka",
   "LED screen rent Sri Lanka",
   "LED video wall rental Sri Lanka",
-  "LED wall hire Colombo",
   "LED screen rental Colombo",
   "outdoor LED screen rental Sri Lanka",
   "wedding LED screen rental Sri Lanka",
   "jumbo screen rental Sri Lanka",
   "LED display rental Sri Lanka",
   "big LED screen rent Sri Lanka",
+  "LED wall Sri Lanka",
 ] as const;
 
 export const SITE_SOCIAL_LINKS = [

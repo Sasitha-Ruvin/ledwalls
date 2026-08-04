@@ -93,7 +93,7 @@ const ServicesGrid = ({
       ) : null}
 
       {otherServices.length ? (
-        <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
+        <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-3">
           {otherServices.map((service) => {
             const ServiceIcon = service.icon;
             return (

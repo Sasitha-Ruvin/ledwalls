@@ -21,7 +21,7 @@ export function LedRentalUsesSection({ className }: LedRentalUsesSectionProps) {
             LED screen rental for every event type
           </h2>
         }
-        description="YC Events is a specialist LED wall rental company in Sri Lanka. We LED screen rent and LED wall hire for weddings, corporate events, concerts and roadshows, with operator, delivery and setup included on every booking."
+        description="YC Events is Sri Lanka's LED wall hire specialist. LED wall rent and LED screen hire for weddings, corporate events, concerts and rallies, with operator included. Add truss, rotating stage lights and fog machines on the same booking."
       />
 
       <ul className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">

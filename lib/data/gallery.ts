@@ -38,6 +38,10 @@ export const StagePortfolio: PortfolioImage[] = [
   ...StageStockPortfolio,
 ];
 
+export const LightingFogPortfolio: PortfolioImage[] = assetManifest.filter(
+  (item) => item.category === "concert"
+);
+
 export const PodiumPortfolio: PortfolioImage[] = assetManifest.filter(
   (item) => item.category === "podium"
 );

@@ -31,9 +31,9 @@ export const LedWallCities: LedWallCity[] = [
   {
     slug: "colombo",
     name: "Colombo",
-    title: "LED Wall Rental Colombo | LED Screen Hire Sri Lanka",
+    title: "LED Wall Hire Colombo | LED Wall Rent & Screen Rental",
     description:
-      "LED wall rental Colombo and LED screen hire across the capital. Indoor P3 and outdoor IP65 LED video walls with operator included for weddings, corporate events and concerts.",
+      "LED wall hire Colombo and LED wall rent across the capital. Indoor P3 and outdoor IP65 LED screens with operator included. Stage truss, rotating lights and fog machines on the same quote.",
     keywords: [
       "LED screen rental Colombo",
       "LED wall rent Colombo",
@@ -44,7 +44,7 @@ export const LedWallCities: LedWallCity[] = [
     eyebrow: "LED wall rental Colombo",
     heroImage: images.corporate,
     heroBody:
-      "LED wall rent Colombo for weddings, corporate conferences, award nights and outdoor concerts. YC Events delivers, builds and operates indoor and outdoor LED screens across Colombo and the greater Western Province.",
+      "LED wall hire Colombo for weddings, corporate conferences, award nights and outdoor concerts. Add stage truss, rotating stage lights and fog machines on the same quote. YC Events delivers, builds and operates LED screens across Colombo and the greater Western Province.",
     intro:
       "Colombo is where most Sri Lankan events happen, from BMICH conferences to hotel weddings and stadium concerts. LED screen hire Colombo bookings from YC Events include delivery, rigging, cabling and an on-site operator for the full event.",
     venues: [
@@ -64,9 +64,14 @@ export const LedWallCities: LedWallCity[] = [
         answer: `${LedWallRatesSummary} Colombo rates match our published pricing page with no hidden fees.`,
       },
       {
-        question: "Is an operator included for LED wall rental in Colombo?",
+        question: "Is an operator included for LED wall hire in Colombo?",
         answer:
-          "Yes. Every LED wall rent Colombo booking includes a trained video technician for setup, live operation and breakdown at no extra charge.",
+          "Yes. Every LED wall hire Colombo booking includes a trained video technician for setup, live operation and breakdown at no extra charge.",
+      },
+      {
+        question: "Can I add truss, rotating lights and fog machines with LED wall hire in Colombo?",
+        answer:
+          "Yes. LED wall hire Colombo can include aluminium stage truss, rotating stage lights and fog machine rental on the same quote. Popular for concerts, hotel weddings and corporate shows.",
       },
     ],
   },
@@ -348,7 +353,7 @@ export function buildLedWallCitySchema(city: LedWallCity) {
     extra: [
       {
         "@type": "Service",
-        name: `LED wall rental ${city.name}`,
+        name: `LED wall hire ${city.name}`,
         description: city.description,
         image: pageUrl(SITE_OG_IMAGE),
         provider: { "@id": LOCAL_BUSINESS_ID },
@@ -369,6 +374,6 @@ export function buildLedWallCityMetadata(slug: string): Metadata | null {
     path: `/led-wall-rental-${city.slug}`,
     keywords: city.keywords,
     ogImage: SITE_OG_IMAGE,
-    ogImageAlt: `${SITE_OG_IMAGE_ALT} · LED wall rental ${city.name}`,
+    ogImageAlt: `${SITE_OG_IMAGE_ALT} · LED wall hire ${city.name}`,
   });
 }

@@ -10,36 +10,42 @@ import {
   LedWallCustomSizesNote,
   formatLedWallRatePerDay,
 } from "@/lib/data/led-wall-pricing";
-import { LED_WALL_SERVICE_HREF } from "@/lib/data/services";
+import { LED_WALL_SERVICE_HREF, STAGE_LIGHTING_FOG_SERVICE_HREF } from "@/lib/data/services";
 import { SITE_URL } from "@/lib/site";
 
 export const PricingPageMetaData: PricingPageMeta = {
-  title: "LED Wall Rent Price Sri Lanka | LED Screen Rent LKR",
+  title: "LED Wall Hire Price Sri Lanka | LED Wall Rent LKR",
   description:
-    "How much does LED screen rent cost in Sri Lanka? From LKR 55,000. Full LED wall rental cost table with operator included. Custom sizes quoted. Colombo, Kandy and all 25 districts.",
+    "LED wall hire and LED wall rent prices in Sri Lanka from LKR 55,000. Full LED screen hire cost table with operator included. Add truss, rotating lights and fog machines. Colombo, Kandy and all 25 districts.",
   keywords: [
+    "LED wall hire price Sri Lanka",
     "LED wall rent price Sri Lanka",
-    "LED screen rent price LKR",
+    "LED wall hire Sri Lanka",
+    "LED wall rent Sri Lanka",
     "LED wall rental cost",
+    "LED screen rent price LKR",
     "LED screen rent per day Sri Lanka LKR",
+    "how much does LED wall hire cost Sri Lanka",
     "how much does LED screen rent cost Sri Lanka",
     "LED screen rental with operator included",
     "LED wall daily rate LKR",
-    "how much LED rental per day",
     "LED screen hire Colombo",
     "LED wall hire Colombo",
+    "LED wall rent Colombo",
+    "fog machine hire with LED wall",
+    "rotating stage lights truss Sri Lanka",
   ],
   canonical: `${SITE_URL}/pricing`,
 };
 
 export const PricingHeroContent = {
-  eyebrow: "LED wall rental cost · Sri Lanka",
-  titleLine1: "LED wall rent price",
+  eyebrow: "LED wall hire price · Sri Lanka",
+  titleLine1: "LED wall hire price",
   titleLine2: "Sri Lanka",
   description:
-    "Published LED screen rent prices in LKR for standard wall sizes. Operator included on every booking.",
+    "Published LED wall rent and LED screen hire prices in LKR. Operator included. Add stage truss, rotating lights and fog machines on the same quote.",
   imageSrc: images.pricingHero,
-  imageAlt: "LED wall rent price Sri Lanka LED screen hire Colombo",
+  imageAlt: "LED wall hire price Sri Lanka LED wall rent Colombo",
 };
 
 export const PricingIncludes = [
@@ -84,9 +90,15 @@ export const PricingSeoSections = [
   },
   {
     id: "operator",
-    title: "LED screen rental with operator included",
+    title: "LED wall hire with operator included",
     body:
-      "Unlike bare panel suppliers, YC Events provides LED screen rental with operator included on every booking across Sri Lanka. Your technician manages content playback, brightness, troubleshooting and breakdown. LED wall rental with operator included is not a paid upgrade. It is built into every LKR rate on this page.",
+      "Unlike bare panel suppliers, YC Events provides LED wall hire and LED screen rent with operator included on every booking across Sri Lanka. Your technician manages content playback, brightness, troubleshooting and breakdown. Operator support is built into every LKR rate on this page.",
+  },
+  {
+    id: "production",
+    title: "LED wall hire with stage lighting and fog",
+    body:
+      `Every LED wall hire booking can include our Stage Lighting & Fog add-on (${STAGE_LIGHTING_FOG_SERVICE_HREF}) with stage truss on the same quote. Popular for concerts, weddings and corporate shows.`,
   },
   {
     id: "delivery",
@@ -98,8 +110,13 @@ export const PricingSeoSections = [
 
 export const PricingFaqs: FaqItem[] = [
   {
-    question: "How much does LED screen rent cost in Sri Lanka?",
+    question: "How much does LED wall hire cost in Sri Lanka?",
     answer: `${LedWallRatesSummary} See the rate cards above for every wall size. Final LED wall rent price may vary for multi-day bookings, pixel pitch and location.`,
+  },
+  {
+    question: "What is the difference between LED wall hire and LED wall rent?",
+    answer:
+      "At YC Events, LED wall hire and LED wall rent mean the same full-service booking: LED panels, delivery, rigging, operator and breakdown. We quote LED wall rent in LKR per 8-hour business day with no separate operator charge.",
   },
   {
     question: "What is the LED wall rent price per day in LKR?",
@@ -146,6 +163,11 @@ export const PricingFaqs: FaqItem[] = [
       "Wall size, number of days, pixel pitch (P3 indoor or P4 outdoor), indoor vs outdoor use, venue location and rigging complexity. Our published LED screen rent price LKR table covers standard single-day event hire.",
   },
   {
+    question: "Can I add truss, rotating lights and fog machines to LED wall hire?",
+    answer:
+      `Yes. Add Stage Lighting & Fog (${STAGE_LIGHTING_FOG_SERVICE_HREF}) and stage truss on the same LED wall quote. One crew handles delivery, rigging and pack-down for the full production package.`,
+  },
+  {
     question: "What is an IP65 outdoor LED screen and does it cost more?",
     answer:
       "IP65 outdoor LED screen rental Sri Lanka uses weatherproof panels rated for rain and direct sunlight, P4 pixel pitch. Outdoor IP65 walls are priced the same way as indoor panels on our rate table, based on wall size rather than a separate outdoor surcharge.",
@@ -169,9 +191,9 @@ export const LedUseCases: LedUseCaseBlock[] = [
   },
   {
     id: "outdoor",
-    title: "Outdoor LED screen rental Sri Lanka",
+    title: "Outdoor LED wall hire Sri Lanka",
     description:
-      "IP65 outdoor LED wall rent for concerts, festivals and rallies. Weatherproof big LED screen rent with certified rigging crew, readable in direct Sri Lankan sunlight.",
+      "IP65 outdoor LED wall rent for concerts, festivals and rallies. Truss, rotating stage lights and fog machines available. Weatherproof big LED screen rent with certified rigging crew.",
     href: LED_WALL_SERVICE_HREF,
   },
   {

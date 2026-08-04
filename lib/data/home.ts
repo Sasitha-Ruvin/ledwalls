@@ -8,10 +8,11 @@ import {
   Monitor,
   Phone,
   Shield,
+  Sparkles,
   Volume2,
 } from "lucide-react";
 import { images } from "@/lib/images";
-import { LED_WALL_SERVICE_HREF } from "@/lib/data/services";
+import { LED_WALL_SERVICE_HREF, STAGE_LIGHTING_FOG_SERVICE_HREF } from "@/lib/data/services";
 import { buildPageJsonLd } from "@/lib/json-ld";
 import { SITE_URL } from "@/lib/site";
 import {
@@ -41,43 +42,46 @@ import type {
 } from "@/types/site";
 
 export const HomePageMetaData: HomePageMeta = {
-  title: "LED Screen Rental Sri Lanka | LED Wall Hire Colombo",
+  title: "LED Wall Hire Sri Lanka | LED Wall Rent & Screen Hire",
   description:
-    "LED screen rental and LED wall hire in Sri Lanka. Rent indoor P3 and outdoor IP65 LED video walls with operator included. LED screen rent Colombo, Kandy and all 25 districts. Quote in 60 minutes.",
+    "LED wall hire and LED wall rent in Sri Lanka. Rent indoor P3 and outdoor IP65 LED screens with operator included. LED screen hire Colombo, Kandy and all 25 districts. Stage truss, rotating lights and fog machines on the same quote.",
   keywords: [
-    "LED screen rental Sri Lanka",
+    "LED wall hire Sri Lanka",
+    "LED wall rent Sri Lanka",
     "LED wall rental Sri Lanka",
+    "LED wall Sri Lanka",
+    "LED screen rental Sri Lanka",
     "LED screen rent Sri Lanka",
     "LED screen hire Sri Lanka",
-    "LED wall rent Sri Lanka",
-    "LED wall hire Sri Lanka",
-    "LED video wall rental Sri Lanka",
-    "LED screen hire Colombo",
     "LED wall hire Colombo",
+    "LED wall rent Colombo",
     "LED wall rental Colombo",
+    "LED video wall rental Sri Lanka",
     "wedding LED screen Colombo",
     "LED screen rental with operator included",
     "LED wall delivery outside Colombo",
+    "fog machine hire Sri Lanka",
+    "rotating stage lights hire Sri Lanka",
   ],
 };
 
 export const HeroContentData: HeroContent = {
-  eyebrow: "LED wall rental Sri Lanka",
+  eyebrow: "LED wall hire Sri Lanka",
   headline: {
-    line1: "LED wall rental",
+    line1: "LED wall hire",
     accent: "Sri Lanka",
     line2: "",
   },
-  subheadline: "LED screen hire Colombo and island-wide",
+  subheadline: "LED wall rent · LED screen hire Colombo and island-wide",
   description:
-    "Indoor and outdoor LED video walls with operator, delivery and setup included. Weddings, corporate events, concerts and rallies across all 25 districts.",
+    "Indoor and outdoor LED video walls with operator, delivery and setup included. Add stage truss, rotating stage lights and fog machines on the same booking. Weddings, concerts, corporate events and rallies across all 25 districts.",
   imageSrc: images.hero,
   imageAlt:
-    "LED wall rental Sri Lanka outdoor concert LED screen hire Colombo",
+    "LED wall hire Sri Lanka outdoor concert LED wall rent Colombo",
   primaryCta: "Get a quote",
   secondaryCta: "View pricing",
   secondaryHref: "/pricing",
-  badge: "LED wall rent, LED screen hire · Operator included · All 25 districts",
+  badge: "LED wall hire · LED wall rent · Operator included · All 25 districts",
 };
 
 export const HeroStats: StatItemData[] = [
@@ -99,13 +103,21 @@ export const HomeServices: ServiceCardData[] = [
   {
     num: "02",
     title: "Stage and Truss Setup",
-    sub: "Indoor stages · carpets · truss",
+    sub: "Indoor stages, carpets & truss",
     img: images.stageIndoor,
     href: "/services/stage-truss",
     icon: Cpu,
   },
   {
     num: "03",
+    title: "Stage Lighting & Fog",
+    sub: "Rotating lights · fog machines",
+    img: images.concert2,
+    href: STAGE_LIGHTING_FOG_SERVICE_HREF,
+    icon: Sparkles,
+  },
+  {
+    num: "04",
     title: "Sound Systems",
     sub: "Add-on with any LED wall booking",
     img: images.sound,
@@ -113,7 +125,7 @@ export const HomeServices: ServiceCardData[] = [
     icon: Volume2,
   },
   {
-    num: "04",
+    num: "05",
     title: "Exhibition Stalls",
     sub: "Add-on with any LED wall booking",
     img: images.exhibition,
@@ -121,7 +133,7 @@ export const HomeServices: ServiceCardData[] = [
     icon: LayoutGrid,
   },
   {
-    num: "05",
+    num: "06",
     title: "Digital Podiums",
     sub: "Add-on with any LED wall booking",
     img: images.podium,
@@ -136,7 +148,7 @@ export const ServicesIntro: SectionIntro = {
   titleLine2: "Full production too.",
   titleLine2Muted: true,
   description:
-    "We specialise in LED screen rental and LED video wall hire, plus stage, sound and exhibition builds when your event needs the full package.",
+    "We specialise in LED wall hire and LED screen rent, plus stage truss, stage lighting and fog, sound and exhibition builds for full event production.",
   ctaLabel: "All services",
   ctaHref: "/services",
 };
@@ -189,7 +201,7 @@ export const WhyUsContentData: WhyUsContent = {
   titleLine1: "LED wall rental",
   titleLine2: "with a full crew.",
   description:
-    "When you LED screen rent from YC Events you get drivers, riggers and a trained LED wall operator included, not a bare panel drop-off. We size your wall, deliver island-wide, run your content and pack down. Stage and sound available on the same booking.",
+    "When you LED wall hire or LED screen rent from YC Events you get drivers, riggers and a trained LED wall operator included. Add aluminium truss, rotating stage lights and fog machines for concerts and weddings on one quote, one crew, island-wide delivery.",
   imageSrc: images.why,
   yearsBadge: "7+",
   yearsLabel: "Years of LED wall hire across Sri Lanka",
@@ -225,7 +237,7 @@ export const EventTypes: EventTypeTab[] = [
     label: "Concerts",
     img: images.concert2,
     heading: "LED screen concert Sri Lanka",
-    body: "Outdoor LED screen rental for live shows, IP65 P4 weatherproof panels, ultra-bright big LED screen rent builds rigged by our certified crew. Rain or shine.",
+    body: "Outdoor LED screen rental for live shows, IP65 P4 weatherproof panels, ultra-bright big LED screen rent builds rigged by our certified crew. Add Stage Lighting & Fog for rotating lights and fog machines on the same quote.",
     tags: ["Outdoor LED wall concert", "IP65 rated", "Big screen hire"],
   },
   {
@@ -360,6 +372,21 @@ export const Faqs: FaqItem[] = [
       "Yes. Jumbo screen rental Sri Lanka bookings use modular outdoor IP65 LED panels scaled to your venue, from medium conference walls to large concert backdrops. Every jumbo LED screen hire includes delivery, rigging and an on-site operator.",
   },
   {
+    question: "What is LED wall hire in Sri Lanka?",
+    answer:
+      "LED wall hire is renting a modular LED video wall for your event with delivery, setup, operator and breakdown included. YC Events LED wall hire Sri Lanka covers indoor P3 and outdoor IP65 panels for weddings, corporate events and concerts across all 25 districts.",
+  },
+  {
+    question: "Is LED wall rent the same as LED wall hire?",
+    answer:
+      "Yes. LED wall rent and LED wall hire mean the same at YC Events: you book the LED screen, crew and operator for your event day. We quote LED wall rent price in LKR on an 8-hour business day basis with no hidden operator fees.",
+  },
+  {
+    question: "Can I add truss, rotating lights and fog machines to LED wall hire?",
+    answer:
+      `Yes. Add our Stage Lighting & Fog service (${STAGE_LIGHTING_FOG_SERVICE_HREF}) with stage truss on the same LED wall quote. Ideal for weddings, concerts and corporate shows.`,
+  },
+  {
     question: "Do you rent LED promotion trucks in Sri Lanka?",
     answer:
       "Our main focus is LED wall and LED screen rental for events. If your campaign needs a mobile truck-mounted LED screen, mention it on enquiry and we will advise on the best fit for your budget and route.",
@@ -429,6 +456,7 @@ export const ClientLogoStripContentData: ClientLogoStripContent = {
 export const QuoteNeedOptions = [
   "LED Wall",
   "Stage & Truss",
+  "Stage Lighting & Fog",
   "Sound System",
   "Exhibition Stall",
   "Digital Podium",
@@ -437,6 +465,7 @@ export const QuoteNeedOptions = [
 export const QuoteServiceOptions = [
   "LED Wall Hire",
   "Stage & Truss Setup",
+  "Stage Lighting & Fog",
   "Sound System",
   "Exhibition Stalls",
   "Digital Podiums",
@@ -452,16 +481,17 @@ export const QuoteAudienceOptions = [
 ] as const;
 
 export const TickerItems = [
-  "LED SCREEN RENTAL SRI LANKA",
-  "LED WALL HIRE COLOMBO",
-  "LED VIDEO WALL RENTAL",
-  "WEDDING LED SCREEN",
+  "LED WALL HIRE SRI LANKA",
+  "LED WALL RENT COLOMBO",
+  "LED SCREEN HIRE",
+  "ROTATING STAGE LIGHTS",
+  "FOG MACHINE HIRE",
   "OUTDOOR IP65 LED WALL",
   "OPERATOR INCLUDED",
   "ALL 25 DISTRICTS",
   "STAGE & TRUSS",
   "SOUND SYSTEMS",
-  "CORPORATE LED WALL",
+  "WEDDING LED WALL",
   "7+ YEARS",
 ] as const;
 
