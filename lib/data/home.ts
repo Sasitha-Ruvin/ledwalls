@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 import { images } from "@/lib/images";
 import { LED_WALL_SERVICE_HREF, STAGE_LIGHTING_FOG_SERVICE_HREF } from "@/lib/data/services";
-import { buildPageJsonLd } from "@/lib/json-ld";
+import { buildPageJsonLd, buildAggregateRatingExtra } from "@/lib/json-ld";
 import { SITE_URL } from "@/lib/site";
 import {
   PRIMARY_PHONE_DISPLAY,
@@ -391,6 +391,11 @@ export const Faqs: FaqItem[] = [
     answer:
       "Our main focus is LED wall and LED screen rental for events. If your campaign needs a mobile truck-mounted LED screen, mention it on enquiry and we will advise on the best fit for your budget and route.",
   },
+  {
+    question: "What is the largest LED wall you can build?",
+    answer:
+      "YC Events builds custom LED video walls up to 70ft and beyond for large outdoor concerts, political rallies and mega events across Sri Lanka. Wall size is quoted to your venue and stage, not limited to a fixed catalogue.",
+  },
 ];
 
 export const FaqIntro: SectionIntro = {
@@ -512,6 +517,7 @@ export function buildHomeSchema() {
     description: HomePageMetaData.description,
     faqs: Faqs,
     localBusinessExtra: {
+      ...buildAggregateRatingExtra(Reviews),
       hasOfferCatalog: {
         "@type": "OfferCatalog",
         name: "Event Production Services",

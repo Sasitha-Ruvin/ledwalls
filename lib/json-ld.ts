@@ -17,7 +17,7 @@ import {
   SITE_SOCIAL_LINKS,
 } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
-import type { FaqItem } from "@/types/site";
+import type { BreadcrumbItem, FaqItem, Review } from "@/types/site";
 
 export const LOCAL_BUSINESS_ID = `${SITE_URL}/#localbusiness`;
 export const WEBSITE_ID = `${SITE_URL}/#website`;
@@ -143,18 +143,71 @@ export function buildFaqPageNode(
   };
 }
 
+/** BreadcrumbList schema matching the visual <Breadcrumbs> trail on each page. */
+export function buildBreadcrumbListNode(
+  items: BreadcrumbItem[],
+  path: string
+): Record<string, unknown> {
+  const url = pageUrl(path);
+  return {
+    "@type": "BreadcrumbList",
+    "@id": `${url}#breadcrumb`,
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.label,
+      item: item.href ? pageUrl(item.href) : url,
+    })),
+  };
+}
+
+/** Aggregate rating + individual reviews for the LocalBusiness node (rich snippets / star ratings). */
+export function buildReviewNodes(reviews: Review[]): Record<string, unknown>[] {
+  return reviews.map((review) => ({
+    "@type": "Review",
+    itemReviewed: { "@id": LOCAL_BUSINESS_ID },
+    author: { "@type": "Person", name: review.name },
+    reviewBody: review.quote,
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: review.rating ?? 5,
+      bestRating: 5,
+    },
+  }));
+}
+
+export function buildAggregateRatingExtra(
+  reviews: Review[]
+): Record<string, unknown> {
+  const count = reviews.length;
+  const average =
+    reviews.reduce((sum, review) => sum + (review.rating ?? 5), 0) /
+    Math.max(count, 1);
+
+  return {
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: Number(average.toFixed(1)),
+      reviewCount: count,
+      bestRating: 5,
+    },
+    review: buildReviewNodes(reviews),
+  };
+}
+
 export interface PageJsonLdInput {
   path: string;
   name: string;
   description: string;
   faqs?: FaqItem[];
+  breadcrumbs?: BreadcrumbItem[];
   areaServed?: string | Record<string, unknown>;
   pageType?: string;
   localBusinessExtra?: Record<string, unknown>;
   extra?: Record<string, unknown>[];
 }
 
-/** LocalBusiness + FAQPage (+ optional WebPage/extra nodes) for any route. */
+/** LocalBusiness + FAQPage (+ optional WebPage/Breadcrumb/extra nodes) for any route. */
 export function buildPageJsonLd(input: PageJsonLdInput) {
   const graph: Record<string, unknown>[] = [
     buildWebPageNode(
@@ -175,6 +228,10 @@ export function buildPageJsonLd(input: PageJsonLdInput) {
     graph.push(buildFaqPageNode(input.faqs, input.path));
   }
 
+  if (input.breadcrumbs?.length) {
+    graph.push(buildBreadcrumbListNode(input.breadcrumbs, input.path));
+  }
+
   if (input.extra?.length) {
     graph.push(...input.extra);
   }
@@ -182,6 +239,13 @@ export function buildPageJsonLd(input: PageJsonLdInput) {
   return buildJsonLd(graph);
 }
 
-export function buildSiteRootJsonLd() {
-  return buildJsonLd([buildLocalBusinessNode(), buildWebSiteNode()]);
+export function buildSiteRootJsonLd(reviews?: Review[]) {
+  const localBusinessExtra = reviews?.length
+    ? buildAggregateRatingExtra(reviews)
+    : undefined;
+
+  return buildJsonLd([
+    buildLocalBusinessNode({ extra: localBusinessExtra }),
+    buildWebSiteNode(),
+  ]);
 }

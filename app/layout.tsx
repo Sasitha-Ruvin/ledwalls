@@ -5,6 +5,7 @@ import SiteNavbar from "@/components/layout/SiteNavbar";
 import { WhatsAppFloat } from "@/components/layout/WhatsAppFloat";
 import { JsonLd } from "@/components/shared/JsonLd";
 import { buildSiteRootJsonLd } from "@/lib/json-ld";
+import { Reviews } from "@/lib/data/home";
 import {
   absoluteUrl,
   SITE_DEFAULT_DESCRIPTION,
@@ -78,7 +79,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  const siteJsonLd = buildSiteRootJsonLd();
+  const siteJsonLd = buildSiteRootJsonLd(Reviews);
 
   return (
     <html

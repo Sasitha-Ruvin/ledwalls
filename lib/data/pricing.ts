@@ -233,6 +233,7 @@ export function buildPricingSchema() {
     name: PricingPageMetaData.title,
     description: PricingPageMetaData.description,
     faqs: PricingFaqs,
+    breadcrumbs: [{ label: "Home", href: "/" }, { label: "Pricing" }],
     localBusinessExtra: {
       makesOffer: LedWallRates.map((rate) => ({
         "@type": "Offer",

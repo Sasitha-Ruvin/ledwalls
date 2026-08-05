@@ -693,6 +693,8 @@ export function buildServicesSchema() {
     path: "/services",
     name: ServicesPageMetaData.title,
     description: ServicesPageMetaData.description,
+    areaServed: { "@type": "Country", name: "Sri Lanka" },
+    breadcrumbs: [{ label: "Home", href: "/" }, { label: "Services" }],
     localBusinessExtra: {
       hasOfferCatalog: {
         "@type": "OfferCatalog",
@@ -702,6 +704,7 @@ export function buildServicesSchema() {
           position: i + 1,
           itemOffered: {
             "@type": "Service",
+            "@id": `${SERVICE_SITE_URL}${s.href}#service`,
             name: s.title,
             description: s.sub,
             url: `${SERVICE_SITE_URL}${s.href}`,
@@ -718,13 +721,22 @@ export function buildServiceDetailSchema(service: ServiceDetailData) {
     name: service.seo.title,
     description: service.seo.description,
     faqs: service.faqs,
+    areaServed: { "@type": "Country", name: "Sri Lanka" },
+    breadcrumbs: [
+      { label: "Home", href: "/" },
+      { label: "Services", href: "/services" },
+      { label: service.title },
+    ],
     extra: [
       {
         "@type": "Service",
+        "@id": `${SERVICE_SITE_URL}${service.href}#service`,
         name: service.seo.h1,
+        serviceType: service.title,
         description: service.seo.description,
+        image: `${SERVICE_SITE_URL}${service.img}`,
         provider: { "@id": LOCAL_BUSINESS_ID },
-        areaServed: "Sri Lanka",
+        areaServed: { "@type": "Country", name: "Sri Lanka" },
         url: `${SERVICE_SITE_URL}${service.href}`,
       },
     ],

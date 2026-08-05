@@ -61,6 +61,7 @@ export interface Review {
   quote: string;
   name: string;
   role: string;
+  rating?: number;
 }
 
 export interface FaqItem {

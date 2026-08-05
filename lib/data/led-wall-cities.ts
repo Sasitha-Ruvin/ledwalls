@@ -78,7 +78,7 @@ export const LedWallCities: LedWallCity[] = [
   {
     slug: "kandy",
     name: "Kandy",
-    title: "LED Wall Rental Kandy | LED Screen Hire Sri Lanka",
+    title: "LED Wall Hire Kandy | LED Wall Rent & Screen Hire",
     description:
       "LED wall rental Kandy and LED screen hire across the hill capital. Indoor P3 and outdoor IP65 LED video walls with operator included. Weddings, temples, hotels and outdoor events.",
     keywords: [
@@ -87,7 +87,7 @@ export const LedWallCities: LedWallCity[] = [
       "LED screen hire Kandy",
       "LED wall hire Kandy",
     ],
-    eyebrow: "LED wall rental Kandy",
+    eyebrow: "LED wall hire Kandy",
     heroImage: images.crowd,
     heroBody:
       "LED wall rent Kandy for weddings, temple events, corporate conferences and outdoor festivals. YC Events delivers, builds and operates indoor and outdoor LED screens across the hill capital and surrounding districts.",
@@ -119,7 +119,7 @@ export const LedWallCities: LedWallCity[] = [
   {
     slug: "galle",
     name: "Galle",
-    title: "LED Wall Rental Galle | LED Screen Hire Sri Lanka",
+    title: "LED Wall Hire Galle | LED Wall Rent & Screen Hire",
     description:
       "LED wall rental Galle and LED screen hire across the southern coast. Indoor P3 and outdoor IP65 LED video walls with operator included for weddings and corporate events.",
     keywords: [
@@ -128,7 +128,7 @@ export const LedWallCities: LedWallCity[] = [
       "LED screen hire Galle",
       "LED wall hire Galle",
     ],
-    eyebrow: "LED wall rental Galle",
+    eyebrow: "LED wall hire Galle",
     heroImage: images.wedding,
     heroBody:
       "LED wall rent Galle for beachfront weddings, fort-area events and southern coast corporate functions. YC Events delivers, builds and operates LED screens across Galle and the surrounding southern province.",
@@ -160,7 +160,7 @@ export const LedWallCities: LedWallCity[] = [
   {
     slug: "negombo",
     name: "Negombo",
-    title: "LED Wall Rental Negombo | LED Screen Hire Sri Lanka",
+    title: "LED Wall Hire Negombo | LED Wall Rent & Screen Hire",
     description:
       "LED wall rental Negombo and LED screen hire near the airport corridor. Indoor and outdoor LED video walls with operator included for weddings, corporate and beach events.",
     keywords: [
@@ -168,7 +168,7 @@ export const LedWallCities: LedWallCity[] = [
       "LED wall hire Negombo",
       "LED screen rent Negombo",
     ],
-    eyebrow: "LED wall rental Negombo",
+    eyebrow: "LED wall hire Negombo",
     heroImage: images.corporate,
     heroBody:
       "LED wall hire Negombo for beach hotel weddings, airport-corridor corporate events and church festival celebrations. YC Events covers Negombo with the same crew and equipment standard used across all 25 districts.",
@@ -195,7 +195,7 @@ export const LedWallCities: LedWallCity[] = [
   {
     slug: "jaffna",
     name: "Jaffna",
-    title: "LED Wall Rental Jaffna | LED Screen Hire Sri Lanka",
+    title: "LED Wall Hire Jaffna | LED Wall Rent & Screen Hire",
     description:
       "LED wall rental Jaffna and LED screen hire in the northern province. Indoor and outdoor IP65 LED video walls with operator included for weddings, temple festivals and corporate events.",
     keywords: [
@@ -203,7 +203,7 @@ export const LedWallCities: LedWallCity[] = [
       "LED wall rent Jaffna",
       "LED screen hire Jaffna",
     ],
-    eyebrow: "LED wall rental Jaffna",
+    eyebrow: "LED wall hire Jaffna",
     heroImage: images.brand,
     heroBody:
       "LED wall rent Jaffna for weddings, temple festivals and corporate functions across the northern province. YC Events delivers island-wide, including full crew and equipment for Jaffna bookings.",
@@ -230,7 +230,7 @@ export const LedWallCities: LedWallCity[] = [
   {
     slug: "anuradhapura",
     name: "Anuradhapura",
-    title: "LED Wall Rental Anuradhapura | LED Screen Hire Sri Lanka",
+    title: "LED Wall Hire Anuradhapura | LED Wall Rent & Screen Hire",
     description:
       "LED wall rental Anuradhapura and LED screen hire in the north central province. Outdoor IP65 and indoor LED video walls with operator included for rallies, festivals and corporate events.",
     keywords: [
@@ -238,7 +238,7 @@ export const LedWallCities: LedWallCity[] = [
       "LED wall hire Anuradhapura",
       "outdoor screen rally Anuradhapura",
     ],
-    eyebrow: "LED wall rental Anuradhapura",
+    eyebrow: "LED wall hire Anuradhapura",
     heroImage: images.concert2,
     heroBody:
       "LED wall hire Anuradhapura for political rallies, religious festivals and corporate events across the north central province. YC Events provides outdoor IP65 rated screens built for open grounds.",
@@ -265,14 +265,14 @@ export const LedWallCities: LedWallCity[] = [
   {
     slug: "kurunegala",
     name: "Kurunegala",
-    title: "LED Wall Rental Kurunegala | LED Screen Hire Sri Lanka",
+    title: "LED Wall Hire Kurunegala | LED Wall Rent & Screen Hire",
     description:
       "LED wall rental Kurunegala and LED screen rent across the north western province. Indoor and outdoor LED video walls with operator included for weddings and corporate events.",
     keywords: [
       "LED screen rental Kurunegala",
       "LED wall rent Kurunegala",
     ],
-    eyebrow: "LED wall rental Kurunegala",
+    eyebrow: "LED wall hire Kurunegala",
     heroImage: images.corporate2,
     heroBody:
       "LED wall rent Kurunegala for weddings, corporate events and town festivals across the north western province. YC Events delivers full LED wall setups with operator included.",
@@ -298,7 +298,7 @@ export const LedWallCities: LedWallCity[] = [
   {
     slug: "matara",
     name: "Matara",
-    title: "LED Wall Rental Matara | LED Screen Hire Sri Lanka",
+    title: "LED Wall Hire Matara | LED Wall Rent & Screen Hire",
     description:
       "LED wall rental Matara and LED screen hire across southern Sri Lanka. Indoor and outdoor IP65 LED video walls with operator included for weddings and corporate events.",
     keywords: [
@@ -306,7 +306,7 @@ export const LedWallCities: LedWallCity[] = [
       "LED wall rent southern Sri Lanka",
       "LED screen rental Matara",
     ],
-    eyebrow: "LED wall rental Matara",
+    eyebrow: "LED wall hire Matara",
     heroImage: images.wedding2,
     heroBody:
       "LED wall rent Matara and the wider southern province for weddings, corporate events and festivals. YC Events covers Matara with the same crew and rate table used island-wide.",
@@ -343,21 +343,33 @@ export function getLedWallCitySlugs(): string[] {
 
 export function buildLedWallCitySchema(city: LedWallCity) {
   const path = `/led-wall-rental-${city.slug}`;
+  const place = {
+    "@type": "City",
+    name: city.name,
+    containedInPlace: { "@type": "Country", name: "Sri Lanka" },
+  };
 
   return buildPageJsonLd({
     path,
     name: city.title,
     description: city.description,
     faqs: city.faqs,
-    areaServed: city.name,
+    areaServed: place,
+    breadcrumbs: [
+      { label: "Home", href: "/" },
+      { label: "Services", href: "/services" },
+      { label: city.name },
+    ],
     extra: [
       {
         "@type": "Service",
+        "@id": `${pageUrl(path)}#service`,
         name: `LED wall hire ${city.name}`,
+        serviceType: "LED wall hire",
         description: city.description,
         image: pageUrl(SITE_OG_IMAGE),
         provider: { "@id": LOCAL_BUSINESS_ID },
-        areaServed: city.name,
+        areaServed: place,
         url: pageUrl(path),
       },
     ],
