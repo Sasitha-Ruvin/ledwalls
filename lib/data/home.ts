@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 import { images } from "@/lib/images";
 import { LED_WALL_SERVICE_HREF, STAGE_LIGHTING_FOG_SERVICE_HREF } from "@/lib/data/services";
-import { buildPageJsonLd, buildAggregateRatingExtra } from "@/lib/json-ld";
+import { buildPageJsonLd, LOCAL_BUSINESS_ID } from "@/lib/json-ld";
 import { SITE_URL } from "@/lib/site";
 import {
   PRIMARY_PHONE_DISPLAY,
@@ -516,11 +516,11 @@ export function buildHomeSchema() {
     name: HomePageMetaData.title,
     description: HomePageMetaData.description,
     faqs: Faqs,
-    localBusinessExtra: {
-      ...buildAggregateRatingExtra(Reviews),
-      hasOfferCatalog: {
+    extra: [
+      {
         "@type": "OfferCatalog",
         name: "Event Production Services",
+        provider: { "@id": LOCAL_BUSINESS_ID },
         itemListElement: HomeServices.map((service, index) => ({
           "@type": "Offer",
           position: index + 1,
@@ -532,6 +532,6 @@ export function buildHomeSchema() {
           },
         })),
       },
-    },
+    ],
   });
 }

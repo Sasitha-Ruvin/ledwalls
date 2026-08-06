@@ -143,39 +143,5 @@ export function buildContactPageSchema() {
     name: ContactPageMeta.title,
     description: ContactPageMeta.description,
     pageType: "ContactPage",
-    localBusinessExtra: {
-      openingHoursSpecification: [
-        {
-          "@type": "OpeningHoursSpecification",
-          dayOfWeek: [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-            "Sunday",
-          ],
-          opens: "09:00",
-          closes: "20:00",
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          dayOfWeek: [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-            "Sunday",
-          ],
-          opens: "06:00",
-          closes: "23:59",
-          description: "Event days from 6am onwards",
-        },
-      ],
-      sameAs: [SITE_FACEBOOK_URL, "https://yasithacreations.lk"],
-    },
   });
 }

@@ -354,7 +354,6 @@ export function buildLedWallCitySchema(city: LedWallCity) {
     name: city.title,
     description: city.description,
     faqs: city.faqs,
-    areaServed: place,
     breadcrumbs: [
       { label: "Home", href: "/" },
       { label: "Services", href: "/services" },

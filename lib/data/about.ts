@@ -133,9 +133,5 @@ export function buildAboutSchema() {
     name: AboutPageMetaData.title,
     description: AboutPageMetaData.description,
     pageType: "AboutPage",
-    localBusinessExtra: {
-      foundingDate: "2018",
-      image: `${SERVICE_SITE_URL}${images.aboutHero}`,
-    },
   });
 }

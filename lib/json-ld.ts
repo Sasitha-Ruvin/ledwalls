@@ -17,7 +17,7 @@ import {
   SITE_SOCIAL_LINKS,
 } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
-import type { BreadcrumbItem, FaqItem, Review } from "@/types/site";
+import type { BreadcrumbItem, FaqItem } from "@/types/site";
 
 export const LOCAL_BUSINESS_ID = `${SITE_URL}/#localbusiness`;
 export const WEBSITE_ID = `${SITE_URL}/#website`;
@@ -91,6 +91,7 @@ export function buildLocalBusinessNode(
         closes: "20:00",
       },
     ],
+    foundingDate: "2018",
     ...options.extra,
   };
 }
@@ -161,53 +162,17 @@ export function buildBreadcrumbListNode(
   };
 }
 
-/** Aggregate rating + individual reviews for the LocalBusiness node (rich snippets / star ratings). */
-export function buildReviewNodes(reviews: Review[]): Record<string, unknown>[] {
-  return reviews.map((review) => ({
-    "@type": "Review",
-    itemReviewed: { "@id": LOCAL_BUSINESS_ID },
-    author: { "@type": "Person", name: review.name },
-    reviewBody: review.quote,
-    reviewRating: {
-      "@type": "Rating",
-      ratingValue: review.rating ?? 5,
-      bestRating: 5,
-    },
-  }));
-}
-
-export function buildAggregateRatingExtra(
-  reviews: Review[]
-): Record<string, unknown> {
-  const count = reviews.length;
-  const average =
-    reviews.reduce((sum, review) => sum + (review.rating ?? 5), 0) /
-    Math.max(count, 1);
-
-  return {
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: Number(average.toFixed(1)),
-      reviewCount: count,
-      bestRating: 5,
-    },
-    review: buildReviewNodes(reviews),
-  };
-}
-
 export interface PageJsonLdInput {
   path: string;
   name: string;
   description: string;
   faqs?: FaqItem[];
   breadcrumbs?: BreadcrumbItem[];
-  areaServed?: string | Record<string, unknown>;
   pageType?: string;
-  localBusinessExtra?: Record<string, unknown>;
   extra?: Record<string, unknown>[];
 }
 
-/** LocalBusiness + FAQPage (+ optional WebPage/Breadcrumb/extra nodes) for any route. */
+/** WebPage + optional FAQPage, BreadcrumbList, and extra nodes (references canonical LocalBusiness by @id). */
 export function buildPageJsonLd(input: PageJsonLdInput) {
   const graph: Record<string, unknown>[] = [
     buildWebPageNode(
@@ -216,12 +181,6 @@ export function buildPageJsonLd(input: PageJsonLdInput) {
       input.description,
       input.pageType
     ),
-    buildLocalBusinessNode({
-      url: pageUrl(input.path),
-      description: input.description,
-      areaServed: input.areaServed,
-      extra: input.localBusinessExtra,
-    }),
   ];
 
   if (input.faqs?.length) {
@@ -239,13 +198,6 @@ export function buildPageJsonLd(input: PageJsonLdInput) {
   return buildJsonLd(graph);
 }
 
-export function buildSiteRootJsonLd(reviews?: Review[]) {
-  const localBusinessExtra = reviews?.length
-    ? buildAggregateRatingExtra(reviews)
-    : undefined;
-
-  return buildJsonLd([
-    buildLocalBusinessNode({ extra: localBusinessExtra }),
-    buildWebSiteNode(),
-  ]);
+export function buildSiteRootJsonLd() {
+  return buildJsonLd([buildLocalBusinessNode(), buildWebSiteNode()]);
 }

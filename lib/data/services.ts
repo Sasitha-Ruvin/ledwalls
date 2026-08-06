@@ -693,12 +693,12 @@ export function buildServicesSchema() {
     path: "/services",
     name: ServicesPageMetaData.title,
     description: ServicesPageMetaData.description,
-    areaServed: { "@type": "Country", name: "Sri Lanka" },
     breadcrumbs: [{ label: "Home", href: "/" }, { label: "Services" }],
-    localBusinessExtra: {
-      hasOfferCatalog: {
+    extra: [
+      {
         "@type": "OfferCatalog",
         name: "Event Production Services",
+        provider: { "@id": LOCAL_BUSINESS_ID },
         itemListElement: ServicesList.map((s, i) => ({
           "@type": "Offer",
           position: i + 1,
@@ -711,7 +711,7 @@ export function buildServicesSchema() {
           },
         })),
       },
-    },
+    ],
   });
 }
 
@@ -721,7 +721,6 @@ export function buildServiceDetailSchema(service: ServiceDetailData) {
     name: service.seo.title,
     description: service.seo.description,
     faqs: service.faqs,
-    areaServed: { "@type": "Country", name: "Sri Lanka" },
     breadcrumbs: [
       { label: "Home", href: "/" },
       { label: "Services", href: "/services" },

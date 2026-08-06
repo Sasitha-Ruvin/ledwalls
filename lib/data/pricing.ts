@@ -234,17 +234,16 @@ export function buildPricingSchema() {
     description: PricingPageMetaData.description,
     faqs: PricingFaqs,
     breadcrumbs: [{ label: "Home", href: "/" }, { label: "Pricing" }],
-    localBusinessExtra: {
-      makesOffer: LedWallRates.map((rate) => ({
+    extra: [
+      ...LedWallRates.map((rate) => ({
         "@type": "Offer",
         name: `LED video wall ${rate.size}`,
         price: rate.priceLkr,
         priceCurrency: "LKR",
         description:
           "Per 8-hour business day LED screen rental with operator included",
+        seller: { "@id": LOCAL_BUSINESS_ID },
       })),
-    },
-    extra: [
       {
         "@type": "Service",
         name: "LED wall hire Sri Lanka",
