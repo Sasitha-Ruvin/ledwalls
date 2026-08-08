@@ -5,9 +5,8 @@ import {
   OFFICE_POSTAL_CODE,
   OFFICE_REGION,
   OFFICE_STREET,
-  PRIMARY_PHONE_E164,
-  SECONDARY_PHONE_E164,
   SITE_EMAIL,
+  SITE_PHONE_NUMBERS_E164,
 } from "@/lib/data/contact";
 import {
   absoluteUrl,
@@ -59,7 +58,7 @@ export function buildLocalBusinessNode(
     legalName: OFFICE_NAME,
     description: options.description ?? SITE_DEFAULT_DESCRIPTION,
     url: options.url ?? SITE_URL,
-    telephone: [PRIMARY_PHONE_E164, SECONDARY_PHONE_E164],
+    telephone: [...SITE_PHONE_NUMBERS_E164],
     email: SITE_EMAIL,
     image: absoluteUrl(SITE_OG_IMAGE),
     logo: absoluteUrl("/images/logo.webp"),

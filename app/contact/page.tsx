@@ -1,4 +1,5 @@
 import { ContactPageContent } from "@/components/contact/ContactPageContent";
+import { GoogleAdsTag } from "@/components/analytics/GoogleAdsTag";
 import { JsonLd } from "@/components/shared/JsonLd";
 import {
   buildContactPageSchema,
@@ -19,6 +20,7 @@ export const metadata: Metadata = buildPageMetadata({
 export default function ContactPage() {
   return (
     <main>
+      <GoogleAdsTag />
       <JsonLd data={buildContactPageSchema()} />
       <ContactPageContent />
     </main>

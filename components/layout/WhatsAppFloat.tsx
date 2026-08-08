@@ -6,6 +6,9 @@ import {
   PRIMARY_PHONE_DISPLAY,
   PRIMARY_PHONE_HREF,
   PRIMARY_WHATSAPP_HREF,
+  HOTLINE_PHONE_DISPLAY,
+  HOTLINE_PHONE_HREF,
+  HOTLINE_WHATSAPP_HREF,
   SECONDARY_PHONE_DISPLAY,
   SECONDARY_PHONE_HREF,
   SECONDARY_WHATSAPP_HREF,
@@ -73,6 +76,17 @@ export function WhatsAppFloat() {
             </li>
             <li>
               <a
+                href={HOTLINE_WHATSAPP_HREF}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 rounded-lg bg-whatsapp/10 px-3 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-whatsapp/15"
+              >
+                <MessageCircle className="size-4 text-whatsapp shrink-0" />
+                WhatsApp hotline {HOTLINE_PHONE_DISPLAY}
+              </a>
+            </li>
+            <li>
+              <a
                 href={PRIMARY_PHONE_HREF}
                 className="flex items-center gap-3 rounded-lg border border-line px-3 py-2.5 text-sm font-medium text-ink transition-colors hover:border-brand hover:text-brand"
               >
@@ -87,6 +101,15 @@ export function WhatsAppFloat() {
               >
                 <Phone className="size-4 shrink-0" />
                 Call {SECONDARY_PHONE_DISPLAY}
+              </a>
+            </li>
+            <li>
+              <a
+                href={HOTLINE_PHONE_HREF}
+                className="flex items-center gap-3 rounded-lg border border-line px-3 py-2.5 text-sm font-medium text-ink transition-colors hover:border-brand hover:text-brand"
+              >
+                <Phone className="size-4 shrink-0" />
+                Hotline {HOTLINE_PHONE_DISPLAY}
               </a>
             </li>
           </ul>

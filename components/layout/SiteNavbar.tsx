@@ -9,6 +9,8 @@ import QuoteDialog from "@/components/layout/QuoteDialog";
 import {
   PRIMARY_PHONE_DISPLAY,
   PRIMARY_PHONE_HREF,
+  HOTLINE_PHONE_DISPLAY,
+  HOTLINE_PHONE_HREF,
   SECONDARY_PHONE_DISPLAY,
   SECONDARY_PHONE_HREF,
 } from "@/lib/data/contact";
@@ -107,6 +109,13 @@ export default function SiteNavbar({ className }: SiteNavbarProps) {
               className="text-xs font-medium text-white/60 transition-colors hover:text-white"
             >
               {SECONDARY_PHONE_DISPLAY}
+            </a>
+            <span className="text-white/20">·</span>
+            <a
+              href={HOTLINE_PHONE_HREF}
+              className="text-xs font-medium text-white/60 transition-colors hover:text-white"
+            >
+              Hotline {HOTLINE_PHONE_DISPLAY}
             </a>
           </div>
 
@@ -210,6 +219,13 @@ export default function SiteNavbar({ className }: SiteNavbarProps) {
               >
                 <Phone className="size-4 text-brand" />
                 {SECONDARY_PHONE_DISPLAY}
+              </a>
+              <a
+                href={HOTLINE_PHONE_HREF}
+                className="flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium text-white/70 hover:bg-white/5 hover:text-white"
+              >
+                <Phone className="size-4 text-brand" />
+                Hotline {HOTLINE_PHONE_DISPLAY}
               </a>
             </div>
 

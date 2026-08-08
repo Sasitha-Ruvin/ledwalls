@@ -6,6 +6,9 @@ import {
   PRIMARY_PHONE_DISPLAY,
   PRIMARY_PHONE_HREF,
   PRIMARY_WHATSAPP_HREF,
+  HOTLINE_PHONE_DISPLAY,
+  HOTLINE_PHONE_HREF,
+  HOTLINE_WHATSAPP_HREF,
   SECONDARY_PHONE_DISPLAY,
   SECONDARY_PHONE_HREF,
   SECONDARY_WHATSAPP_HREF,
@@ -21,7 +24,7 @@ import { SITE_URL } from "@/lib/site";
 export const ContactPageMeta = {
   title: "Contact YC Events | LED Wall Rental Sri Lanka",
   description:
-    "Contact YC Events for LED wall rental in Sri Lanka. WhatsApp or call 071 446 0460 and 070 596 0960. Quote within 60 minutes. Office in Kandy, island-wide delivery.",
+    "Contact YC Events for LED wall rental in Sri Lanka. WhatsApp or call 071 446 0460, 070 596 0960 or hotline 077 392 0312. Quote within 60 minutes. Office in Kandy, island-wide delivery.",
   keywords: [
     "contact YC Events",
     "LED wall rental contact Sri Lanka",
@@ -80,6 +83,22 @@ export const ContactPageMethods = [
     detail: SECONDARY_PHONE_DISPLAY,
     href: SECONDARY_PHONE_HREF,
     iconClassName: "text-brand",
+  },
+  {
+    id: "call-hotline",
+    icon: Phone,
+    label: "Hotline",
+    detail: HOTLINE_PHONE_DISPLAY,
+    href: HOTLINE_PHONE_HREF,
+    iconClassName: "text-brand",
+  },
+  {
+    id: "wa-hotline",
+    icon: MessageCircle,
+    label: "WhatsApp hotline",
+    detail: HOTLINE_PHONE_DISPLAY,
+    href: HOTLINE_WHATSAPP_HREF,
+    iconClassName: "text-whatsapp",
   },
   {
     id: "email",

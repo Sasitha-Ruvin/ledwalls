@@ -4,6 +4,9 @@ import {
   PRIMARY_PHONE_DISPLAY,
   PRIMARY_PHONE_HREF,
   PRIMARY_WHATSAPP_HREF,
+  HOTLINE_PHONE_DISPLAY,
+  HOTLINE_PHONE_HREF,
+  HOTLINE_WHATSAPP_HREF,
   SECONDARY_PHONE_DISPLAY,
   SECONDARY_PHONE_HREF,
   SECONDARY_WHATSAPP_HREF,
@@ -42,6 +45,11 @@ export const FooterContacts = [
     href: SECONDARY_PHONE_HREF,
   },
   {
+    icon: Phone,
+    label: `Hotline ${HOTLINE_PHONE_DISPLAY}`,
+    href: HOTLINE_PHONE_HREF,
+  },
+  {
     icon: MessageCircle,
     label: `WhatsApp ${PRIMARY_PHONE_DISPLAY}`,
     href: PRIMARY_WHATSAPP_HREF,
@@ -50,6 +58,11 @@ export const FooterContacts = [
     icon: MessageCircle,
     label: `WhatsApp ${SECONDARY_PHONE_DISPLAY}`,
     href: SECONDARY_WHATSAPP_HREF,
+  },
+  {
+    icon: MessageCircle,
+    label: `WhatsApp hotline ${HOTLINE_PHONE_DISPLAY}`,
+    href: HOTLINE_WHATSAPP_HREF,
   },
   {
     icon: Mail,

@@ -3,15 +3,26 @@ import type { ContactMethod } from "@/types/site";
 
 export const PRIMARY_PHONE_DISPLAY = "071 446 0460";
 export const SECONDARY_PHONE_DISPLAY = "070 596 0960";
+export const HOTLINE_PHONE_DISPLAY = "077 392 0312";
 
 export const PRIMARY_PHONE_E164 = "+94714460460";
 export const SECONDARY_PHONE_E164 = "+94705960960";
+export const HOTLINE_PHONE_E164 = "+94773920312";
 
 export const PRIMARY_PHONE_RAW = "94714460460";
 export const SECONDARY_PHONE_RAW = "94705960960";
+export const HOTLINE_PHONE_RAW = "94773920312";
 
 export const PRIMARY_PHONE_HREF = `tel:${PRIMARY_PHONE_E164}`;
 export const SECONDARY_PHONE_HREF = `tel:${SECONDARY_PHONE_E164}`;
+export const HOTLINE_PHONE_HREF = `tel:${HOTLINE_PHONE_E164}`;
+
+/** All public lines for schema.org and SEO. */
+export const SITE_PHONE_NUMBERS_E164 = [
+  PRIMARY_PHONE_E164,
+  SECONDARY_PHONE_E164,
+  HOTLINE_PHONE_E164,
+] as const;
 
 export const WHATSAPP_PREFILL =
   "Hi YC Events, I would like to enquire about LED wall rental in Sri Lanka.";
@@ -25,6 +36,7 @@ export function buildWhatsAppHref(
 
 export const PRIMARY_WHATSAPP_HREF = buildWhatsAppHref(PRIMARY_PHONE_RAW);
 export const SECONDARY_WHATSAPP_HREF = buildWhatsAppHref(SECONDARY_PHONE_RAW);
+export const HOTLINE_WHATSAPP_HREF = buildWhatsAppHref(HOTLINE_PHONE_RAW);
 
 export const SITE_EMAIL = "yasithacreations@gmail.com";
 export const SITE_EMAIL_HREF = `mailto:${SITE_EMAIL}`;
@@ -76,6 +88,15 @@ export const PrimaryContactMethods: ContactMethod[] = [
     iconClassName: "text-brand",
     variant: "dark",
   },
+  {
+    id: "phone-hotline",
+    label: "Hotline",
+    detail: HOTLINE_PHONE_DISPLAY,
+    href: HOTLINE_PHONE_HREF,
+    icon: Phone,
+    iconClassName: "text-brand",
+    variant: "dark",
+  },
 ];
 
 export const QuoteDialogContacts: ContactMethod[] = [
@@ -105,6 +126,13 @@ export const QuoteDialogContacts: ContactMethod[] = [
     label: "Call",
     detail: SECONDARY_PHONE_DISPLAY,
     href: SECONDARY_PHONE_HREF,
+    icon: Phone,
+  },
+  {
+    id: "call-hotline",
+    label: "Hotline",
+    detail: HOTLINE_PHONE_DISPLAY,
+    href: HOTLINE_PHONE_HREF,
     icon: Phone,
   },
   {
