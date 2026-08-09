@@ -22,6 +22,8 @@ export const PricingPageMetaData: PricingPageMeta = {
     "LED wall rent price Sri Lanka",
     "LED wall hire Sri Lanka",
     "LED wall rent Sri Lanka",
+    "LED wall hire near me",
+    "LED wall rent near me Sri Lanka",
     "LED wall rental cost",
     "LED screen rent price LKR",
     "LED screen rent per day Sri Lanka LKR",
@@ -109,6 +111,10 @@ export const PricingSeoSections = [
 ];
 
 export const PricingFaqs: FaqItem[] = [
+  {
+    question: "How much does LED wall hire cost near me in Sri Lanka?",
+    answer: `${LedWallRatesSummary} LED wall hire near you in any of our 25 districts uses the same published LKR rate table. Delivery, setup, operator and breakdown are included. Contact us with your venue for an itemised quote within 60 minutes.`,
+  },
   {
     question: "How much does LED wall hire cost in Sri Lanka?",
     answer: `${LedWallRatesSummary} See the rate cards above for every wall size. Final LED wall rent price may vary for multi-day bookings, pixel pitch and location.`,

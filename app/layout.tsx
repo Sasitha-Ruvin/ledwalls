@@ -29,7 +29,6 @@ export const metadata: Metadata = {
   },
   description: SITE_DEFAULT_DESCRIPTION,
   keywords: [...SITE_DEFAULT_KEYWORDS],
-  alternates: { canonical: "/" },
   robots: { index: true, follow: true },
   icons: {
     icon: [

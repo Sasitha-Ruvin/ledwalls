@@ -98,7 +98,7 @@ export const ServicesList: ServiceDetailData[] = [
       ["Outdoor rating", "IP65, weatherproof LED wall rent"],
     ],
     seo: {
-      title: "LED Wall Hire Sri Lanka | LED Wall Rent & Screen Hire",
+      title: "LED Wall Hire & Rent Sri Lanka | LED Screen Hire",
       description:
         "LED wall hire and LED wall rent in Sri Lanka. Indoor P3 wedding walls, outdoor IP65 concert screens, LED backdrop hire. Stage truss, rotating stage lights and fog machines on the same quote. Operator included, island-wide.",
       keywords: [
@@ -106,6 +106,10 @@ export const ServicesList: ServiceDetailData[] = [
         "LED wall rent Sri Lanka",
         "LED wall rental Sri Lanka",
         "LED wall Sri Lanka",
+        "LED wall hire near me",
+        "LED wall rent near me",
+        "ledwall hire Sri Lanka",
+        "ledwall rent Sri Lanka",
         "LED screen rent Sri Lanka",
         "LED screen hire Sri Lanka",
         "LED video wall rental Sri Lanka",
@@ -122,9 +126,19 @@ export const ServicesList: ServiceDetailData[] = [
         "LED screen concert Sri Lanka",
         "LED screen rental with operator included Sri Lanka",
       ],
-      h1: "LED Wall Hire Sri Lanka",
+      h1: "LED Wall Hire & Rent Sri Lanka",
     },
     faqs: [
+      {
+        question: "LED wall hire near me: do you cover my area?",
+        answer:
+          "Yes. YC Events provides LED wall hire near you across all 25 districts of Sri Lanka. From Colombo and the Western Province to Kandy, Galle, Jaffna and every outstation venue, we deliver, rig and operate LED screens at your location. Send your venue on enquiry for a same-day LED wall rent quote.",
+      },
+      {
+        question: "LED wall rent price Sri Lanka: how is it quoted?",
+        answer:
+          `LED wall rent price in Sri Lanka is quoted per 8-hour business day in LKR, starting from ${formatLedWallRatePerDay(55000)} for a 10×8 ft wall. Your quote covers panels, delivery, setup, operator and breakdown. See the rate table on this page or our pricing page for all standard sizes.`,
+      },
       {
         question: "How much does LED wall hire cost in Sri Lanka?",
         answer:
@@ -639,7 +653,7 @@ export const ServicesQuickNav: QuickNavItem[] = ServicesList.map((s) => ({
 }));
 
 export const CoverageContent: CoverageSectionContent = {
-  eyebrow: "Island-wide service coverage",
+  eyebrow: "LED wall hire near you · island-wide",
   title: "Every service. Every district. Colombo to Jaffna.",
   districts: [
     { name: "Colombo", href: "/led-wall-rental-colombo" },

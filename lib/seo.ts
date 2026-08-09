@@ -10,12 +10,17 @@ export const SITE_OG_IMAGE_WIDTH = 1200;
 export const SITE_OG_IMAGE_HEIGHT = 630;
 
 export const SITE_DEFAULT_DESCRIPTION =
-  "LED wall hire, LED wall rent and LED screen rental in Sri Lanka. Indoor P3 and outdoor IP65 LED walls with operator included. Stage truss, rotating lights and fog machines available. Colombo, Kandy and all 25 districts.";
+  "LED wall hire and LED wall rent in Sri Lanka. Indoor P3 and outdoor IP65 LED walls near you. Hire or rent LED screens in Colombo, Kandy and all 25 districts. Operator included.";
 
 export const SITE_DEFAULT_KEYWORDS = [
+  "LED wall",
   "LED wall hire Sri Lanka",
   "LED wall rent Sri Lanka",
   "LED wall rental Sri Lanka",
+  "LED wall hire near me",
+  "LED wall rent near me",
+  "ledwall hire Sri Lanka",
+  "ledwall rent Sri Lanka",
   "LED wall hire Colombo",
   "LED wall rent Colombo",
   "LED screen hire Sri Lanka",
@@ -37,9 +42,10 @@ export const SITE_SOCIAL_LINKS = [
 
 /** Build absolute URLs for canonical, Open Graph, and sitemap entries. */
 export function absoluteUrl(path = ""): string {
-  if (!path) return SITE_URL;
-  if (path.startsWith("http")) return path;
-  return `${SITE_URL}${path.startsWith("/") ? path : `/${path}`}`;
+  if (!path || path === "/") return SITE_URL;
+  if (path.startsWith("http")) return path.replace(/\/$/, "") || SITE_URL;
+  const normalized = path.startsWith("/") ? path : `/${path}`;
+  return `${SITE_URL}${normalized}`;
 }
 
 export interface PageMetadataInput {

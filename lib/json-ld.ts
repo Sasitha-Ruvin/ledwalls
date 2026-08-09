@@ -33,7 +33,7 @@ export interface LocalBusinessNodeOptions {
 
 export function pageUrl(path: string): string {
   if (path.startsWith("http")) return path;
-  return `${SITE_URL}${path.startsWith("/") ? path : `/${path}`}`;
+  return absoluteUrl(path);
 }
 
 export function buildJsonLd(graph: Record<string, unknown>[]) {
@@ -56,6 +56,11 @@ export function buildLocalBusinessNode(
     "@id": LOCAL_BUSINESS_ID,
     name: SITE_NAME,
     legalName: OFFICE_NAME,
+    alternateName: [
+      "LED wall hire Sri Lanka",
+      "LED wall rent Sri Lanka",
+      "LED wall rental Sri Lanka",
+    ],
     description: options.description ?? SITE_DEFAULT_DESCRIPTION,
     url: options.url ?? SITE_URL,
     telephone: [...SITE_PHONE_NUMBERS_E164],
