@@ -19,11 +19,11 @@ export function LedWallCityPageContent({ city }: LedWallCityPageContentProps) {
     <>
       <PageHero
         imageSrc={city.heroImage}
-        imageAlt={`LED wall rental ${city.name} LED screen hire Sri Lanka`}
+        imageAlt={`LED wall hire ${city.name} LED screen rent Sri Lanka`}
         eyebrow={city.eyebrow}
         title={
           <>
-            LED wall rental
+            LED wall hire
             <br />
             {city.name}
           </>
@@ -94,12 +94,12 @@ export function LedWallCityPageContent({ city }: LedWallCityPageContentProps) {
         items={city.faqs}
         listId="faq"
         intro={{
-          eyebrow: `LED wall rental ${city.name} FAQ`,
+          eyebrow: `LED wall hire ${city.name} FAQ`,
           titleLine1: "Questions about LED wall",
           titleLine2: `hire in ${city.name}.`,
           titleLine2Muted: true,
           description:
-            "Common questions about LED wall rental, pricing and delivery for events in this area. For full LED wall details see our services page.",
+            "Common questions about LED wall hire, pricing and delivery for events in this area. For full LED wall details see our services page.",
         }}
       />
 
@@ -109,7 +109,7 @@ export function LedWallCityPageContent({ city }: LedWallCityPageContentProps) {
             eyebrow="Ready to book?"
             title={
               <h2 className="text-2xl sm:text-3xl">
-                LED wall rental {city.name} quote
+                LED wall hire {city.name} quote
               </h2>
             }
             tone="brand"

@@ -18,7 +18,7 @@ export const LedWallPortfolio: PortfolioImage[] = assetManifest.filter((item) =>
 export const StageStockPortfolio: PortfolioImage[] = [
   {
     src: "/images/portfolio/stage/indoor-stage-rental-sri-lanka.jpg",
-    alt: "Indoor stage rental for hotel ballroom and conference Sri Lanka by YC Events",
+    alt: "Indoor stage hire for hotel ballroom and conference Sri Lanka by YC Events",
     category: "stage",
   },
   {
@@ -53,7 +53,7 @@ export const GalleryImages: PortfolioImage[] = [
 
 export const LedWallPortfolioIntro = {
   eyebrow: "LED wall portfolio",
-  title: "Recent LED screen rentals across Sri Lanka",
+  title: "Recent LED screen hires across Sri Lanka",
   description:
     "Real weddings, award ceremonies, concerts and corporate events delivered by YC Events. Indoor P3 backdrops and outdoor IP65 concert walls.",
 };
@@ -62,15 +62,15 @@ export const ServicesPagePortfolioIntro = {
   eyebrow: "Project portfolio",
   title: "Events we've delivered across Sri Lanka",
   description:
-    "LED wall rentals, stage builds and digital podiums from real YC Events bookings. Filter by event type or browse the full gallery.",
+    "LED wall hires, stage builds and digital podiums from real YC Events bookings. Filter by event type or browse the full gallery.",
 };
 
 export const GalleryPageMeta = {
   title: "Gallery | LED Wall Rental Portfolio Sri Lanka",
   description:
-    "YC Events gallery: LED wall rental, stage and truss builds, and digital podiums across Sri Lanka. Weddings, concerts, corporate events and award ceremonies.",
+    "YC Events gallery: LED wall hire, stage and truss builds, and digital podiums across Sri Lanka. Weddings, concerts, corporate events and award ceremonies.",
   keywords: [
-    "LED wall rental gallery Sri Lanka",
+    "LED wall rent gallery Sri Lanka",
     "event production portfolio Colombo",
     "LED screen hire photos",
   ],
@@ -84,7 +84,7 @@ export const GalleryPageIntro = {
     "Project photos from weddings, concerts, award ceremonies, corporate events, stage builds and digital podiums. All images are from YC Events bookings across Sri Lanka.",
   imageSrc: "/images/portfolio/led-wall/led-wall-concert-stage-sri-lanka-01.webp",
   imageAlt:
-    "LED wall rental concert stage Sri Lanka outdoor IP65 screen by YC Events",
+    "LED wall rent concert stage Sri Lanka outdoor IP65 screen by YC Events",
 };
 
 export function buildGallerySchema() {
@@ -95,7 +95,7 @@ export function buildGallerySchema() {
     extra: [
       {
         "@type": "ImageGallery",
-        name: "YC Events LED wall rental portfolio",
+        name: "YC Events LED wall rent portfolio",
         description: GalleryPageMeta.description,
         url: GalleryPageMeta.canonical,
         publisher: { "@id": LOCAL_BUSINESS_ID },

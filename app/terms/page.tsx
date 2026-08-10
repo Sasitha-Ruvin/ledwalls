@@ -5,9 +5,9 @@ import { buildPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildPageMetadata({
   title: "Terms of Service | YC Events LED Wall Rental Sri Lanka",
   description:
-    "Terms of service for YC Events LED wall rental and event production bookings in Sri Lanka. Quotes, bookings, delivery and on-site operation.",
+    "Terms of service for YC Events LED wall rent and event production bookings in Sri Lanka. Quotes, bookings, delivery and on-site operation.",
   path: "/terms",
-  keywords: ["YC Events terms", "LED wall rental Sri Lanka terms"],
+  keywords: ["YC Events terms", "LED wall hire Sri Lanka terms"],
 });
 
 export default function TermsPage() {
@@ -18,7 +18,7 @@ export default function TermsPage() {
       </h1>
       <div className="space-y-4 text-sm leading-relaxed text-muted">
         <p>
-          These terms apply to LED wall rental, LED screen hire and related
+          These terms apply to LED wall hire, LED screen hire and related
           event production services provided by YC Events (Yasitha Creations)
           in Sri Lanka.
         </p>

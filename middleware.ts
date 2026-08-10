@@ -4,9 +4,24 @@ import { NextResponse } from "next/server";
 const WWW_HOST = "www.ledwalls.lk";
 const APEX_HOST = "ledwalls.lk";
 
+/** Strip junk `?q=` URLs (legacy WebSite SearchAction template Google indexed). */
+function redirectIfSearchQueryParam(request: NextRequest): NextResponse | null {
+  if (!request.nextUrl.searchParams.has("q")) return null;
+
+  const url = request.nextUrl.clone();
+  url.searchParams.delete("q");
+  url.search = url.searchParams.toString()
+    ? `?${url.searchParams.toString()}`
+    : "";
+  return NextResponse.redirect(url, 308);
+}
+
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const host = request.headers.get("host")?.split(":")[0] ?? "";
+
+  const searchRedirect = redirectIfSearchQueryParam(request);
+  if (searchRedirect) return searchRedirect;
 
   if (host === APEX_HOST) {
     const url = request.nextUrl.clone();

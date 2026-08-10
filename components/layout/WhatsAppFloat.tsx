@@ -36,7 +36,7 @@ export function WhatsAppFloat() {
         >
           <div className="mb-3 flex items-start justify-between gap-3">
             <div>
-              <p className="text-sm font-bold text-ink">LED wall rental quote</p>
+              <p className="text-sm font-bold text-ink">LED wall hire quote</p>
               <p className="mt-0.5 text-xs text-muted-yc">
                 WhatsApp or call either line. Quote in 60 minutes.
               </p>

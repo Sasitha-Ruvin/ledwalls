@@ -18,7 +18,7 @@ const WhyUsSection = ({content = WhyUsContentData, features = WhyUsFeatures, cla
         <div className='relative min-h-80 w-full overflow-hidden sm:min-h-96 lg:min-h-150 lg:w-1/2'>
         <Image
             src={content.imageSrc}
-            alt="LED wall rental and video wall hire on concert stage, Sri Lanka by YC Events"
+            alt="LED wall hire and video wall rent on concert stage, Sri Lanka by YC Events"
             fill
             className='object-cover'
             sizes='(max-width:1024px) 100ve, 50vw'

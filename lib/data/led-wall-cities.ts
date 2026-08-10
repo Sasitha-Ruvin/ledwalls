@@ -35,14 +35,14 @@ export const LedWallCities: LedWallCity[] = [
     description:
       "LED wall hire Colombo and LED wall rent across the capital. Indoor P3 and outdoor IP65 LED screens with operator included. Stage truss, rotating lights and fog machines on the same quote.",
     keywords: [
-      "LED screen rental Colombo",
+      "LED screen hire Colombo",
       "LED wall rent Colombo",
       "LED screen hire Colombo",
       "LED wall hire Colombo",
       "LED wall hire near me Colombo",
       "wedding LED screen Colombo",
     ],
-    eyebrow: "LED wall rental Colombo",
+    eyebrow: "LED wall rent Colombo",
     heroImage: images.corporate,
     heroBody:
       "LED wall hire Colombo for weddings, corporate conferences, award nights and outdoor concerts. Add stage truss, rotating stage lights and fog machines on the same quote. YC Events delivers, builds and operates LED screens across Colombo and the greater Western Province.",
@@ -56,14 +56,14 @@ export const LedWallCities: LedWallCity[] = [
     ],
     faqs: [
       {
-        question: "LED wall hire near me in Colombo?",
+        question: "Can I hire an LED wall locally in Colombo?",
         answer:
-          "Yes. YC Events provides LED wall hire and LED wall rent near you in Colombo and the greater Western Province. We deliver, build and operate indoor P3 and outdoor IP65 LED screens at your venue. See our pricing page for LKR rates or contact us for a quote within 60 minutes.",
+          "Yes. YC Events is based in the Western Province and covers Colombo and suburbs with the fastest delivery and setup. Indoor P3 and outdoor IP65 panels, full crew and operator included. See our pricing page for LKR rates or contact us for a quote.",
       },
       {
         question: "Do you rent LED walls in Colombo?",
         answer:
-          "Yes. LED wall rental Colombo is our primary service area with the fastest delivery and setup across the capital and suburbs.",
+          "Yes. LED wall rent Colombo is our primary service area with the fastest delivery and setup across the capital and suburbs.",
       },
       {
         question: "How much does LED screen hire cost in Colombo?",
@@ -77,7 +77,7 @@ export const LedWallCities: LedWallCity[] = [
       {
         question: "Can I add truss, rotating lights and fog machines with LED wall hire in Colombo?",
         answer:
-          "Yes. LED wall hire Colombo can include aluminium stage truss, rotating stage lights and fog machine rental on the same quote. Popular for concerts, hotel weddings and corporate shows.",
+          "Yes. LED wall hire Colombo can include aluminium stage truss, rotating stage lights and fog machine hire on the same quote. Popular for concerts, hotel weddings and corporate shows.",
       },
     ],
   },
@@ -86,9 +86,9 @@ export const LedWallCities: LedWallCity[] = [
     name: "Kandy",
     title: "LED Wall Hire Kandy | LED Wall Rent & Screen Hire",
     description:
-      "LED wall rental Kandy and LED screen hire across the hill capital. Indoor P3 and outdoor IP65 LED video walls with operator included. Weddings, temples, hotels and outdoor events.",
+      "LED wall rent Kandy and LED screen hire across the hill capital. Indoor P3 and outdoor IP65 LED video walls with operator included. Weddings, temples, hotels and outdoor events.",
     keywords: [
-      "LED screen rental Kandy",
+      "LED screen rent Kandy",
       "LED wall rent Kandy",
       "LED screen hire Kandy",
       "LED wall hire Kandy",
@@ -108,9 +108,9 @@ export const LedWallCities: LedWallCity[] = [
     ],
     faqs: [
       {
-        question: "LED wall hire near me in Kandy?",
+        question: "Can I hire an LED wall locally in Kandy?",
         answer:
-          "Yes. YC Events provides LED wall hire and LED wall rent near you in Kandy and the hill country. We deliver from Colombo with a full crew, rigging and operator for weddings, hotels and outdoor events. See our pricing page for LKR rates or contact us for a quote.",
+          "Yes. YC Events delivers to Kandy and the hill country with a full crew for weddings, hotels and outdoor events. Indoor P3 and outdoor IP65 panels with operator included. See our pricing page for LKR rates or contact us for a quote.",
       },
       {
         question: "Do you rent LED walls in Kandy?",
@@ -122,7 +122,7 @@ export const LedWallCities: LedWallCity[] = [
         answer: `${LedWallRatesSummary} Kandy delivery is included in your quote, not billed as a separate outstation fee.`,
       },
       {
-        question: "Is there an operator included for LED wall rental in Kandy?",
+        question: "Is there an operator included for LED wall rent in Kandy?",
         answer:
           "Yes. Every LED wall rent Kandy booking includes a trained video technician for setup, live operation and breakdown, the same as our Colombo bookings.",
       },
@@ -133,9 +133,9 @@ export const LedWallCities: LedWallCity[] = [
     name: "Galle",
     title: "LED Wall Hire Galle | LED Wall Rent & Screen Hire",
     description:
-      "LED wall rental Galle and LED screen hire across the southern coast. Indoor P3 and outdoor IP65 LED video walls with operator included for weddings and corporate events.",
+      "LED wall rent Galle and LED screen hire across the southern coast. Indoor P3 and outdoor IP65 LED video walls with operator included for weddings and corporate events.",
     keywords: [
-      "LED screen rental Galle",
+      "LED screen rent Galle",
       "LED wall rent Galle",
       "LED screen hire Galle",
       "LED wall hire Galle",
@@ -155,9 +155,9 @@ export const LedWallCities: LedWallCity[] = [
     ],
     faqs: [
       {
-        question: "LED wall hire near me in Galle?",
+        question: "Can I hire an LED wall locally in Galle?",
         answer:
-          "Yes. YC Events provides LED wall hire and LED wall rent near you in Galle and along the southern coast. We deliver beachfront and fort-area venues with indoor P3 and outdoor IP65 panels. See our pricing page for LKR rates or contact us for a quote.",
+          "Yes. YC Events covers Galle and the southern coast for beachfront weddings, fort-area events and corporate functions. Indoor P3 and outdoor IP65 panels with delivery and operator included.",
       },
       {
         question: "Do you rent LED walls in Galle?",
@@ -180,9 +180,9 @@ export const LedWallCities: LedWallCity[] = [
     name: "Negombo",
     title: "LED Wall Hire Negombo | LED Wall Rent & Screen Hire",
     description:
-      "LED wall rental Negombo and LED screen hire near the airport corridor. Indoor and outdoor LED video walls with operator included for weddings, corporate and beach events.",
+      "LED wall rent Negombo and LED screen hire near the airport corridor. Indoor and outdoor LED video walls with operator included for weddings, corporate and beach events.",
     keywords: [
-      "LED screen rental Negombo",
+      "LED screen hire Negombo",
       "LED wall hire Negombo",
       "LED wall rent Negombo",
       "LED screen rent Negombo",
@@ -202,9 +202,9 @@ export const LedWallCities: LedWallCity[] = [
     ],
     faqs: [
       {
-        question: "LED wall hire near me in Negombo?",
+        question: "Can I hire an LED wall locally in Negombo?",
         answer:
-          "Yes. YC Events provides LED wall hire and LED wall rent near you in Negombo and the airport corridor. We cover beach hotel weddings, corporate events and festival celebrations with full delivery and operator. See our pricing page for LKR rates or contact us for a quote.",
+          "Yes. YC Events covers Negombo and the airport corridor for beach hotel weddings, corporate events and festival celebrations with full delivery and operator.",
       },
       {
         question: "Do you rent LED walls in Negombo?",
@@ -222,9 +222,9 @@ export const LedWallCities: LedWallCity[] = [
     name: "Jaffna",
     title: "LED Wall Hire Jaffna | LED Wall Rent & Screen Hire",
     description:
-      "LED wall rental Jaffna and LED screen hire in the northern province. Indoor and outdoor IP65 LED video walls with operator included for weddings, temple festivals and corporate events.",
+      "LED wall rent Jaffna and LED screen hire in the northern province. Indoor and outdoor IP65 LED video walls with operator included for weddings, temple festivals and corporate events.",
     keywords: [
-      "LED screen rental Jaffna",
+      "LED screen hire Jaffna",
       "LED wall rent Jaffna",
       "LED screen hire Jaffna",
       "LED wall hire Jaffna",
@@ -244,9 +244,9 @@ export const LedWallCities: LedWallCity[] = [
     ],
     faqs: [
       {
-        question: "LED wall hire near me in Jaffna?",
+        question: "Can I hire an LED wall locally in Jaffna?",
         answer:
-          "Yes. YC Events provides LED wall hire and LED wall rent near you in Jaffna and the northern province. Island-wide delivery, setup and operator are included in your quote. See our pricing page for LKR rates or contact us for a quote.",
+          "Yes. YC Events delivers to Jaffna and the northern province for weddings, temple festivals and corporate events. Island-wide delivery, setup and operator are included in your quote.",
       },
       {
         question: "Do you deliver LED walls to Jaffna?",
@@ -254,7 +254,7 @@ export const LedWallCities: LedWallCity[] = [
           "Yes. LED wall rent Jaffna is part of our island-wide delivery coverage, included in your quote with no separate outstation surprise fee.",
       },
       {
-        question: "How much does LED screen rental cost in Jaffna?",
+        question: "How much does LED screen hire cost in Jaffna?",
         answer: `${LedWallRatesSummary} Jaffna delivery timelines are confirmed at the time of your quote.`,
       },
     ],
@@ -264,9 +264,9 @@ export const LedWallCities: LedWallCity[] = [
     name: "Anuradhapura",
     title: "LED Wall Hire Anuradhapura | LED Wall Rent & Screen Hire",
     description:
-      "LED wall rental Anuradhapura and LED screen hire in the north central province. Outdoor IP65 and indoor LED video walls with operator included for rallies, festivals and corporate events.",
+      "LED wall rent Anuradhapura and LED screen hire in the north central province. Outdoor IP65 and indoor LED video walls with operator included for rallies, festivals and corporate events.",
     keywords: [
-      "LED screen rental Anuradhapura",
+      "LED screen rent Anuradhapura",
       "LED wall hire Anuradhapura",
       "LED wall rent Anuradhapura",
       "outdoor screen rally Anuradhapura",
@@ -277,7 +277,7 @@ export const LedWallCities: LedWallCity[] = [
     heroBody:
       "LED wall hire Anuradhapura for political rallies, religious festivals and corporate events across the north central province. YC Events provides outdoor IP65 rated screens built for open grounds.",
     intro:
-      "Anuradhapura's large outdoor grounds regularly host rallies, poya festivals and public gatherings. LED screen rental Anuradhapura bookings use outdoor-rated IP65 panels with certified rigging crew.",
+      "Anuradhapura's large outdoor grounds regularly host rallies, poya festivals and public gatherings. LED screen rent Anuradhapura bookings use outdoor-rated IP65 panels with certified rigging crew.",
     venues: [
       "Political rally and campaign grounds",
       "Religious festival and poya day events",
@@ -286,9 +286,9 @@ export const LedWallCities: LedWallCity[] = [
     ],
     faqs: [
       {
-        question: "LED wall hire near me in Anuradhapura?",
+        question: "Can I hire an LED wall locally in Anuradhapura?",
         answer:
-          "Yes. YC Events provides LED wall hire and LED wall rent near you in Anuradhapura and the north central province. We deliver outdoor IP65 rally screens and indoor panels for festivals and corporate events. See our pricing page for LKR rates or contact us for a quote.",
+          "Yes. YC Events delivers to Anuradhapura and the north central province for rallies, festivals and corporate events. Outdoor IP65 and indoor panels with certified rigging crew.",
       },
       {
         question: "Do you rent LED screens for rallies in Anuradhapura?",
@@ -306,9 +306,9 @@ export const LedWallCities: LedWallCity[] = [
     name: "Kurunegala",
     title: "LED Wall Hire Kurunegala | LED Wall Rent & Screen Hire",
     description:
-      "LED wall rental Kurunegala and LED screen rent across the north western province. Indoor and outdoor LED video walls with operator included for weddings and corporate events.",
+      "LED wall rent Kurunegala and LED screen rent across the north western province. Indoor and outdoor LED video walls with operator included for weddings and corporate events.",
     keywords: [
-      "LED screen rental Kurunegala",
+      "LED screen hire Kurunegala",
       "LED wall rent Kurunegala",
       "LED wall hire Kurunegala",
       "LED wall hire near me Kurunegala",
@@ -318,7 +318,7 @@ export const LedWallCities: LedWallCity[] = [
     heroBody:
       "LED wall rent Kurunegala for weddings, corporate events and town festivals across the north western province. YC Events delivers full LED wall setups with operator included.",
     intro:
-      "Kurunegala's wedding halls and corporate venues get the same LED wall rental standard as Colombo, delivered with our full crew and equipment.",
+      "Kurunegala's wedding halls and corporate venues get the same LED wall rent standard as Colombo, delivered with our full crew and equipment.",
     venues: [
       "Wedding halls and reception venues",
       "Corporate conference venues",
@@ -326,9 +326,9 @@ export const LedWallCities: LedWallCity[] = [
     ],
     faqs: [
       {
-        question: "LED wall hire near me in Kurunegala?",
+        question: "Can I hire an LED wall locally in Kurunegala?",
         answer:
-          "Yes. YC Events provides LED wall hire and LED wall rent near you in Kurunegala and the north western province. We deliver wedding halls, corporate venues and festival grounds with full crew and operator. See our pricing page for LKR rates or contact us for a quote.",
+          "Yes. YC Events covers Kurunegala and the north western province for weddings, corporate events and town festivals with full crew and operator.",
       },
       {
         question: "Do you rent LED walls in Kurunegala?",
@@ -336,7 +336,7 @@ export const LedWallCities: LedWallCity[] = [
           "Yes. LED wall rent Kurunegala covers weddings, corporate events and public functions, with indoor and outdoor panel options.",
       },
       {
-        question: "How much does LED screen rental cost in Kurunegala?",
+        question: "How much does LED screen hire cost in Kurunegala?",
         answer: `${LedWallRatesSummary} Kurunegala delivery is included in your quote.`,
       },
     ],
@@ -346,12 +346,12 @@ export const LedWallCities: LedWallCity[] = [
     name: "Matara",
     title: "LED Wall Hire Matara | LED Wall Rent & Screen Hire",
     description:
-      "LED wall rental Matara and LED screen hire across southern Sri Lanka. Indoor and outdoor IP65 LED video walls with operator included for weddings and corporate events.",
+      "LED wall rent Matara and LED screen hire across southern Sri Lanka. Indoor and outdoor IP65 LED video walls with operator included for weddings and corporate events.",
     keywords: [
       "LED screen hire Matara",
       "LED wall rent Matara",
       "LED wall rent southern Sri Lanka",
-      "LED screen rental Matara",
+      "LED screen rent Matara",
       "LED wall hire near me Matara",
     ],
     eyebrow: "LED wall hire Matara",
@@ -367,9 +367,9 @@ export const LedWallCities: LedWallCity[] = [
     ],
     faqs: [
       {
-        question: "LED wall hire near me in Matara?",
+        question: "Can I hire an LED wall locally in Matara?",
         answer:
-          "Yes. YC Events provides LED wall hire and LED wall rent near you in Matara and southern Sri Lanka. We deliver wedding venues, resorts and outdoor festival grounds with full setup and operator. See our pricing page for LKR rates or contact us for a quote.",
+          "Yes. YC Events covers Matara and southern Sri Lanka for wedding venues, resorts and outdoor festival grounds with full setup and operator.",
       },
       {
         question: "Do you rent LED walls in Matara?",
@@ -377,7 +377,7 @@ export const LedWallCities: LedWallCity[] = [
           "Yes. LED wall rent southern Sri Lanka bookings, including Matara, cover weddings, corporate events and outdoor functions.",
       },
       {
-        question: "How much does LED screen rental cost in Matara?",
+        question: "How much does LED screen hire cost in Matara?",
         answer: `${LedWallRatesSummary} Matara delivery is included in your quote.`,
       },
     ],

@@ -45,7 +45,7 @@ export function PricingPageContent() {
       <TickerBar />
 
       <section
-        aria-label="LED wall rental price highlights"
+        aria-label="LED wall hire price highlights"
         className="border-b border-line bg-white px-4 py-8 sm:px-8 lg:px-16"
       >
         <div className="flex flex-wrap gap-y-6">
@@ -113,10 +113,10 @@ export function PricingPageContent() {
             id="pricing-includes-heading"
             className="text-2xl font-extrabold tracking-tight text-ink sm:text-3xl"
           >
-            LED screen rental with operator included
+            LED screen hire with operator included
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-muted-yc sm:text-base">
-            Every rate is a full LED wall rental cost with operator, delivery,
+            Every rate is a full LED wall hire cost with operator, delivery,
             setup and breakdown included.
           </p>
         </div>
@@ -146,13 +146,13 @@ export function PricingPageContent() {
       >
         <div className="mb-10 max-w-2xl">
           <p className="mb-3 text-xs font-medium tracking-widest text-brand uppercase">
-            LED rental guide
+            LED hire guide
           </p>
           <h2
             id="pricing-seo-heading"
             className="text-2xl font-extrabold tracking-tight text-ink sm:text-3xl"
           >
-            Understanding LED wall rental cost in Sri Lanka
+            Understanding LED wall hire cost in Sri Lanka
           </h2>
         </div>
         <div className="grid gap-6 lg:grid-cols-2">
@@ -174,7 +174,7 @@ export function PricingPageContent() {
         items={PricingFaqs}
         listId="faq"
         intro={{
-          eyebrow: "LED rental FAQ",
+          eyebrow: "LED wall FAQ",
           titleLine1: "LED screen rent",
           titleLine2: "questions answered.",
           titleLine2Muted: true,

@@ -24,12 +24,12 @@ export const PricingPageMetaData: PricingPageMeta = {
     "LED wall rent Sri Lanka",
     "LED wall hire near me",
     "LED wall rent near me Sri Lanka",
-    "LED wall rental cost",
+    "LED wall hire cost",
     "LED screen rent price LKR",
     "LED screen rent per day Sri Lanka LKR",
     "how much does LED wall hire cost Sri Lanka",
     "how much does LED screen rent cost Sri Lanka",
-    "LED screen rental with operator included",
+    "LED screen hire with operator included",
     "LED wall daily rate LKR",
     "LED screen hire Colombo",
     "LED wall hire Colombo",
@@ -53,7 +53,7 @@ export const PricingHeroContent = {
 export const PricingIncludes = [
   {
     title: "Operator included",
-    body: "LED screen rental with operator included is standard. A trained video technician runs your wall from setup to breakdown.",
+    body: "LED screen hire with operator included is standard. A trained video technician runs your wall from setup to breakdown.",
   },
   {
     title: "Island-wide delivery",
@@ -112,17 +112,8 @@ export const PricingSeoSections = [
 
 export const PricingFaqs: FaqItem[] = [
   {
-    question: "How much does LED wall hire cost near me in Sri Lanka?",
-    answer: `${LedWallRatesSummary} LED wall hire near you in any of our 25 districts uses the same published LKR rate table. Delivery, setup, operator and breakdown are included. Contact us with your venue for an itemised quote within 60 minutes.`,
-  },
-  {
     question: "How much does LED wall hire cost in Sri Lanka?",
-    answer: `${LedWallRatesSummary} See the rate cards above for every wall size. Final LED wall rent price may vary for multi-day bookings, pixel pitch and location.`,
-  },
-  {
-    question: "What is the difference between LED wall hire and LED wall rent?",
-    answer:
-      "At YC Events, LED wall hire and LED wall rent mean the same full-service booking: LED panels, delivery, rigging, operator and breakdown. We quote LED wall rent in LKR per 8-hour business day with no separate operator charge.",
+    answer: `${LedWallRatesSummary} See the rate cards above for every wall size. The same published LKR rates apply in every district with delivery, setup, operator and breakdown included. Final LED wall rent price may vary for multi-day bookings, pixel pitch and location.`,
   },
   {
     question: "What is the LED wall rent price per day in LKR?",
@@ -139,24 +130,24 @@ export const PricingFaqs: FaqItem[] = [
       "Yes. Custom LED video wall sizes are available for any venue or stage layout. Custom size pricing is calculated from wall dimensions, pixel pitch, indoor vs outdoor use and rigging. Contact us with your venue measurements for a bespoke quote.",
   },
   {
-    question: "Is LED screen rental with operator included standard?",
+    question: "Is LED screen hire with operator included standard?",
     answer:
-      "Yes. LED screen rental with operator included is our default package in Sri Lanka. Every LKR rate on this page includes a trained video technician for setup, live operation and breakdown.",
+      "Yes. LED screen hire with operator included is our default package in Sri Lanka. Every LKR rate on this page includes a trained video technician for setup, live operation and breakdown.",
   },
   {
-    question: "Does LED screen rental with operator included cost extra?",
+    question: "Does LED screen hire with operator included cost extra?",
     answer:
-      "No. LED wall rental with operator included is not a paid add-on. The LKR daily rate you see is the full LED wall rental cost for operator, delivery, setup and breakdown on standard event hire.",
+      "No. LED wall rent with operator included is not a paid add-on. The LKR daily rate you see is the full LED wall hire cost for operator, delivery, setup and breakdown on standard event hire.",
   },
   {
     question: "What is the difference between P3 and P4 LED screens?",
     answer:
-      "Pixel pitch is the distance between LED clusters in millimetres. P3 is a fine-pitch indoor panel for close viewing at weddings and corporate events. P4 is an outdoor-rated, brighter IP65 panel for concerts, rallies and outdoor LED screen rental in Sri Lanka.",
+      "Pixel pitch is the distance between LED clusters in millimetres. P3 is a fine-pitch indoor panel for close viewing at weddings and corporate events. P4 is an outdoor-rated, brighter IP65 panel for concerts, rallies and outdoor LED screen rent in Sri Lanka.",
   },
   {
-    question: "What should I book: indoor or outdoor LED screen rental?",
+    question: "What should I book: indoor or outdoor LED screen rent?",
     answer:
-      "Indoor LED wall rent uses P3 panels for ballrooms, hotels and conference halls. Outdoor LED screen rental uses IP65 weatherproof P4 panels rated for direct sunlight and rain. We recommend the correct configuration during your quote.",
+      "Indoor LED wall rent uses P3 panels for ballrooms, hotels and conference halls. Outdoor LED screen rent uses IP65 weatherproof P4 panels rated for direct sunlight and rain. We recommend the correct configuration during your quote.",
   },
   {
     question: "Do you deliver LED walls outside Colombo?",
@@ -164,7 +155,7 @@ export const PricingFaqs: FaqItem[] = [
       "Yes. LED screen outstation delivery is standard across all 25 districts, Kandy, Galle, Jaffna, Negombo and everywhere between. LED wall Kandy delivery and island-wide hire are included in your quote, not billed as a surprise add-on.",
   },
   {
-    question: "What affects the final LED wall rental cost?",
+    question: "What affects the final LED wall hire cost?",
     answer:
       "Wall size, number of days, pixel pitch (P3 indoor or P4 outdoor), indoor vs outdoor use, venue location and rigging complexity. Our published LED screen rent price LKR table covers standard single-day event hire.",
   },
@@ -176,16 +167,16 @@ export const PricingFaqs: FaqItem[] = [
   {
     question: "What is an IP65 outdoor LED screen and does it cost more?",
     answer:
-      "IP65 outdoor LED screen rental Sri Lanka uses weatherproof panels rated for rain and direct sunlight, P4 pixel pitch. Outdoor IP65 walls are priced the same way as indoor panels on our rate table, based on wall size rather than a separate outdoor surcharge.",
+      "IP65 outdoor LED screen rent Sri Lanka uses weatherproof panels rated for rain and direct sunlight, P4 pixel pitch. Outdoor IP65 walls are priced the same way as indoor panels on our rate table, based on wall size rather than a separate outdoor surcharge.",
   },
 ];
 
 export const LedUseCases: LedUseCaseBlock[] = [
   {
     id: "wedding",
-    title: "Wedding LED screen rental Sri Lanka",
+    title: "Wedding LED screen rent Sri Lanka",
     description:
-      "LED backdrop rental for receptions and ceremonies. Wedding LED screen Colombo and island-wide, indoor P3 panels with planner coordination and an all-night operator.",
+      "LED backdrop rent for receptions and ceremonies. Wedding LED screen Colombo and island-wide, indoor P3 panels with planner coordination and an all-night operator.",
     href: LED_WALL_SERVICE_HREF,
   },
   {
@@ -204,21 +195,21 @@ export const LedUseCases: LedUseCaseBlock[] = [
   },
   {
     id: "indoor",
-    title: "Indoor LED screen rental Sri Lanka",
+    title: "Indoor LED screen rent Sri Lanka",
     description:
-      "Indoor LED wall rent with P3 fine-pitch panels for hotels, ballrooms and conference halls. Crystal-clear LED video wall rental for close viewing distances.",
+      "Indoor LED wall rent with P3 fine-pitch panels for hotels, ballrooms and conference halls. Crystal-clear LED video wall rent for close viewing distances.",
     href: LED_WALL_SERVICE_HREF,
   },
   {
     id: "exhibition",
-    title: "LED wall rental for exhibitions Sri Lanka",
+    title: "LED wall rent for exhibitions Sri Lanka",
     description:
-      "LED screen rental for trade shows and expos, fitted into custom exhibition stalls or as standalone displays. Operator included for the full run of the event.",
+      "LED screen rent for trade shows and expos, fitted into custom exhibition stalls or as standalone displays. Operator included for the full run of the event.",
     href: LED_WALL_SERVICE_HREF,
   },
   {
     id: "backdrop",
-    title: "LED backdrop rental Sri Lanka",
+    title: "LED backdrop rent Sri Lanka",
     description:
       "LED backdrop rent for weddings, award nights and stage sets. Custom sizes from 10×8 ft to 40×12 ft with operator and delivery included.",
     href: LED_WALL_SERVICE_HREF,
@@ -247,7 +238,7 @@ export function buildPricingSchema() {
         price: rate.priceLkr,
         priceCurrency: "LKR",
         description:
-          "Per 8-hour business day LED screen rental with operator included",
+          "Per 8-hour business day LED screen hire with operator included",
         seller: { "@id": LOCAL_BUSINESS_ID },
       })),
       {

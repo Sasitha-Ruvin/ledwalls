@@ -39,7 +39,7 @@ export function HeroSection({
     >
       <Image
         src={imageSrc}
-        alt={imageAlt ?? "LED wall rental Sri Lanka LED screen hire"}
+        alt={imageAlt ?? "LED wall hire Sri Lanka LED screen hire"}
         fill
         priority
         className="object-cover object-center"

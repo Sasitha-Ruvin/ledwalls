@@ -25,7 +25,7 @@ export const SITE_PHONE_NUMBERS_E164 = [
 ] as const;
 
 export const WHATSAPP_PREFILL =
-  "Hi YC Events, I would like to enquire about LED wall rental in Sri Lanka.";
+  "Hi YC Events, I would like to enquire about LED wall rent in Sri Lanka.";
 
 export function buildWhatsAppHref(
   phoneRaw: string,

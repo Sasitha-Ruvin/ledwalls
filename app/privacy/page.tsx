@@ -3,11 +3,11 @@ import Link from "next/link";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Privacy Policy | YC Events LED Wall Rental Sri Lanka",
+  title: "Privacy Policy | YC Events LED Wall Hire Sri Lanka",
   description:
-    "Privacy policy for YC Events LED wall rental enquiries, quote forms and website contact. How we collect, use and protect your information.",
+    "Privacy policy for YC Events LED wall hire enquiries, quote forms and website contact. How we collect, use and protect your information.",
   path: "/privacy",
-  keywords: ["YC Events privacy policy", "LED wall rental Sri Lanka"],
+  keywords: ["YC Events privacy policy", "LED wall hire Sri Lanka"],
 });
 
 export default function PrivacyPage() {
@@ -20,7 +20,7 @@ export default function PrivacyPage() {
         <p>
           YC Events (Yasitha Creations) respects your privacy. This policy
           explains how we handle information when you contact us about LED wall
-          rental, LED screen hire or other event production services in Sri
+          hire, LED screen rent or other event production services in Sri
           Lanka.
         </p>
         <h2 className="pt-4 text-base font-bold text-ink">Information we collect</h2>
@@ -33,7 +33,7 @@ export default function PrivacyPage() {
         <h2 className="pt-4 text-base font-bold text-ink">How we use your information</h2>
         <p>
           We use your information to respond to enquiries, prepare LED screen
-          rental quotes, coordinate delivery and event setup, and improve our
+          hire quotes, coordinate delivery and event setup, and improve our
           services. We do not sell your personal data to third parties.
         </p>
         <h2 className="pt-4 text-base font-bold text-ink">Contact</h2>

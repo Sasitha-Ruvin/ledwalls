@@ -18,7 +18,7 @@ function EventCard({ event }: { event: LedWallEventCard }) {
     >
       <Image
         src={event.img}
-        alt={`LED wall rental for ${event.title} in Sri Lanka`}
+        alt={`LED wall hire for ${event.title} in Sri Lanka`}
         fill
         className="object-cover transition-transform duration-500 group-hover:scale-105"
         sizes="(max-width: 1024px) 100vw, 33vw"

@@ -59,7 +59,6 @@ export function buildLocalBusinessNode(
     alternateName: [
       "LED wall hire Sri Lanka",
       "LED wall rent Sri Lanka",
-      "LED wall rental Sri Lanka",
     ],
     description: options.description ?? SITE_DEFAULT_DESCRIPTION,
     url: options.url ?? SITE_URL,

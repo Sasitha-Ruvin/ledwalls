@@ -10,13 +10,13 @@ export const SITE_OG_IMAGE_WIDTH = 1200;
 export const SITE_OG_IMAGE_HEIGHT = 630;
 
 export const SITE_DEFAULT_DESCRIPTION =
-  "LED wall hire and LED wall rent in Sri Lanka. Indoor P3 and outdoor IP65 LED walls near you. Hire or rent LED screens in Colombo, Kandy and all 25 districts. Operator included.";
+  "LED wall hire and rent across Sri Lanka. Indoor P3 and outdoor IP65 LED screens with operator included. Colombo, Kandy, Jaffna and all 25 districts.";
 
 export const SITE_DEFAULT_KEYWORDS = [
   "LED wall",
   "LED wall hire Sri Lanka",
   "LED wall rent Sri Lanka",
-  "LED wall rental Sri Lanka",
+  "LED wall hire Sri Lanka",
   "LED wall hire near me",
   "LED wall rent near me",
   "ledwall hire Sri Lanka",
@@ -25,12 +25,12 @@ export const SITE_DEFAULT_KEYWORDS = [
   "LED wall rent Colombo",
   "LED screen hire Sri Lanka",
   "LED screen rent Sri Lanka",
-  "LED video wall rental Sri Lanka",
-  "LED screen rental Colombo",
-  "outdoor LED screen rental Sri Lanka",
-  "wedding LED screen rental Sri Lanka",
-  "jumbo screen rental Sri Lanka",
-  "LED display rental Sri Lanka",
+  "LED video wall hire Sri Lanka",
+  "LED screen hire Colombo",
+  "outdoor LED screen rent Sri Lanka",
+  "wedding LED screen rent Sri Lanka",
+  "jumbo screen hire Sri Lanka",
+  "LED display rent Sri Lanka",
   "big LED screen rent Sri Lanka",
   "LED wall Sri Lanka",
 ] as const;

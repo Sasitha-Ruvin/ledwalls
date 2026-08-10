@@ -17,7 +17,7 @@ import {
 } from "@/lib/data/contact";
 
 export const FooterBlurb =
-  "Sri Lanka's leading LED wall rental specialists since 2017. Island-wide.";
+  "Sri Lanka's leading LED wall rent specialists since 2017. Island-wide.";
 
 export const FooterServiceLinks = ServicesList.map((service) => ({
   label: service.title,

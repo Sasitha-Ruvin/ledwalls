@@ -62,7 +62,7 @@ const ServicesGrid = ({
         >
           <Image
             src={ledWall.img}
-            alt="LED wall rental on concert stage in Sri Lanka, P3 indoor and P4 outdoor screens"
+            alt="LED wall hire on concert stage in Sri Lanka, P3 indoor and P4 outdoor screens"
             fill
             priority
             className="object-cover transition-transform duration-500 group-hover:scale-105"

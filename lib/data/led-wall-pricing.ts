@@ -1,6 +1,6 @@
 import type { LedWallRate } from "@/types/site";
 
-/** Official YC Events LED video wall rental rates (LKR per day). */
+/** Official YC Events LED video wall hire rates (LKR per day). */
 export const LedWallRates: LedWallRate[] = [
   { size: "10×8 ft", priceLkr: 55000 },
   { size: "13×8 ft", priceLkr: 60000 },
@@ -42,7 +42,7 @@ export const LedWallRateTiers: LedWallRateTier[] = [
     id: "large",
     title: "Large format LED walls",
     description: "Concerts, political rallies, festivals and big screen outdoor hire.",
-    bestFor: "Outdoor LED screen rental · big screen rent Sri Lanka",
+    bestFor: "Outdoor LED screen rent · big screen rent Sri Lanka",
     rates: LedWallRates.slice(7),
   },
 ];
