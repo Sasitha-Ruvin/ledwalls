@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { LED_WALL_SERVICE_ID, LED_WALL_SERVICE_HREF, ServicesList, LedWallAddonServices } from "@/lib/data/services";
 import { LedWallPortfolioIntro } from "@/lib/data/led-wall-portfolio";
 import { LedWallServicePricingSection } from "@/components/pricing/LedWallServicePricingSection";
+import { LedScreenRentSection } from "@/components/services/LedScreenRentSection";
 import { LedWallCityLinks } from "@/components/services/LedWallCityLinks";
 import { OtherServicesStrip } from "@/components/services/OtherServicesStrip";
 import type { ServiceDetailData } from "@/types/site";
@@ -72,6 +73,8 @@ export function ServiceDetailView({ service }: ServiceDetailViewProps) {
           </div>
         </div>
       </section>
+
+      {service.id === LED_WALL_SERVICE_ID ? <LedScreenRentSection /> : null}
 
       {service.id === LED_WALL_SERVICE_ID ? <LedWallServicePricingSection /> : null}
 

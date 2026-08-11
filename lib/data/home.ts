@@ -44,25 +44,26 @@ import type {
 } from "@/types/site";
 
 export const HomePageMetaData: HomePageMeta = {
-  title: "LED Wall Hire Sri Lanka | LED Wall Rent & Screen Hire",
+  title: "YC Events | LED Wall Hire, LED Screen Rent & Event Production Sri Lanka",
   description:
-    "LED wall hire and rent across Sri Lanka. Indoor P3 and outdoor IP65 LED screens with operator included. Colombo, Kandy, Jaffna and all 25 districts.",
+    "YC Events (ledwalls.lk) is Sri Lanka's LED wall hire, LED screen rent and event production company. Stage truss, lighting, fog and sound on the same quote. Island-wide, all 25 districts.",
   keywords: [
     "LED wall hire Sri Lanka",
     "LED wall rent Sri Lanka",
-    "LED wall hire Sri Lanka",
     "LED wall Sri Lanka",
+    "ledwalls",
     "LED wall hire near me",
     "LED wall rent near me",
     "ledwall hire Sri Lanka",
     "ledwall rent Sri Lanka",
     "LED screen rent Sri Lanka",
-    "LED screen rent Sri Lanka",
+    "LED screen rental Sri Lanka",
     "LED screen hire Sri Lanka",
     "LED wall hire Colombo",
     "LED wall rent Colombo",
-    "LED wall rent Colombo",
+    "rent LED screen Colombo",
     "LED video wall hire Sri Lanka",
+    "LED video wall rent Sri Lanka",
     "wedding LED screen Colombo",
     "LED screen hire with operator included",
     "LED wall delivery outside Colombo",
@@ -72,10 +73,10 @@ export const HomePageMetaData: HomePageMeta = {
 };
 
 export const HeroContentData: HeroContent = {
-  eyebrow: "Island-wide LED wall rent",
+  eyebrow: "Island-wide LED wall hire, ledwalls.lk",
   headline: {
-    line1: "LED wall hire",
-    accent: "Sri Lanka",
+    line1: "LED wall hire,",
+    accent: "full event production",
     line2: "",
   },
   subheadline: "Indoor P3 and outdoor IP65 screens for weddings, concerts and corporate events",
@@ -146,6 +147,39 @@ export const HomeServices: ServiceCardData[] = [
     icon: Monitor,
   },
 ];
+
+export const LedWallHireIntroContentData = {
+  eyebrow: "Sri Lanka's LED wall specialists",
+  titleLine1: "LED wall hire.",
+  titleLine2: "LED wall rent. Same team.",
+  description:
+    "YC Events (ledwalls.lk) builds, delivers and operates the LED wall ourselves for every booking, no subcontracted crew. Search LED wall hire, LED wall rent, or simply ledwalls, and you'll reach the same team.",
+  imageSrc: images.heroLedRental,
+  imageAlt: "LED wall hire and LED wall rent setup at an event in Sri Lanka",
+  badgeValue: "25",
+  badgeLabel: "Districts covered island-wide",
+  features: [
+    {
+      icon: Monitor,
+      title: "Indoor & outdoor LED wall rent",
+      description: "P3 fine-pitch indoor and IP65 P4 outdoor panels, sized to your venue, not a fixed catalogue.",
+    },
+    {
+      icon: MapPin,
+      title: "Delivered island-wide",
+      description: "LED wall hire delivery, rigging and breakdown across all 25 districts, from Colombo to Jaffna.",
+    },
+    {
+      icon: Cpu,
+      title: "Everything included",
+      description: "Video processor, power distribution and an on-site operator on every LED wall rent booking.",
+    },
+  ],
+  ctaLabel: "Full LED wall hire details",
+  ctaHref: LED_WALL_SERVICE_HREF,
+  secondaryCtaLabel: "See LED wall rent pricing",
+  secondaryCtaHref: "/pricing",
+};
 
 export const ServicesIntro: SectionIntro = {
   eyebrow: "LED wall hire Sri Lanka",
@@ -545,6 +579,7 @@ export function buildHomeSchema() {
           position: index + 1,
           itemOffered: {
             "@type": "Service",
+            "@id": `${SITE_URL}${service.href}#service`,
             name: service.title,
             description: service.sub,
             url: `${SITE_URL}${service.href}`,

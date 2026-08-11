@@ -14,9 +14,9 @@ export const SITE_DEFAULT_DESCRIPTION =
 
 export const SITE_DEFAULT_KEYWORDS = [
   "LED wall",
+  "ledwalls",
   "LED wall hire Sri Lanka",
   "LED wall rent Sri Lanka",
-  "LED wall hire Sri Lanka",
   "LED wall hire near me",
   "LED wall rent near me",
   "ledwall hire Sri Lanka",
@@ -25,8 +25,11 @@ export const SITE_DEFAULT_KEYWORDS = [
   "LED wall rent Colombo",
   "LED screen hire Sri Lanka",
   "LED screen rent Sri Lanka",
-  "LED video wall hire Sri Lanka",
+  "LED screen rental Sri Lanka",
   "LED screen hire Colombo",
+  "rent LED screen Colombo",
+  "LED video wall hire Sri Lanka",
+  "LED video wall rent Sri Lanka",
   "outdoor LED screen rent Sri Lanka",
   "wedding LED screen rent Sri Lanka",
   "jumbo screen hire Sri Lanka",

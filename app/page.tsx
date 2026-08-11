@@ -7,6 +7,7 @@ import FAQSection from "@/components/home/FAQSection";
 import GalleryTeaser from "@/components/home/GalleryTeaser";
 import { HeroSection } from "@/components/home/HeroSection";
 import { LedRentalUsesSection } from "@/components/home/LedRentalUsesSection";
+import { LedWallHireIntroSection } from "@/components/home/LedWallHireIntroSection";
 import ProcessSection from "@/components/home/ProcessSection";
 import ServicesGrid from "@/components/home/ServicesGrid";
 import StatsBar from "@/components/home/StatsBar";
@@ -30,6 +31,7 @@ export default function Page() {
       <JsonLd data={buildHomeSchema()} />
       <HeroSection />
       <TickerBar />
+      <LedWallHireIntroSection />
       <LedRentalUsesSection />
       <ClientLogoStrip />
       <ServicesGrid />
