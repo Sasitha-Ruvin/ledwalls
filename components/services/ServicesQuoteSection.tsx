@@ -89,6 +89,20 @@ export function ServicesQuoteSection({
               />
             </FormField>
 
+            <FormField label="Contact number" htmlFor="svc-phone">
+              <input
+                id="svc-phone"
+                name="phone"
+                type="tel"
+                autoComplete="tel"
+                placeholder="07X XXX XXXX"
+                required
+                value={form.phone}
+                onChange={(e) => updateField("phone", e.target.value)}
+                className={LightInputClass}
+              />
+            </FormField>
+
             <FormField label="Service needed" htmlFor="svc-service">
               <select
                 id="svc-service"

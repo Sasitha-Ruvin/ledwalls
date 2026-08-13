@@ -77,6 +77,21 @@ export function ContactEnquiryForm() {
           </FormField>
 
           <FormField
+            label="Contact number"
+            labelClassName="normal-case tracking-normal text-ink"
+          >
+            <input
+              type="tel"
+              className={LightInputClass}
+              placeholder="07X XXX XXXX"
+              value={form.phone}
+              onChange={(e) => updateField("phone", e.target.value)}
+              required
+              disabled={isSubmitting}
+            />
+          </FormField>
+
+          <FormField
             label="Event type"
             labelClassName="normal-case tracking-normal text-ink"
           >

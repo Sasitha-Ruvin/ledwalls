@@ -19,7 +19,7 @@ export async function POST(request: Request) {
 
     if (!payload) {
       return jsonResponse(
-        { error: "Please provide your name and a valid enquiry." },
+        { error: "Please provide your name and a valid contact number." },
         400
       );
     }

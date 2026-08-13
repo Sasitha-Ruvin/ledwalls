@@ -163,6 +163,18 @@ export default function QuoteDialog({
                 />
               </FormField>
 
+              <FormField label="Contact Number">
+                <input
+                  type="tel"
+                  className={DarkInputClass}
+                  placeholder="07X XXX XXXX"
+                  value={form.phone}
+                  onChange={(e) => updateField("phone", e.target.value)}
+                  required
+                  disabled={isSubmitting}
+                />
+              </FormField>
+
               <FormField label="Service Needed">
                 <select
                   className={DarkInputClass}

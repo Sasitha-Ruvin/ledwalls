@@ -81,6 +81,7 @@ export interface ContactMethod {
 
 export interface QuoteFormValues {
   name: string;
+  phone: string;
   service: string;
   date: string;
   venue: string;

@@ -555,6 +555,7 @@ export const TickerItems = [
 
 export const EmptyQuoteForm: QuoteFormValues = {
   name: "",
+  phone: "",
   service: "",
   date: "",
   venue: "",

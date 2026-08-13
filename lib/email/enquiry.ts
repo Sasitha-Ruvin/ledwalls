@@ -20,6 +20,7 @@ export function formatEnquiryEmail(payload: EnquiryPayload): {
   const lines = [
     `Source: ${sourceLabel}`,
     `Name: ${payload.name}`,
+    `Phone: ${payload.phone}`,
     `Event / service: ${payload.service || "Not specified"}`,
     `Event date: ${payload.date || "Not specified"}`,
     `Location: ${payload.venue || "Not specified"}`,
@@ -37,6 +38,7 @@ export function formatEnquiryEmail(payload: EnquiryPayload): {
       <table style="border-collapse:collapse;width:100%;max-width:560px">
         <tbody>
           <tr><td style="padding:8px 0;border-bottom:1px solid #E0DFDC"><strong>Name</strong></td><td style="padding:8px 0;border-bottom:1px solid #E0DFDC">${escapeHtml(payload.name)}</td></tr>
+          <tr><td style="padding:8px 0;border-bottom:1px solid #E0DFDC"><strong>Phone</strong></td><td style="padding:8px 0;border-bottom:1px solid #E0DFDC">${escapeHtml(payload.phone)}</td></tr>
           <tr><td style="padding:8px 0;border-bottom:1px solid #E0DFDC"><strong>Event / service</strong></td><td style="padding:8px 0;border-bottom:1px solid #E0DFDC">${escapeHtml(payload.service || "—")}</td></tr>
           <tr><td style="padding:8px 0;border-bottom:1px solid #E0DFDC"><strong>Event date</strong></td><td style="padding:8px 0;border-bottom:1px solid #E0DFDC">${escapeHtml(payload.date || "—")}</td></tr>
           <tr><td style="padding:8px 0;border-bottom:1px solid #E0DFDC"><strong>Location</strong></td><td style="padding:8px 0;border-bottom:1px solid #E0DFDC">${escapeHtml(payload.venue || "—")}</td></tr>
@@ -69,9 +71,11 @@ export function parseEnquiryPayload(body: unknown): EnquiryPayload | null {
 
   const record = body as Record<string, unknown>;
   const name = typeof record.name === "string" ? record.name.trim() : "";
+  const phone = typeof record.phone === "string" ? record.phone.trim() : "";
   const source = record.source;
 
   if (!name || name.length < 2) return null;
+  if (!phone || phone.length < 7) return null;
   if (source !== "contact-page" && source !== "quote-dialog") return null;
 
   const needs = Array.isArray(record.needs)
@@ -81,6 +85,7 @@ export function parseEnquiryPayload(body: unknown): EnquiryPayload | null {
   return {
     source,
     name,
+    phone,
     service: typeof record.service === "string" ? record.service.trim() : "",
     date: typeof record.date === "string" ? record.date.trim() : "",
     venue: typeof record.venue === "string" ? record.venue.trim() : "",
