@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
-import TickerBar from "@/components/home/TickerBar";
 import FAQSection from "@/components/home/FAQSection";
 import QuoteDialog from "@/components/layout/QuoteDialog";
 import { PageHero } from "@/components/shared/PageHero";
@@ -42,8 +41,6 @@ export function PricingPageContent() {
           { label: "Pricing" },
         ]}
       />
-      <TickerBar />
-
       <section
         aria-label="LED wall hire price highlights"
         className="border-b border-line bg-white px-4 py-8 sm:px-8 lg:px-16"
@@ -100,6 +97,45 @@ export function PricingPageContent() {
       </section>
 
       <LedWallCustomSizesSection />
+
+      <section
+        aria-labelledby="pricing-summary-heading"
+        className="bg-white px-4 py-16 sm:px-8 sm:py-20 lg:px-16"
+      >
+        <div className="grid gap-10 lg:grid-cols-3">
+          <div>
+            <h2
+              id="pricing-summary-heading"
+              className="text-lg font-bold text-ink"
+            >
+              What changes the price
+            </h2>
+            <p className="mt-3 text-sm leading-relaxed text-muted-yc sm:text-base">
+              Size, pixel pitch, number of days, and delivery location.
+            </p>
+          </div>
+          <div>
+            <h2 className="text-lg font-bold text-ink">Indoor vs outdoor</h2>
+            <ul className="mt-3 space-y-1.5 text-sm leading-relaxed text-muted-yc sm:text-base">
+              <li>
+                <span className="font-semibold text-ink">P3 (indoor)</span> -
+                sharper at close range, for weddings and conferences.
+              </li>
+              <li>
+                <span className="font-semibold text-ink">P4 (outdoor)</span> -
+                brighter and weatherproof, for concerts and rallies.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 className="text-lg font-bold text-ink">What's included</h2>
+            <p className="mt-3 text-sm leading-relaxed text-muted-yc sm:text-base">
+              Delivery, setup, breakdown and an operator, on every booking. No
+              hidden charges.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <section
         aria-labelledby="pricing-includes-heading"

@@ -223,6 +223,7 @@ export interface ServiceDetailData {
   faqs?: FaqItem[];
   useCases?: ServiceUseCase[];
   portfolio?: PortfolioImage[];
+  ctaNote?: string;
 }
 
 export interface ServicesPageHero {

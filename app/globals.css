@@ -45,10 +45,10 @@
   --radius-4xl: calc(var(--radius) * 2.6);
   --color-brand: #d01b1b;
   --color-brand-dark: #b01414;
-  --color-ink: #0d0d0d;
-  --color-ink-soft: #1a1a1a;
-  --color-muted-yc: #6b6b6b;
-  --color-surface: #f5f4f2;
+  --color-ink: #0a0a0b;
+  --color-ink-soft: #1a1a1c;
+  --color-muted-yc: #6b6b6e;
+  --color-surface: #f7f7f5;
   --color-line: #e0dfdc;
   --color-whatsapp: #25d366;
   --spacing-18: 4.5rem;
@@ -123,20 +123,11 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-@keyframes tk {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
 @keyframes lg {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 
-.tk {
-  display: flex;
-  width: max-content;
-  animation: tk 32s linear infinite;
-}
 .lg {
   display: flex;
   width: max-content;

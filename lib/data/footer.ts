@@ -17,7 +17,7 @@ import {
 } from "@/lib/data/contact";
 
 export const FooterBlurb =
-  "YC Events (ledwalls.lk) — Sri Lanka's leading LED wall rent specialists since 2017. Island-wide.";
+  "YC Events (ledwalls.lk) - Sri Lanka's leading LED wall rent specialists since 2017. Island-wide.";
 
 export const FooterServiceLinks = ServicesList.map((service) => ({
   label: service.title,

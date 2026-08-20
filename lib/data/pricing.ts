@@ -42,10 +42,10 @@ export const PricingPageMetaData: PricingPageMeta = {
 
 export const PricingHeroContent = {
   eyebrow: "LED wall hire price · Sri Lanka",
-  titleLine1: "LED wall hire price",
-  titleLine2: "Sri Lanka",
+  titleLine1: "LED Wall Hire",
+  titleLine2: "Pricing",
   description:
-    "Published LED wall rent and LED screen hire prices in LKR. Operator included. Add stage truss, rotating lights and fog machines on the same quote.",
+    "Standard rates for an 8-hour business day, indoor or outdoor. Operator, delivery, setup and breakdown included. Custom sizes quoted to your venue.",
   imageSrc: images.pricingHero,
   imageAlt: "LED wall hire price Sri Lanka LED wall rent Colombo",
 };
@@ -174,44 +174,44 @@ export const PricingFaqs: FaqItem[] = [
 export const LedUseCases: LedUseCaseBlock[] = [
   {
     id: "wedding",
-    title: "Wedding LED screen rent Sri Lanka",
+    title: "Wedding LED wall",
     description:
-      "LED backdrop rent for receptions and ceremonies. Wedding LED screen Colombo and island-wide, indoor P3 panels with planner coordination and an all-night operator.",
+      "Indoor P3 backdrop walls for receptions and ceremonies, coordinated with your planner and operated through the night.",
     href: LED_WALL_SERVICE_HREF,
   },
   {
     id: "corporate",
-    title: "LED screen corporate event Sri Lanka",
+    title: "Corporate & launches",
     description:
-      "LED wall corporate event hire for product launches, AGMs and conferences. LED screen hire Colombo with AV integration and full-day technician support.",
+      "LED screens for product launches, AGMs and conferences, with AV integration and full-day technician support.",
     href: LED_WALL_SERVICE_HREF,
   },
   {
     id: "outdoor",
-    title: "Outdoor LED wall hire Sri Lanka",
+    title: "Outdoor concerts",
     description:
-      "IP65 outdoor LED wall rent for concerts, festivals and rallies. Truss, rotating stage lights and fog machines available. Weatherproof big LED screen rent with certified rigging crew.",
+      "Weatherproof IP65 outdoor screens for concerts, festivals and rallies, with certified rigging.",
     href: LED_WALL_SERVICE_HREF,
   },
   {
     id: "indoor",
-    title: "Indoor LED screen rent Sri Lanka",
+    title: "Indoor conferences",
     description:
-      "Indoor LED wall rent with P3 fine-pitch panels for hotels, ballrooms and conference halls. Crystal-clear LED video wall rent for close viewing distances.",
+      "P3 fine-pitch panels for hotels, ballrooms and conference halls, built for close viewing distances.",
     href: LED_WALL_SERVICE_HREF,
   },
   {
     id: "exhibition",
-    title: "LED wall rent for exhibitions Sri Lanka",
+    title: "Exhibitions & trade shows",
     description:
-      "LED screen rent for trade shows and expos, fitted into custom exhibition stalls or as standalone displays. Operator included for the full run of the event.",
-    href: LED_WALL_SERVICE_HREF,
+      "LED screens fitted into custom exhibition stalls or set up as standalone displays, operator included for the full event.",
+    href: "/services/exhibition-stalls",
   },
   {
     id: "backdrop",
-    title: "LED backdrop rent Sri Lanka",
+    title: "Award nights & backdrops",
     description:
-      "LED backdrop rent for weddings, award nights and stage sets. Custom sizes from 10×8 ft to 40×12 ft with operator and delivery included.",
+      "Custom LED backdrops from 10×8 ft to 40×12 ft, for stage sets and award ceremonies.",
     href: LED_WALL_SERVICE_HREF,
   },
 ];

@@ -9,7 +9,7 @@ interface ClientLogoStripProps {
     title?:string;
     className?:string;
 }
-const ClientLogoStrip = ({logos = ClientLogos, title = "Trusted by Sri Lanka's Leading Organizations", className,}:ClientLogoStripProps) => {
+const ClientLogoStrip = ({logos = ClientLogos, title = "Trusted by Sri Lanka's leading organisations", className,}:ClientLogoStripProps) => {
     const loop = [...logos, ...logos];
 
   return (

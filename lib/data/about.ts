@@ -13,7 +13,7 @@ import type {
 export const AboutPageMetaData: AboutPageMeta = {
   title: "About YC Events | LED & Event Production Sri Lanka",
   description:
-    "YC Events, Sri Lanka's LED wall specialists since 2018. Owned crew, owned equipment, 1,000+ events across all 25 districts. No subcontracting.",
+    "YC Events, Sri Lanka's LED wall specialists since 2017. Owned crew, owned equipment, 1,000+ events across all 25 districts. No subcontracting.",
   keywords: [
     "YC Events Sri Lanka",
     "LED wall company Colombo",
@@ -42,12 +42,11 @@ export const AboutHeroData: AboutHeroContent = {
 
 export const AboutStoryData: AboutStoryContent = {
   eyebrow: "Our Story",
-  titleLine1: "Started with one LED wall.",
-  titleLine2: "Built to run the island.",
+  titleLine1: "About YC Events",
+  titleLine2: "",
   paragraphs: [
-    "YC Events was founded in Colombo in 2018 with a single indoor LED wall and a simple belief: event organisers in Sri Lanka deserved better equipment and more reliable crews. At the time, LED walls were hard to source, expensive to operate and usually arrived with freelance technicians who had never worked together before.",
-    "We spent the first years building our own team, buying our own equipment and running every event ourselves. No subcontracting. No agency workers. Every operator who works an event is directly employed by YC Events, trained on our equipment and accountable to us.",
-    "Today we run LED walls, stage builds, sound systems, exhibition stalls and digital podiums across all 25 districts. From hotel ballrooms in Colombo to open-ground rallies in Jaffna, from wedding halls in Kandy to award ceremonies in Galle. The same standard. The same crew. Every time.",
+    "YC Events has delivered LED wall and event production for weddings, concerts and corporate events across Sri Lanka since 2017. We handle every booking ourselves - no subcontracted crew - from Colombo to outstation venues in all 25 districts.",
+    "Clients include Commercial Bank, BMICH, TV Derana and the University of Peradeniya. Every booking includes delivery, setup and a trained operator.",
   ],
   imageSrc: images.aboutCrew,
   imageAlt: "YC Events logo",
@@ -73,7 +72,7 @@ export const AboutValues: AboutValueItem[] = [
 
 export const AboutMilestones: AboutMilestone[] = [
   {
-    year: "2018",
+    year: "2017",
     description: "Founded in Colombo with first indoor LED wall",
     yearAboveSpine: true,
   },

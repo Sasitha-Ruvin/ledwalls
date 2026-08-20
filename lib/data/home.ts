@@ -150,10 +150,10 @@ export const HomeServices: ServiceCardData[] = [
 
 export const LedWallHireIntroContentData = {
   eyebrow: "Sri Lanka's LED wall specialists",
-  titleLine1: "LED wall hire.",
-  titleLine2: "LED wall rent. Same team.",
+  titleLine1: "Built and operated",
+  titleLine2: "by one team.",
   description:
-    "YC Events (ledwalls.lk) builds, delivers and operates the LED wall ourselves for every booking, no subcontracted crew. Search LED wall hire, LED wall rent, or simply ledwalls, and you'll reach the same team.",
+    "YC Events builds, delivers and operates every LED wall ourselves - no subcontracted crew. Indoor P3 panels for weddings and corporate events, outdoor IP65 panels for concerts and rallies, island-wide across all 25 districts.",
   imageSrc: images.heroLedRental,
   imageAlt: "LED wall hire and LED wall rent setup at an event in Sri Lanka",
   badgeValue: "25",
@@ -161,23 +161,23 @@ export const LedWallHireIntroContentData = {
   features: [
     {
       icon: Monitor,
-      title: "Indoor & outdoor LED wall rent",
+      title: "Indoor & outdoor panels",
       description: "P3 fine-pitch indoor and IP65 P4 outdoor panels, sized to your venue, not a fixed catalogue.",
     },
     {
       icon: MapPin,
       title: "Delivered island-wide",
-      description: "LED wall hire delivery, rigging and breakdown across all 25 districts, from Colombo to Jaffna.",
+      description: "Delivery, rigging and breakdown across all 25 districts, from Colombo to Jaffna.",
     },
     {
       icon: Cpu,
       title: "Everything included",
-      description: "Video processor, power distribution and an on-site operator on every LED wall rent booking.",
+      description: "Video processor, power distribution and an on-site operator on every booking.",
     },
   ],
-  ctaLabel: "Full LED wall hire details",
+  ctaLabel: "Full service details",
   ctaHref: LED_WALL_SERVICE_HREF,
-  secondaryCtaLabel: "See LED wall rent pricing",
+  secondaryCtaLabel: "See pricing",
   secondaryCtaHref: "/pricing",
 };
 
@@ -187,7 +187,7 @@ export const ServicesIntro: SectionIntro = {
   titleLine2: "Full production too.",
   titleLine2Muted: true,
   description:
-    "We specialise in LED wall hire and LED screen rent, plus stage truss, stage lighting and fog, sound and exhibition builds for full event production.",
+    "We specialise in LED wall hire and screen rental, plus stage truss, stage lighting and fog, sound and exhibition builds - for full event production on one quote.",
   ctaLabel: "All services",
   ctaHref: "/services",
 };
@@ -260,32 +260,32 @@ export const EventTypes: EventTypeTab[] = [
     label: "Weddings",
     img: images.wedding,
     heading: "Wedding LED screen rent Sri Lanka",
-    body: "LED wall hire wedding Sri Lanka, indoor P3 backdrop walls, aisle screens and stage displays. Wedding LED screen Colombo and island-wide with planner coordination and an all-night operator.",
-    tags: ["LED backdrop wedding", "P3 indoor", "Colombo & outstation"],
+    body: "LED wall hire for weddings, indoor P3 backdrop walls, aisle screens and stage displays. Coordinated with your planner and operated through the night.",
+    tags: ["LED backdrop", "P3 indoor", "Colombo & outstation"],
   },
   {
     id: "corporate",
     label: "Corporate",
     img: images.corporate,
-    heading: "LED screen corporate event Sri Lanka",
-    body: "LED wall corporate event hire for product launches, AGMs and award nights. LED screen hire Colombo with P3 indoor panels, AV integration and full-day technician support.",
-    tags: ["Product launch screens", "Conference LED wall", "Operator included"],
+    heading: "LED screens for corporate events",
+    body: "LED screens for product launches, AGMs and conferences, with AV integration and full-day technician support.",
+    tags: ["Product launches", "AGMs & conferences", "AV integration"],
   },
   {
     id: "concerts",
     label: "Concerts",
     img: images.concert2,
-    heading: "LED screen concert Sri Lanka",
-    body: "Outdoor LED screen rent for live shows, IP65 P4 weatherproof panels, ultra-bright big LED screen rent builds rigged by our certified crew. Add Stage Lighting & Fog for rotating lights and fog machines on the same quote.",
-    tags: ["Outdoor LED wall concert", "IP65 rated", "Big screen hire"],
+    heading: "Outdoor concert LED screens",
+    body: "Weatherproof IP65 outdoor screens for concerts, festivals and rallies, with certified rigging.",
+    tags: ["Outdoor IP65", "Concerts & festivals", "Certified rigging"],
   },
   {
     id: "award-ceremonies",
     label: "Award Ceremonies",
     img: images.brand,
-    heading: "LED backdrop hire for gala nights",
-    body: "LED backdrop rent for award ceremonies and convocations, fine-pitch indoor walls with stage builds and polished audio. We coordinate from rehearsal through the final trophy moment.",
-    tags: ["LED backdrop hire", "Stage & truss", "Indoor P3"],
+    heading: "Award night LED backdrops",
+    body: "Custom LED backdrops from 10×8 ft to 40×12 ft, for stage sets and award ceremonies.",
+    tags: ["Custom backdrops", "10×8-40×12 ft", "Stage & truss"],
   },
 ];
 
@@ -368,77 +368,39 @@ export const Faqs: FaqItem[] = [
   {
     question: "Where can I find LED wall hire in Sri Lanka?",
     answer:
-      "YC Events provides LED wall hire across all 25 districts. Whether you are in Colombo, Kandy, Galle, Jaffna or any outstation town, we deliver, build and operate LED screens at your venue. Contact us or check our city pages for local coverage.",
+      "YC Events provides LED wall hire across all 25 districts - Colombo, Kandy, Galle, Jaffna and every outstation town. See our coverage page or contact us for local availability.",
   },
   {
-    question: "How do I rent an LED wall in Sri Lanka?",
+    question: "How do I rent an LED wall?",
     answer:
-      "To rent an LED wall in Sri Lanka, send your event date, venue and wall size via our contact form or WhatsApp. We reply with an itemised LED wall rent quote in LKR within 60 minutes. Every booking includes delivery, setup, operator and breakdown.",
+      "Send your event date, venue and wall size via WhatsApp or our contact form. We reply with an itemised quote within 60 minutes.",
   },
   {
-    question: "How much does LED screen rent cost in Sri Lanka?",
+    question: "How much does it cost?",
     answer:
-      "LED screen rent in Sri Lanka starts from LKR 55,000 per 8-hour business day for a 10×8 ft LED video wall. See our pricing page for the full rate table and custom size quotes.",
+      "Starts from LKR 55,000 for an 8-hour day on a 10×8 ft screen. See our pricing page for the full rate table.",
   },
   {
-    question: "How much does LED wall hire cost in Sri Lanka?",
+    question: "What's the difference between P3 and P4?",
     answer:
-      "LED wall hire cost depends on wall size, pixel pitch (P3 or P4+), indoor vs outdoor use, location and number of days. YC Events sends an itemised LED screen rent price quote within 60 minutes, no hidden fees.",
+      "P3 is a fine-pitch indoor panel for close viewing. P4 is a brighter, weatherproof outdoor panel for concerts and rallies.",
   },
   {
-    question: "P3 vs P4 LED screen, what is the difference?",
-    answer:
-      "Pixel pitch is the gap between LED clusters in millimetres. P3 is a fine-pitch indoor panel for weddings and corporate events where guests sit close to the screen. P4 is an outdoor-rated, brighter IP65 panel built for concerts, rallies and outdoor LED screen rent in Sri Lanka.",
+    question: "Is an operator included?",
+    answer: "Yes, on every booking, at no separate charge.",
   },
   {
-    question: "Indoor vs outdoor LED screen rent, which should I book?",
-    answer:
-      "Indoor LED wall rent uses P3 panels for hotels, ballrooms and conference halls. Outdoor LED screen rent uses IP65 weatherproof P4 panels rated for direct sunlight and rain. We recommend the right configuration during your quote.",
+    question: "Do you deliver outside Colombo?",
+    answer: "Yes, island-wide across all 25 districts.",
   },
   {
-    question: "What does LED screen hire with operator included mean?",
-    answer:
-      "LED screen hire with operator included means a trained video technician is part of every booking, in Colombo and every outstation district, at no separate charge. Your operator handles setup, content playback, brightness and breakdown, so you never run the LED wall yourself.",
+    question: "Do you rent wedding LED screens?",
+    answer: "Yes - indoor P3 backdrop walls, coordinated with your planner.",
   },
   {
-    question: "Do you deliver LED walls outside Colombo?",
+    question: "Can I add stage, lighting or sound to my booking?",
     answer:
-      "Yes. LED screen outstation delivery is standard across all 25 districts, Kandy, Galle, Jaffna, Negombo and everywhere between. LED wall Kandy delivery and island-wide LED wall hire are included in your quote.",
-  },
-  {
-    question: "Do you rent wedding LED screens in Colombo?",
-    answer:
-      "Yes. Wedding LED screen Colombo is one of our most common bookings, indoor P3 backdrop walls for receptions and ceremonies, coordinated with your planner and operated all night.",
-  },
-  {
-    question: "Can I rent a big LED screen for an outdoor concert?",
-    answer:
-      "Yes. We provide big LED screen rent and large screen hire for outdoor concerts, festivals and political rallies. Outdoor LED wall builds use IP65 panels up to 7,000 nit with certified rigging crew.",
-  },
-  {
-    question: "Do you offer jumbo screen hire in Sri Lanka?",
-    answer:
-      "Yes. Jumbo screen hire Sri Lanka bookings use modular outdoor IP65 LED panels scaled to your venue, from medium conference walls to large concert backdrops. Every jumbo LED screen hire includes delivery, rigging and an on-site operator.",
-  },
-  {
-    question: "What is LED wall hire in Sri Lanka?",
-    answer:
-      "LED wall hire is renting a modular LED video wall for your event with delivery, setup, operator and breakdown included. YC Events LED wall hire Sri Lanka covers indoor P3 and outdoor IP65 panels for weddings, corporate events and concerts across all 25 districts.",
-  },
-  {
-    question: "Can I add truss, rotating lights and fog machines to LED wall hire?",
-    answer:
-      `Yes. Add our Stage Lighting & Fog service (${STAGE_LIGHTING_FOG_SERVICE_HREF}) with stage truss on the same LED wall quote. Ideal for weddings, concerts and corporate shows.`,
-  },
-  {
-    question: "Do you rent LED promotion trucks in Sri Lanka?",
-    answer:
-      "Our main focus is LED wall and LED screen rent for events. If your campaign needs a mobile truck-mounted LED screen, mention it on enquiry and we will advise on the best fit for your budget and route.",
-  },
-  {
-    question: "What is the largest LED wall you can build?",
-    answer:
-      "YC Events builds custom LED video walls up to 70ft and beyond for large outdoor concerts, political rallies and mega events across Sri Lanka. Wall size is quoted to your venue and stage, not limited to a fixed catalogue.",
+      "Yes, all add-ons can go on the same quote, one crew, one delivery.",
   },
 ];
 
@@ -536,21 +498,6 @@ export const QuoteAudienceOptions = [
   "300-1,000",
   "1,000-5,000",
   "5,000+",
-] as const;
-
-export const TickerItems = [
-  "LED WALL HIRE SRI LANKA",
-  "LED WALL RENT COLOMBO",
-  "LED SCREEN HIRE",
-  "ROTATING STAGE LIGHTS",
-  "FOG MACHINE HIRE",
-  "OUTDOOR IP65 LED WALL",
-  "OPERATOR INCLUDED",
-  "ALL 25 DISTRICTS",
-  "STAGE & TRUSS",
-  "SOUND SYSTEMS",
-  "WEDDING LED WALL",
-  "7+ YEARS",
 ] as const;
 
 export const EmptyQuoteForm: QuoteFormValues = {

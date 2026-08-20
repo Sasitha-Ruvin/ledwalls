@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { ChevronRight, MapPin } from "lucide-react";
-import TickerBar from "@/components/home/TickerBar";
 import { ContactEnquiryForm } from "@/components/contact/ContactEnquiryForm";
 import {
   ContactBusinessHours,
@@ -62,8 +61,6 @@ export function ContactPageContent() {
           </div>
         </div>
       </section>
-
-      <TickerBar />
 
       <section
         aria-labelledby="contact-main-heading"

@@ -8,7 +8,6 @@ import { ServicesHeroSection } from "@/components/services/ServicesHeroSection";
 import { ServicesQuoteSection } from "@/components/services/ServicesQuoteSection";
 import { LedWallServicePricingSection } from "@/components/pricing/LedWallServicePricingSection";
 import { JsonLd } from "@/components/shared/JsonLd";
-import TickerBar from "@/components/home/TickerBar";
 import {
   GalleryImages,
   ServicesPagePortfolioIntro,
@@ -37,7 +36,6 @@ const ServicesPage = () => {
     <main>
       <JsonLd data={buildServicesSchema()} />
       <ServicesHeroSection />
-      <TickerBar />
 
       <ServiceDetailsRow {...ledWallService} reverse={false} />
       <LedWallEventFocusSection />

@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import TickerBar from "@/components/home/TickerBar";
 import QuoteDialog from "@/components/layout/QuoteDialog";
 import { PageHero } from "@/components/shared/PageHero";
 import { FaqList } from "@/components/shared/FaqList";
@@ -40,8 +39,6 @@ export function ServiceDetailView({ service }: ServiceDetailViewProps) {
         ]}
         minHeightClass="min-h-[24rem] sm:min-h-[28rem] lg:min-h-[32rem]"
       />
-
-      <TickerBar />
 
       <section
         aria-labelledby="service-about-heading"
@@ -210,7 +207,8 @@ export function ServiceDetailView({ service }: ServiceDetailViewProps) {
             Ready to book {service.title.toLowerCase()} in Sri Lanka?
           </h2>
           <p className="mt-2 text-sm text-white/75 sm:text-base">
-            Island-wide delivery. Itemised quote within 60 minutes.
+            {service.ctaNote ??
+              "Island-wide delivery. Itemised quote within 60 minutes."}
           </p>
         </div>
         <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">

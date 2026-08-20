@@ -11,7 +11,6 @@ import { LedWallHireIntroSection } from "@/components/home/LedWallHireIntroSecti
 import ProcessSection from "@/components/home/ProcessSection";
 import ServicesGrid from "@/components/home/ServicesGrid";
 import StatsBar from "@/components/home/StatsBar";
-import TickerBar from "@/components/home/TickerBar";
 import WhyUsSection from "@/components/home/WhyUsSection";
 import { buildHomeSchema, HomePageMetaData } from "@/lib/data/home";
 import { buildPageMetadata, SITE_OG_IMAGE, SITE_OG_IMAGE_ALT } from "@/lib/seo";
@@ -30,7 +29,6 @@ export default function Page() {
     <>
       <JsonLd data={buildHomeSchema()} />
       <HeroSection />
-      <TickerBar />
       <LedWallHireIntroSection />
       <LedRentalUsesSection />
       <ClientLogoStrip />
@@ -40,7 +38,13 @@ export default function Page() {
       <StatsBar />
       <EventTypeSection />
       <ProcessSection />
-      <FAQSection listId="faq" />
+      <FAQSection
+        listId="faq"
+        footerLink={{
+          label: "More questions? See our full FAQ on the LED Wall Hire page",
+          href: "/services/led-wall-hire",
+        }}
+      />
       <CtaSection />
     </>
   );

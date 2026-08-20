@@ -3,7 +3,7 @@ import Script from "next/script";
 const GOOGLE_ADS_ID =
   process.env.NEXT_PUBLIC_GOOGLE_ADS_ID?.trim() || "AW-18370434606";
 
-/** Google Ads gtag.js — load only on pages that include this component. */
+/** Google Ads gtag.js - load only on pages that include this component. */
 export function GoogleAdsTag() {
   if (!GOOGLE_ADS_ID) return null;
 

@@ -18,10 +18,10 @@ export function LedRentalUsesSection({ className }: LedRentalUsesSectionProps) {
         eyebrow="LED wall hire Sri Lanka"
         title={
           <h2 id="led-uses-heading">
-            LED screen hire for every event type
+            Built for every event type
           </h2>
         }
-        description="YC Events is Sri Lanka's LED wall hire specialist. LED wall rent and LED screen hire for weddings, corporate events, concerts and rallies, with operator included. Add truss, rotating stage lights and fog machines on the same booking."
+        description="Indoor and outdoor LED screens for weddings, corporate events, concerts and rallies, with an operator included on every booking. Add truss, stage lighting and fog on the same quote."
       />
 
       <ul className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">

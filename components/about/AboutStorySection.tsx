@@ -27,8 +27,12 @@ const AboutStorySection = ({content= AboutStoryData, className}:AboutStorySectio
                     className="text-3xl font-bold leading-tight tracking-tight text-ink sm:text-4xl"
                 >
                     {content.titleLine1}
-                    <br />
-                    {content.titleLine2}
+                    {content.titleLine2 ? (
+                        <>
+                            <br />
+                            {content.titleLine2}
+                        </>
+                    ) : null}
                 </h2>
                 <div className="mt-6 max-w-lg space-y-5">
                     {content.paragraphs.map((paragraph) =>(

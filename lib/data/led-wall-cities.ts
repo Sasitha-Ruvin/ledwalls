@@ -384,6 +384,76 @@ export const LedWallCities: LedWallCity[] = [
   },
 ];
 
+/**
+ * Lightweight factory for the remaining district pages. Uses the same
+ * template copy for every district (per the site content spec): a short
+ * indoor/outdoor intro, three generic bullet points and one FAQ, so every
+ * district gets a real, indexable page without duplicating body copy.
+ */
+function createDistrictCity(
+  slug: string,
+  name: string,
+  heroImage: string
+): LedWallCity {
+  return {
+    slug,
+    name,
+    title: `LED Wall Hire ${name} | YC Events`,
+    description: `LED wall hire and LED screen rental in ${name}, Sri Lanka. Delivery and operator included. Quote in 60 minutes.`,
+    keywords: [
+      `LED wall hire ${name}`,
+      `LED screen rental ${name}`,
+      `LED wall rent ${name}`,
+      `LED wall hire near me ${name}`,
+    ],
+    eyebrow: `LED wall hire ${name}`,
+    heroImage,
+    heroBody: `LED wall hire in ${name} - indoor P3 screens for weddings and corporate events. LED screen rental in ${name} - outdoor IP65 screens for concerts and rallies.`,
+    intro: `YC Events delivers, builds and operates LED screens in ${name} with the same crew and rate table used island-wide. Indoor and outdoor panels, operator included, quote in 60 minutes.`,
+    venues: [
+      "Indoor & outdoor panels",
+      "Operator included",
+      "Quote in 60 minutes",
+    ],
+    faqs: [
+      {
+        question: `Do you deliver LED walls to ${name}?`,
+        answer: `Yes. YC Events covers ${name} as part of our island-wide, all-25-district delivery. Send your venue on enquiry for a same-day quote.`,
+      },
+      {
+        question: `How much does LED wall hire cost in ${name}?`,
+        answer: `${LedWallRatesSummary} ${name} delivery is included in your quote, not billed as a separate outstation fee.`,
+      },
+    ],
+  };
+}
+
+const DISTRICT_TEMPLATE_ENTRIES: Array<[string, string, string]> = [
+  ["kalutara", "Kalutara", images.wedding],
+  ["gampaha", "Gampaha", images.corporate],
+  ["ratnapura", "Ratnapura", images.concert3],
+  ["kegalle", "Kegalle", images.corporate2],
+  ["trincomalee", "Trincomalee", images.crowd],
+  ["batticaloa", "Batticaloa", images.concert2],
+  ["ampara", "Ampara", images.brand],
+  ["badulla", "Badulla", images.wedding2],
+  ["monaragala", "Monaragala", images.why],
+  ["hambantota", "Hambantota", images.wedding],
+  ["puttalam", "Puttalam", images.corporate],
+  ["polonnaruwa", "Polonnaruwa", images.concert3],
+  ["mannar", "Mannar", images.brand],
+  ["vavuniya", "Vavuniya", images.corporate2],
+  ["mullaitivu", "Mullaitivu", images.crowd],
+  ["kilinochchi", "Kilinochchi", images.concert2],
+  ["nuwara-eliya", "Nuwara Eliya", images.wedding2],
+];
+
+LedWallCities.push(
+  ...DISTRICT_TEMPLATE_ENTRIES.map(([slug, name, img]) =>
+    createDistrictCity(slug, name, img)
+  )
+);
+
 export const LedWallCitiesFootnote = LedWallRatesFootnote;
 
 export function getLedWallCityBySlug(slug: string): LedWallCity | undefined {

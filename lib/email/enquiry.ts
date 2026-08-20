@@ -26,7 +26,7 @@ export function formatEnquiryEmail(payload: EnquiryPayload): {
     `Location: ${payload.venue || "Not specified"}`,
     `Audience: ${payload.audience || "Not specified"}`,
     `Services needed: ${needs}`,
-    `Message: ${payload.message || "—"}`,
+    `Message: ${payload.message || "-"}`,
   ];
 
   const subject = `YC Events enquiry: ${payload.name} · ${payload.service || "LED wall"}`;
@@ -39,15 +39,15 @@ export function formatEnquiryEmail(payload: EnquiryPayload): {
         <tbody>
           <tr><td style="padding:8px 0;border-bottom:1px solid #E0DFDC"><strong>Name</strong></td><td style="padding:8px 0;border-bottom:1px solid #E0DFDC">${escapeHtml(payload.name)}</td></tr>
           <tr><td style="padding:8px 0;border-bottom:1px solid #E0DFDC"><strong>Phone</strong></td><td style="padding:8px 0;border-bottom:1px solid #E0DFDC">${escapeHtml(payload.phone)}</td></tr>
-          <tr><td style="padding:8px 0;border-bottom:1px solid #E0DFDC"><strong>Event / service</strong></td><td style="padding:8px 0;border-bottom:1px solid #E0DFDC">${escapeHtml(payload.service || "—")}</td></tr>
-          <tr><td style="padding:8px 0;border-bottom:1px solid #E0DFDC"><strong>Event date</strong></td><td style="padding:8px 0;border-bottom:1px solid #E0DFDC">${escapeHtml(payload.date || "—")}</td></tr>
-          <tr><td style="padding:8px 0;border-bottom:1px solid #E0DFDC"><strong>Location</strong></td><td style="padding:8px 0;border-bottom:1px solid #E0DFDC">${escapeHtml(payload.venue || "—")}</td></tr>
-          <tr><td style="padding:8px 0;border-bottom:1px solid #E0DFDC"><strong>Audience</strong></td><td style="padding:8px 0;border-bottom:1px solid #E0DFDC">${escapeHtml(payload.audience || "—")}</td></tr>
+          <tr><td style="padding:8px 0;border-bottom:1px solid #E0DFDC"><strong>Event / service</strong></td><td style="padding:8px 0;border-bottom:1px solid #E0DFDC">${escapeHtml(payload.service || "-")}</td></tr>
+          <tr><td style="padding:8px 0;border-bottom:1px solid #E0DFDC"><strong>Event date</strong></td><td style="padding:8px 0;border-bottom:1px solid #E0DFDC">${escapeHtml(payload.date || "-")}</td></tr>
+          <tr><td style="padding:8px 0;border-bottom:1px solid #E0DFDC"><strong>Location</strong></td><td style="padding:8px 0;border-bottom:1px solid #E0DFDC">${escapeHtml(payload.venue || "-")}</td></tr>
+          <tr><td style="padding:8px 0;border-bottom:1px solid #E0DFDC"><strong>Audience</strong></td><td style="padding:8px 0;border-bottom:1px solid #E0DFDC">${escapeHtml(payload.audience || "-")}</td></tr>
           <tr><td style="padding:8px 0;border-bottom:1px solid #E0DFDC"><strong>Services needed</strong></td><td style="padding:8px 0;border-bottom:1px solid #E0DFDC">${escapeHtml(needs)}</td></tr>
         </tbody>
       </table>
       <p style="margin:16px 0 8px"><strong>Message</strong></p>
-      <p style="margin:0;padding:12px;background:#F5F4F2;border-radius:8px">${escapeHtml(payload.message || "—")}</p>
+      <p style="margin:0;padding:12px;background:#F5F4F2;border-radius:8px">${escapeHtml(payload.message || "-")}</p>
     </div>
   `;
 

@@ -1,4 +1,3 @@
-import TickerBar from "@/components/home/TickerBar";
 import { ServicePortfolioGallery } from "@/components/services/ServicePortfolioGallery";
 import { PageHero } from "@/components/shared/PageHero";
 import { GalleryImages, GalleryPageIntro } from "@/lib/data/gallery";
@@ -18,7 +17,6 @@ export function GalleryPageContent() {
         ]}
         minHeightClass="min-h-[22rem] sm:min-h-[26rem] lg:min-h-[30rem]"
       />
-      <TickerBar />
       <ServicePortfolioGallery
         items={GalleryImages}
         eyebrow="All projects"

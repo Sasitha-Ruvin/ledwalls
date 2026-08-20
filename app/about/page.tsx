@@ -3,7 +3,6 @@ import AboutHero from "@/components/about/AboutHero";
 import AboutStorySection from "@/components/about/AboutStorySection";
 import AboutTimelineSection from "@/components/about/AboutTimelineSection";
 import AboutValuesSection from "@/components/about/AboutValuesSection";
-import TickerBar from "@/components/home/TickerBar";
 import { JsonLd } from "@/components/shared/JsonLd";
 import { AboutPageMetaData, buildAboutSchema } from "@/lib/data/about";
 import { buildPageMetadata, SITE_OG_IMAGE, SITE_OG_IMAGE_ALT } from "@/lib/seo";
@@ -23,7 +22,6 @@ export default function AboutPage(){
         <main>
             <JsonLd data={buildAboutSchema()}/>
             <AboutHero/>
-            <TickerBar/>
             <AboutStorySection/>
             <AboutValuesSection/>
             <AboutTimelineSection/>

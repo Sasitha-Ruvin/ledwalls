@@ -94,7 +94,7 @@ export function buildLocalBusinessNode(
         closes: "20:00",
       },
     ],
-    foundingDate: "2018",
+    foundingDate: "2017",
     ...options.extra,
   };
 }

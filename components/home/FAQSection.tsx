@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FaqIntro, Faqs } from "@/lib/data/home";
 import { FaqList } from "@/components/shared/FaqList";
 import { SectionHeading } from "@/components/shared/SectionHeading";
@@ -11,6 +12,7 @@ interface FAQSectionProps {
   intro?: SectionIntro;
   className?: string;
   listId?: string;
+  footerLink?: { label: string; href: string };
 }
 
 const FAQSection = ({
@@ -18,6 +20,7 @@ const FAQSection = ({
   intro = FaqIntro,
   className,
   listId,
+  footerLink,
 }: FAQSectionProps) => {
   return (
     <section
@@ -48,6 +51,16 @@ const FAQSection = ({
         listId={listId}
         className="mt-10 lg:mt-12"
       />
+
+      {footerLink ? (
+        <Link
+          href={footerLink.href}
+          className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-brand transition-opacity hover:opacity-80"
+        >
+          {footerLink.label}
+          <ArrowRight className="size-3.5" aria-hidden />
+        </Link>
+      ) : null}
     </section>
   );
 };

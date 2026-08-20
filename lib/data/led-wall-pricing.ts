@@ -71,15 +71,15 @@ export const LedWallPricingHighlights = [
 
 export const LedWallRatesIntro = {
   eyebrow: "LED wall hire price Sri Lanka",
-  title: "LED wall hire and rent rates",
+  title: "LED Wall Hire and Rent Rates",
   description:
-    "Published LED wall hire and LED wall rent prices for standard sizes below. Operator, delivery, setup and breakdown included. Add truss, rotating lights and fog machines on the same quote across Colombo, Kandy and all 25 districts.",
+    "Standard rates for one 8-hour business day, operator, delivery, setup and breakdown included. Add truss, lighting or fog on the same quote. Final price may vary for extended hours, multi-day bookings, pixel pitch upgrades or complex rigging.",
 };
 
 export const LedWallCustomSizesNote = {
-  title: "Need a custom LED wall size?",
+  title: "Need a custom size?",
   body:
-    "These rates cover our standard catalogue sizes. We also build custom LED video walls sized to your stage, ballroom or outdoor plot. Pricing is quoted to your exact dimensions.",
+    "These rates cover our standard catalogue sizes. We also build custom LED walls sized to your stage, ballroom or outdoor plot, quoted to your exact dimensions.",
   points: [
     "Any width and height",
     "Indoor P3 or outdoor IP65",
