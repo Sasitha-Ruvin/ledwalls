@@ -1,10 +1,12 @@
 import Link from "next/link";
+import { MessageCircle, Phone } from "lucide-react";
 import BrandMark from "@/components/shared/BrandMark";
 import {
   FooterBlurb,
-  FooterContacts,
+  FooterContactLinks,
   FooterCoverage,
   FooterLegal,
+  FooterPhoneLines,
   FooterServiceLinks,
 } from "@/lib/data/footer";
 import { cn } from "@/lib/utils";
@@ -72,24 +74,55 @@ export default function SiteFooter({ className }: SiteFooterProps) {
             Contact
           </h2>
           <ul className="space-y-3">
-            {FooterContacts.map((item) => {
+            {FooterPhoneLines.map((line) => (
+              <li key={line.display}>
+                <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm">
+                  <a
+                    href={line.phoneHref}
+                    className="inline-flex items-center gap-2 text-muted-yc transition-colors hover:text-white"
+                  >
+                    <Phone className="size-3.5 shrink-0 text-brand" aria-hidden />
+                    {line.tag ? (
+                      <>
+                        <span className="text-white/55">{line.tag}</span>
+                        {line.display}
+                      </>
+                    ) : (
+                      line.display
+                    )}
+                  </a>
+                  <span className="text-white/20" aria-hidden>
+                    ·
+                  </span>
+                  <a
+                    href={line.whatsappHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs font-medium text-whatsapp transition-opacity hover:opacity-80"
+                  >
+                    <MessageCircle className="size-3.5" aria-hidden />
+                    WhatsApp
+                  </a>
+                </div>
+              </li>
+            ))}
+
+            {FooterContactLinks.map((item) => {
               const Icon = item.icon;
-              const href = "href" in item ? item.href : undefined;
-              const external =
-                "external" in item && item.external || href?.startsWith("http");
               const content = (
                 <span className="flex items-center gap-2.5 text-sm text-muted-yc">
                   <Icon className="size-3.5 shrink-0 text-brand" aria-hidden />
                   {item.label}
                 </span>
               );
+
               return (
                 <li key={item.label}>
-                  {href ? (
+                  {item.href ? (
                     <a
-                      href={href}
-                      target={external ? "_blank" : undefined}
-                      rel={external ? "noopener noreferrer" : undefined}
+                      href={item.href}
+                      target={item.external ? "_blank" : undefined}
+                      rel={item.external ? "noopener noreferrer" : undefined}
                       className="transition-colors hover:text-white"
                     >
                       {content}

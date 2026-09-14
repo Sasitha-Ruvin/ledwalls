@@ -6,11 +6,10 @@ import { PageHero } from "@/components/shared/PageHero";
 import { JsonLd } from "@/components/shared/JsonLd";
 import { StatItem } from "@/components/shared/StatItem";
 import { Button } from "@/components/ui/button";
-import { LedWallRatesPanel } from "@/components/pricing/PricingRatesGrid";
+import { LedWallStartingPriceCard } from "@/components/pricing/PricingRatesGrid";
 import { LedWallCustomSizesSection } from "@/components/pricing/LedWallCustomSizesSection";
 import {
   buildPricingSchema,
-  LedWallRatesFootnote,
   LedWallRatesIntro,
   LedWallPricingHighlights,
   PricingFaqs,
@@ -18,6 +17,7 @@ import {
   PricingIncludes,
   PricingSeoSections,
 } from "@/lib/data/pricing";
+import { LedWallPricingExclusions } from "@/lib/data/led-wall-pricing";
 import { LED_WALL_SERVICE_HREF } from "@/lib/data/services";
 
 export function PricingPageContent() {
@@ -41,6 +41,7 @@ export function PricingPageContent() {
           { label: "Pricing" },
         ]}
       />
+
       <section
         aria-label="LED wall hire price highlights"
         className="border-b border-line bg-white px-4 py-8 sm:px-8 lg:px-16"
@@ -76,9 +77,28 @@ export function PricingPageContent() {
             <p className="mt-4 text-base leading-relaxed text-muted-yc">
               {LedWallRatesIntro.description}
             </p>
-            <p className="mt-6 text-xs leading-relaxed text-muted-yc">
-              {LedWallRatesFootnote}
-            </p>
+
+            <div className="mt-8 grid gap-4 sm:grid-cols-3">
+              <div>
+                <h3 className="text-sm font-bold text-ink">What changes the price</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-yc">
+                  Size, pixel pitch, hire duration and venue.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-sm font-bold text-ink">Indoor vs outdoor</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-yc">
+                  P3 for close indoor viewing. P4 IP65 for outdoor concerts and rallies.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-sm font-bold text-ink">Not included</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-yc">
+                  {LedWallPricingExclusions}
+                </p>
+              </div>
+            </div>
+
             <Button
               nativeButton={false}
               render={<Link href={LED_WALL_SERVICE_HREF} />}
@@ -91,7 +111,7 @@ export function PricingPageContent() {
           </div>
 
           <div className="w-full lg:sticky lg:top-24">
-            <LedWallRatesPanel />
+            <LedWallStartingPriceCard />
           </div>
         </div>
       </section>
@@ -99,61 +119,22 @@ export function PricingPageContent() {
       <LedWallCustomSizesSection />
 
       <section
-        aria-labelledby="pricing-summary-heading"
-        className="bg-white px-4 py-16 sm:px-8 sm:py-20 lg:px-16"
-      >
-        <div className="grid gap-10 lg:grid-cols-3">
-          <div>
-            <h2
-              id="pricing-summary-heading"
-              className="text-lg font-bold text-ink"
-            >
-              What changes the price
-            </h2>
-            <p className="mt-3 text-sm leading-relaxed text-muted-yc sm:text-base">
-              Size, pixel pitch, number of days, and delivery location.
-            </p>
-          </div>
-          <div>
-            <h2 className="text-lg font-bold text-ink">Indoor vs outdoor</h2>
-            <ul className="mt-3 space-y-1.5 text-sm leading-relaxed text-muted-yc sm:text-base">
-              <li>
-                <span className="font-semibold text-ink">P3 (indoor)</span> -
-                sharper at close range, for weddings and conferences.
-              </li>
-              <li>
-                <span className="font-semibold text-ink">P4 (outdoor)</span> -
-                brighter and weatherproof, for concerts and rallies.
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h2 className="text-lg font-bold text-ink">What's included</h2>
-            <p className="mt-3 text-sm leading-relaxed text-muted-yc sm:text-base">
-              Delivery, setup, breakdown and an operator, on every booking. No
-              hidden charges.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section
         aria-labelledby="pricing-includes-heading"
         className="bg-white px-4 py-16 sm:px-8 sm:py-20 lg:px-16"
       >
         <div className="mb-10 max-w-2xl">
           <p className="mb-3 text-xs font-medium tracking-widest text-brand uppercase">
-            Included in every rate
+            How we quote
           </p>
           <h2
             id="pricing-includes-heading"
             className="text-2xl font-extrabold tracking-tight text-ink sm:text-3xl"
           >
-            LED screen hire with operator included
+            Clear pricing for every event
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-muted-yc sm:text-base">
-            Every rate is a full LED wall hire cost with operator, delivery,
-            setup and breakdown included.
+            Starting price covers the LED wall hire baseline. Transport, setup and
+            add-ons are listed separately so you know exactly what you are paying for.
           </p>
         </div>
         <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -211,29 +192,25 @@ export function PricingPageContent() {
         listId="faq"
         intro={{
           eyebrow: "LED wall FAQ",
-          titleLine1: "LED screen rent",
+          titleLine1: "Pricing",
           titleLine2: "questions answered.",
           titleLine2Muted: true,
           description:
-            "Common questions about LED wall rent price, LKR rates, operator inclusion and delivery across Sri Lanka.",
+            "Starting price, what is excluded, custom sizes and island-wide delivery.",
         }}
         className="bg-white"
       />
 
-      <section
-        className="flex flex-col items-start justify-between gap-6 bg-brand px-4 py-12 sm:flex-row sm:items-center sm:px-8 sm:py-14 lg:px-16"
-      >
+      <section className="flex flex-col items-start justify-between gap-6 bg-brand px-4 py-12 sm:flex-row sm:items-center sm:px-8 sm:py-14 lg:px-16">
         <div>
           <h2 className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">
             Ready for your LED wall quote?
           </h2>
           <p className="mt-2 text-sm text-white/80 sm:text-base">
-            Itemised LED screen rent price in LKR within 60 minutes.
+            Itemised quote in LKR within 60 minutes.
           </p>
         </div>
-        <QuoteDialog
-          triggerClassName="h-12 bg-white px-6 text-sm font-semibold text-brand hover:bg-surface"
-        >
+        <QuoteDialog triggerClassName="h-12 bg-white px-6 text-sm font-semibold text-brand hover:bg-surface">
           Get a quote
           <ArrowRight className="size-4" aria-hidden />
         </QuoteDialog>

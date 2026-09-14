@@ -2,7 +2,7 @@ import {cn} from "@/lib/utils";
 
 interface MarqueeProps {
     children:React.ReactNode;
-    animationClass: "tk" | "lg";
+    animationClass?: "tk" | "lg";
     className?:string;
     pauseOnHover?:boolean;
 }

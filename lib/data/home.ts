@@ -378,7 +378,7 @@ export const Faqs: FaqItem[] = [
   {
     question: "How much does it cost?",
     answer:
-      "Starts from LKR 55,000 for an 8-hour day on a 10×8 ft screen. See our pricing page for the full rate table.",
+      "Starts from LKR 50,000 onwards. Price does not include transport, setup or additional equipment charges. See our pricing page for details.",
   },
   {
     question: "What's the difference between P3 and P4?",

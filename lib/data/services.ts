@@ -7,9 +7,10 @@ import {
 } from "lucide-react";
 import { images } from "@/lib/images";
 import {
-  LedWallRates,
   formatLedWallRateLkr,
-  formatLedWallRatePerDay,
+  LedWallStartingPriceDisplay,
+  LedWallPricingExclusions,
+  LED_WALL_STARTING_PRICE_LKR,
 } from "@/lib/data/led-wall-pricing";
 import {
   LightingFogPortfolio,
@@ -85,17 +86,18 @@ export const ServicesList: ServiceDetailData[] = [
     icon: Monitor,
     quickNavLabel: "LED Wall Hire",
     cta: "Full LED wall hire details",
-    body: "YC Events is Sri Lanka's LED wall hire specialist. We supply indoor P3 panels for weddings, corporate events and conferences, and outdoor IP65 panels for concerts, rallies and festivals - island-wide, across all 25 districts. Every booking includes delivery, full assembly, video processor setup, content testing and a dedicated on-site operator. Wall sizes from 6×4 ft to 40×20 ft+ are built to your venue, not a fixed catalogue. Add aluminium stage truss, rotating stage lights, fog machines, sound systems, exhibition stalls or digital podiums to the same quote - one crew, one delivery.",
+    body: "YC Events is Sri Lanka's LED wall hire specialist. We supply indoor P3 panels for weddings, corporate events and conferences, and outdoor IP65 panels for concerts, rallies and festivals - island-wide, across all 25 districts. Every booking includes delivery, full assembly, video processor setup, content testing and a dedicated on-site operator. Wall sizes from 6×4 ft to 40×20 ft+ are built to your venue, not a fixed catalogue. Add stage truss, lighting, fog, sound, exhibition stalls or digital podiums to the same quote.",
     specs: [
       ["Indoor pixel pitch", "P3, wedding & corporate"],
       ["Outdoor pixel pitch", "P4 IP65 weatherproof"],
       ["Brightness", "Up to 7,000 nit outdoor"],
       ["Size range", "10×8 ft to 40×12 ft · custom sizes available"],
       ["Hire window", "8-hour business day (standard)"],
-      ["Starting rate", `${formatLedWallRateLkr(55000)} / 8 hrs`],
-      ["Includes", "Operator, delivery, setup, breakdown"],
+      ["Starting rate", `From ${formatLedWallRateLkr(LED_WALL_STARTING_PRICE_LKR)}`],
+      ["Includes", "LED wall hire baseline"],
+      ["Not included", "Transport, setup, add-ons"],
       ["Production add-ons", "Stage lighting & fog, truss, sound, stalls, podiums"],
-      ["Outdoor rating", "IP65, weatherproof LED wall rent"],
+      ["Outdoor rating", "IP65, weatherproof"],
     ],
     seo: {
       title: "LED Wall Hire Sri Lanka | LED Wall Rent & Screen Hire",
@@ -140,7 +142,7 @@ export const ServicesList: ServiceDetailData[] = [
       {
         question: "How much does LED wall hire cost?",
         answer:
-          `Starts from ${formatLedWallRatePerDay(55000)} for an 8-hour day on a 10×8 ft wall. Final price depends on size, pixel pitch and indoor vs outdoor use. See the rate table above or our pricing page.`,
+          `Starts from ${LedWallStartingPriceDisplay} onwards. Final price depends on size, pixel pitch and event needs. ${LedWallPricingExclusions} See our pricing page or request a quote.`,
       },
       {
         question: "What is LED video wall hire?",

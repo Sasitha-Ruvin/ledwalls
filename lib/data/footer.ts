@@ -1,12 +1,13 @@
 import { Mail, MapPin, MessageCircle, Phone, Share2 } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import { LED_WALL_SERVICE_HREF, ServicesList } from "@/lib/data/services";
 import {
-  PRIMARY_PHONE_DISPLAY,
-  PRIMARY_PHONE_HREF,
-  PRIMARY_WHATSAPP_HREF,
   HOTLINE_PHONE_DISPLAY,
   HOTLINE_PHONE_HREF,
   HOTLINE_WHATSAPP_HREF,
+  PRIMARY_PHONE_DISPLAY,
+  PRIMARY_PHONE_HREF,
+  PRIMARY_WHATSAPP_HREF,
   SECONDARY_PHONE_DISPLAY,
   SECONDARY_PHONE_HREF,
   SECONDARY_WHATSAPP_HREF,
@@ -15,6 +16,20 @@ import {
   SITE_FACEBOOK_DISPLAY,
   SITE_FACEBOOK_URL,
 } from "@/lib/data/contact";
+
+export interface FooterPhoneLine {
+  display: string;
+  phoneHref: string;
+  whatsappHref: string;
+  tag?: string;
+}
+
+export interface FooterContactLink {
+  icon: LucideIcon;
+  label: string;
+  href?: string;
+  external?: boolean;
+}
 
 export const FooterBlurb =
   "YC Events (ledwalls.lk) - Sri Lanka's leading LED wall rent specialists since 2017. Island-wide.";
@@ -33,37 +48,27 @@ export const FooterCoverage = [
   { label: "All 25 Districts", href: `${LED_WALL_SERVICE_HREF}#led-wall-cities` },
 ] as const;
 
-export const FooterContacts = [
+/** One row per line: call link + WhatsApp link, no duplicate listings. */
+export const FooterPhoneLines: FooterPhoneLine[] = [
   {
-    icon: Phone,
-    label: PRIMARY_PHONE_DISPLAY,
-    href: PRIMARY_PHONE_HREF,
+    display: PRIMARY_PHONE_DISPLAY,
+    phoneHref: PRIMARY_PHONE_HREF,
+    whatsappHref: PRIMARY_WHATSAPP_HREF,
   },
   {
-    icon: Phone,
-    label: SECONDARY_PHONE_DISPLAY,
-    href: SECONDARY_PHONE_HREF,
+    display: SECONDARY_PHONE_DISPLAY,
+    phoneHref: SECONDARY_PHONE_HREF,
+    whatsappHref: SECONDARY_WHATSAPP_HREF,
   },
   {
-    icon: Phone,
-    label: `Hotline ${HOTLINE_PHONE_DISPLAY}`,
-    href: HOTLINE_PHONE_HREF,
+    display: HOTLINE_PHONE_DISPLAY,
+    phoneHref: HOTLINE_PHONE_HREF,
+    whatsappHref: HOTLINE_WHATSAPP_HREF,
+    tag: "Hotline",
   },
-  {
-    icon: MessageCircle,
-    label: `WhatsApp ${PRIMARY_PHONE_DISPLAY}`,
-    href: PRIMARY_WHATSAPP_HREF,
-  },
-  {
-    icon: MessageCircle,
-    label: `WhatsApp ${SECONDARY_PHONE_DISPLAY}`,
-    href: SECONDARY_WHATSAPP_HREF,
-  },
-  {
-    icon: MessageCircle,
-    label: `WhatsApp hotline ${HOTLINE_PHONE_DISPLAY}`,
-    href: HOTLINE_WHATSAPP_HREF,
-  },
+];
+
+export const FooterContactLinks: FooterContactLink[] = [
   {
     icon: Mail,
     label: SITE_EMAIL,
@@ -71,7 +76,7 @@ export const FooterContacts = [
   },
   {
     icon: Share2,
-    label: `Facebook · ${SITE_FACEBOOK_DISPLAY}`,
+    label: SITE_FACEBOOK_DISPLAY,
     href: SITE_FACEBOOK_URL,
     external: true,
   },
@@ -79,7 +84,7 @@ export const FooterContacts = [
     icon: MapPin,
     label: "Colombo, Sri Lanka",
   },
-] as const;
+];
 
 export const FooterLegal = {
   copyright: `© ${new Date().getFullYear()} YC Events. All rights reserved.`,

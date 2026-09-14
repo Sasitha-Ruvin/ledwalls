@@ -2,40 +2,32 @@ import type { FaqItem, LedUseCaseBlock, PricingPageMeta } from "@/types/site";
 import { images } from "@/lib/images";
 import { buildPageJsonLd, LOCAL_BUSINESS_ID } from "@/lib/json-ld";
 import {
-  LedWallRates,
   LedWallRatesFootnote,
   LedWallRatesIntro,
   LedWallRatesSummary,
   LedWallPricingHighlights,
   LedWallCustomSizesNote,
-  formatLedWallRatePerDay,
+  LedWallStartingPriceDisplay,
+  LedWallPricingExclusions,
+  LED_WALL_STARTING_PRICE_LKR,
 } from "@/lib/data/led-wall-pricing";
 import { LED_WALL_SERVICE_HREF, STAGE_LIGHTING_FOG_SERVICE_HREF } from "@/lib/data/services";
 import { SITE_URL } from "@/lib/site";
 
 export const PricingPageMetaData: PricingPageMeta = {
-  title: "LED Wall Hire Price Sri Lanka | LED Wall Rent LKR",
+  title: "LED Wall Hire Price Sri Lanka | From LKR 50,000",
   description:
-    "LED wall hire and LED wall rent prices in Sri Lanka from LKR 55,000. Full LED screen hire cost table with operator included. Add truss, rotating lights and fog machines. Colombo, Kandy and all 25 districts.",
+    "LED wall hire pricing in Sri Lanka starts from LKR 50,000 onwards. Transport, setup and additional equipment charged separately. Get an itemised quote in 60 minutes.",
   keywords: [
     "LED wall hire price Sri Lanka",
     "LED wall rent price Sri Lanka",
     "LED wall hire Sri Lanka",
     "LED wall rent Sri Lanka",
-    "LED wall hire near me",
-    "LED wall rent near me Sri Lanka",
     "LED wall hire cost",
     "LED screen rent price LKR",
-    "LED screen rent per day Sri Lanka LKR",
     "how much does LED wall hire cost Sri Lanka",
-    "how much does LED screen rent cost Sri Lanka",
-    "LED screen hire with operator included",
-    "LED wall daily rate LKR",
-    "LED screen hire Colombo",
     "LED wall hire Colombo",
     "LED wall rent Colombo",
-    "fog machine hire with LED wall",
-    "rotating stage lights truss Sri Lanka",
   ],
   canonical: `${SITE_URL}/pricing`,
 };
@@ -44,36 +36,35 @@ export const PricingHeroContent = {
   eyebrow: "LED wall hire price · Sri Lanka",
   titleLine1: "LED Wall Hire",
   titleLine2: "Pricing",
-  description:
-    "Standard rates for an 8-hour business day, indoor or outdoor. Operator, delivery, setup and breakdown included. Custom sizes quoted to your venue.",
+  description: `Starts from ${LedWallStartingPriceDisplay} onwards. ${LedWallPricingExclusions} Custom sizes quoted to your venue.`,
   imageSrc: images.pricingHero,
-  imageAlt: "LED wall hire price Sri Lanka LED wall rent Colombo",
+  imageAlt: "LED wall hire price Sri Lanka",
 };
 
 export const PricingIncludes = [
   {
-    title: "Operator included",
-    body: "LED screen hire with operator included is standard. A trained video technician runs your wall from setup to breakdown.",
-  },
-  {
-    title: "Island-wide delivery",
-    body: "LED wall delivery outside Colombo to Kandy, Galle, Jaffna, Negombo and all 25 districts. Outstation is not a surprise add-on.",
-  },
-  {
-    title: "Full technical setup",
-    body: "Video processor, cabling, rigging, content testing and brightness calibration before your guests arrive.",
-  },
-  {
-    title: "Breakdown included",
-    body: "Crew clears the venue after your event. No separate breakdown charge on standard bookings.",
-  },
-  {
     title: "Itemised LKR quote",
-    body: "LED screen rent price breakdown within 60 minutes. Wall size, days on site and location in one clear quote.",
+    body: "Tell us your wall size, venue and date. We reply with a clear quote within 60 minutes.",
   },
   {
     title: "Indoor and outdoor panels",
     body: "P3 indoor fine-pitch and IP65 outdoor rated walls for concerts, weddings and corporate events.",
+  },
+  {
+    title: "Custom sizing",
+    body: "Walls built to your venue, not a fixed catalogue size. Quoted to your exact dimensions.",
+  },
+  {
+    title: "Production add-ons available",
+    body: "Stage truss, rotating lights, fog, sound, stalls and podiums available on the same booking.",
+  },
+  {
+    title: "Island-wide coverage",
+    body: "Colombo, Kandy, Galle, Jaffna and all 25 districts. Transport is quoted separately.",
+  },
+  {
+    title: "Trained crew",
+    body: "YC Events crew builds and operates your wall. Operator support is confirmed in your quote.",
   },
 ];
 
@@ -81,93 +72,63 @@ export const PricingSeoSections = [
   {
     id: "cost",
     title: "How much does LED screen rent cost in Sri Lanka?",
-    body:
-      "LED screen rent in Sri Lanka starts at LKR 55,000 per 8-hour business day for a 10×8 ft LED video wall. Rates in the table above apply to one standard working day (8 hours) with operator, delivery, setup and breakdown included. A 20×10 ft wall is LKR 100,000 per 8 hrs and a 40×12 ft wall is LKR 200,000 per 8 hrs.",
+    body: `LED wall hire starts from ${LedWallStartingPriceDisplay} onwards. Final price depends on wall size, pixel pitch, hire duration and venue. ${LedWallPricingExclusions}`,
   },
   {
-    id: "daily-rate",
-    title: "LED screen rent per day Sri Lanka LKR",
-    body:
-      "Our LED wall rates are quoted in LKR per 8-hour business day, not per hour. Extended hours beyond the standard working day, multi-day bookings and overnight operation are quoted separately. Request an itemised quote for your exact date, venue and hire duration.",
+    id: "exclusions",
+    title: "What is not included in the starting price?",
+    body: "Transport, setup and additional equipment (truss, lighting, fog, sound and other add-ons) are charged separately and itemised in your quote.",
   },
   {
-    id: "operator",
-    title: "LED wall hire with operator included",
-    body:
-      "Unlike bare panel suppliers, YC Events provides LED wall hire and LED screen rent with operator included on every booking across Sri Lanka. Your technician manages content playback, brightness, troubleshooting and breakdown. Operator support is built into every LKR rate on this page.",
+    id: "custom",
+    title: "How are custom sizes priced?",
+    body: "Custom LED walls are quoted to your exact dimensions, indoor or outdoor pitch, and event schedule. Send venue measurements for a bespoke quote.",
   },
   {
     id: "production",
-    title: "LED wall hire with stage lighting and fog",
-    body:
-      `Every LED wall hire booking can include our Stage Lighting & Fog add-on (${STAGE_LIGHTING_FOG_SERVICE_HREF}) with stage truss on the same quote. Popular for concerts, weddings and corporate shows.`,
+    title: "Can I add stage lighting and fog?",
+    body: `Yes. Add Stage Lighting & Fog (${STAGE_LIGHTING_FOG_SERVICE_HREF}) and stage truss on the same booking. Add-ons are priced separately from the LED wall starting rate.`,
   },
   {
     id: "delivery",
-    title: "LED wall delivery outside Colombo",
-    body:
-      "LED screen outstation delivery is standard across all 25 districts. LED wall Kandy delivery, Galle, Jaffna and Negombo hires are quoted upfront. We operate island-wide from Colombo with the same crew quality and equipment standard on every outstation event.",
+    title: "Do you deliver outside Colombo?",
+    body: "Yes, island-wide across all 25 districts. Transport is quoted separately based on location and load.",
   },
 ];
 
 export const PricingFaqs: FaqItem[] = [
   {
     question: "How much does LED wall hire cost in Sri Lanka?",
-    answer: `${LedWallRatesSummary} See the rate cards above for every wall size. The same published LKR rates apply in every district with delivery, setup, operator and breakdown included. Final LED wall rent price may vary for multi-day bookings, pixel pitch and location.`,
+    answer: LedWallRatesSummary,
   },
   {
-    question: "What is the LED wall rent price per day in LKR?",
-    answer: `LED wall rates start at ${formatLedWallRatePerDay(55000)} for a 10×8 ft wall. Each published price covers one 8-hour working business day. Rates scale by wall size up to ${formatLedWallRatePerDay(200000)} for a 40×12 ft LED video wall. We send an itemised LED screen rent price breakdown within 60 minutes.`,
-  },
-  {
-    question: "Are these rates for a full day or per hour?",
+    question: "Does the starting price include transport and setup?",
     answer:
-      "Published rates are for one 8-hour working business day, the standard event hire window. Extended hours, overnight operation and multi-day bookings are quoted separately based on your schedule.",
-  },
-  {
-    question: "Can I rent a custom LED wall size?",
-    answer:
-      "Yes. Custom LED video wall sizes are available for any venue or stage layout. Custom size pricing is calculated from wall dimensions, pixel pitch, indoor vs outdoor use and rigging. Contact us with your venue measurements for a bespoke quote.",
-  },
-  {
-    question: "Is LED screen hire with operator included standard?",
-    answer:
-      "Yes. LED screen hire with operator included is our default package in Sri Lanka. Every LKR rate on this page includes a trained video technician for setup, live operation and breakdown.",
-  },
-  {
-    question: "Does LED screen hire with operator included cost extra?",
-    answer:
-      "No. LED wall rent with operator included is not a paid add-on. The LKR daily rate you see is the full LED wall hire cost for operator, delivery, setup and breakdown on standard event hire.",
-  },
-  {
-    question: "What is the difference between P3 and P4 LED screens?",
-    answer:
-      "Pixel pitch is the distance between LED clusters in millimetres. P3 is a fine-pitch indoor panel for close viewing at weddings and corporate events. P4 is an outdoor-rated, brighter IP65 panel for concerts, rallies and outdoor LED screen rent in Sri Lanka.",
-  },
-  {
-    question: "What should I book: indoor or outdoor LED screen rent?",
-    answer:
-      "Indoor LED wall rent uses P3 panels for ballrooms, hotels and conference halls. Outdoor LED screen rent uses IP65 weatherproof P4 panels rated for direct sunlight and rain. We recommend the correct configuration during your quote.",
-  },
-  {
-    question: "Do you deliver LED walls outside Colombo?",
-    answer:
-      "Yes. LED screen outstation delivery is standard across all 25 districts, Kandy, Galle, Jaffna, Negombo and everywhere between. LED wall Kandy delivery and island-wide hire are included in your quote, not billed as a surprise add-on.",
+      "No. Transport, setup and additional equipment charges are not included in the starting price. They are itemised separately in your quote.",
   },
   {
     question: "What affects the final LED wall hire cost?",
     answer:
-      "Wall size, number of days, pixel pitch (P3 indoor or P4 outdoor), indoor vs outdoor use, venue location and rigging complexity. Our published LED screen rent price LKR table covers standard single-day event hire.",
+      "Wall size, pixel pitch (P3 indoor or P4 outdoor), number of days, venue location, rigging complexity and any production add-ons.",
   },
   {
-    question: "Can I add truss, rotating lights and fog machines to LED wall hire?",
+    question: "Can I rent a custom LED wall size?",
     answer:
-      `Yes. Add Stage Lighting & Fog (${STAGE_LIGHTING_FOG_SERVICE_HREF}) and stage truss on the same LED wall quote. One crew handles delivery, rigging and pack-down for the full production package.`,
+      "Yes. Custom sizes are available for any venue or stage layout. Pricing is calculated from dimensions, pitch and hire window.",
   },
   {
-    question: "What is an IP65 outdoor LED screen and does it cost more?",
+    question: "What's the difference between P3 and P4?",
     answer:
-      "IP65 outdoor LED screen rent Sri Lanka uses weatherproof panels rated for rain and direct sunlight, P4 pixel pitch. Outdoor IP65 walls are priced the same way as indoor panels on our rate table, based on wall size rather than a separate outdoor surcharge.",
+      "P3 is a fine-pitch indoor panel for close viewing at weddings and corporate events. P4 is a brighter, weatherproof outdoor panel for concerts and rallies.",
+  },
+  {
+    question: "Can I add truss, lighting or fog?",
+    answer: `Yes. Add Stage Lighting & Fog (${STAGE_LIGHTING_FOG_SERVICE_HREF}) and stage truss on the same booking. These are additional equipment charges, quoted separately.`,
+  },
+  {
+    question: "Do you deliver outside Colombo?",
+    answer:
+      "Yes, across all 25 districts. Transport is charged separately based on distance and load.",
   },
 ];
 
@@ -217,7 +178,6 @@ export const LedUseCases: LedUseCaseBlock[] = [
 ];
 
 export {
-  LedWallRates,
   LedWallRatesFootnote,
   LedWallRatesIntro,
   LedWallPricingHighlights,
@@ -232,15 +192,15 @@ export function buildPricingSchema() {
     faqs: PricingFaqs,
     breadcrumbs: [{ label: "Home", href: "/" }, { label: "Pricing" }],
     extra: [
-      ...LedWallRates.map((rate) => ({
+      {
         "@type": "Offer",
-        name: `LED video wall ${rate.size}`,
-        price: rate.priceLkr,
+        name: "LED wall hire Sri Lanka",
+        price: LED_WALL_STARTING_PRICE_LKR,
         priceCurrency: "LKR",
-        description:
-          "Per 8-hour business day LED screen hire with operator included",
+        priceValidUntil: "2027-12-31",
+        description: `Starting from ${LedWallStartingPriceDisplay} onwards. ${LedWallPricingExclusions}`,
         seller: { "@id": LOCAL_BUSINESS_ID },
-      })),
+      },
       {
         "@type": "Service",
         name: "LED wall hire Sri Lanka",

@@ -1,67 +1,33 @@
-import type { LedWallRate } from "@/types/site";
+/** Shared LED wall hire pricing copy (no size-by-size rate table). */
 
-/** Official YC Events LED video wall hire rates (LKR per day). */
-export const LedWallRates: LedWallRate[] = [
-  { size: "10×8 ft", priceLkr: 55000 },
-  { size: "13×8 ft", priceLkr: 60000 },
-  { size: "16×8 ft", priceLkr: 70000 },
-  { size: "18×8 ft", priceLkr: 80000 },
-  { size: "20×8 ft", priceLkr: 90000 },
-  { size: "20×10 ft", priceLkr: 100000 },
-  { size: "26×10 ft", priceLkr: 125000 },
-  { size: "30×10 ft", priceLkr: 150000 },
-  { size: "35×10 ft", priceLkr: 160000 },
-  { size: "40×10 ft", priceLkr: 180000 },
-  { size: "40×12 ft", priceLkr: 200000 },
-];
-
-export interface LedWallRateTier {
-  id: string;
-  title: string;
-  description: string;
-  bestFor: string;
-  rates: LedWallRate[];
-}
-
-export const LedWallRateTiers: LedWallRateTier[] = [
-  {
-    id: "compact",
-    title: "Compact LED walls",
-    description: "Ideal for weddings, hotel events and indoor corporate meetings.",
-    bestFor: "Wedding LED screen Colombo · indoor receptions",
-    rates: LedWallRates.slice(0, 4),
-  },
-  {
-    id: "standard",
-    title: "Standard LED video walls",
-    description: "Award nights, AGMs, product launches and mid-size outdoor events.",
-    bestFor: "LED screen corporate event Sri Lanka · ballroom events",
-    rates: LedWallRates.slice(4, 7),
-  },
-  {
-    id: "large",
-    title: "Large format LED walls",
-    description: "Concerts, political rallies, festivals and big screen outdoor hire.",
-    bestFor: "Outdoor LED screen rent · big screen rent Sri Lanka",
-    rates: LedWallRates.slice(7),
-  },
-];
+export const LED_WALL_STARTING_PRICE_LKR = 50000;
 
 export const LedWallHireDurationLabel = "8-hour business day";
 export const LedWallHireDurationShort = "8 hrs";
 
+export function formatLedWallRateLkr(priceLkr: number): string {
+  return `LKR ${priceLkr.toLocaleString("en-LK")}`;
+}
+
+export const LedWallStartingPriceDisplay = formatLedWallRateLkr(
+  LED_WALL_STARTING_PRICE_LKR
+);
+
+export const LedWallPricingExclusions =
+  "Price does not include transport, setup or additional equipment charges.";
+
 export const LedWallPricingHighlights = [
   {
-    value: "LKR 55,000",
-    label: "From · 8-hour hire",
+    value: LedWallStartingPriceDisplay,
+    label: "Starting from",
   },
   {
-    value: "8 hrs",
-    label: "Per business day",
+    value: "Custom",
+    label: "Sized to your venue",
   },
   {
-    value: "Operator",
-    label: "Included on every hire",
+    value: "60 min",
+    label: "Quote turnaround",
   },
   {
     value: "25",
@@ -71,15 +37,13 @@ export const LedWallPricingHighlights = [
 
 export const LedWallRatesIntro = {
   eyebrow: "LED wall hire price Sri Lanka",
-  title: "LED Wall Hire and Rent Rates",
-  description:
-    "Standard rates for one 8-hour business day, operator, delivery, setup and breakdown included. Add truss, lighting or fog on the same quote. Final price may vary for extended hours, multi-day bookings, pixel pitch upgrades or complex rigging.",
+  title: "LED Wall Hire Pricing",
+  description: `LED wall hire starts from ${LedWallStartingPriceDisplay} onwards, depending on wall size, pixel pitch and event requirements. ${LedWallPricingExclusions} Request an itemised quote for your exact setup.`,
 };
 
 export const LedWallCustomSizesNote = {
   title: "Need a custom size?",
-  body:
-    "These rates cover our standard catalogue sizes. We also build custom LED walls sized to your stage, ballroom or outdoor plot, quoted to your exact dimensions.",
+  body: "We build LED walls to your stage, ballroom or outdoor plot. Final pricing is quoted to your exact dimensions, pitch and hire window.",
   points: [
     "Any width and height",
     "Indoor P3 or outdoor IP65",
@@ -87,16 +51,9 @@ export const LedWallCustomSizesNote = {
   ],
 };
 
-export function formatLedWallRateLkr(priceLkr: number): string {
-  return `LKR ${priceLkr.toLocaleString("en-LK")}`;
-}
+export const LedWallRatesFootnote = LedWallPricingExclusions;
 
-export function formatLedWallRatePerDay(priceLkr: number): string {
-  return `${formatLedWallRateLkr(priceLkr)} / ${LedWallHireDurationShort}`;
-}
+export const LedWallRatesSummary = `LED wall hire in Sri Lanka starts from ${LedWallStartingPriceDisplay} onwards. ${LedWallPricingExclusions} Final price depends on size, pitch and event needs.`;
 
-export const LedWallRatesFootnote =
-  "All rates are for one 8-hour working business day on standard event hire. Final LED screen rent price may vary for extended hours, multi-day bookings, pixel pitch upgrades or complex rigging. Custom sizes quoted separately. Itemised quote within 60 minutes.";
-
-export const LedWallRatesSummary =
-  "LED wall hire and LED screen rent in Sri Lanka from LKR 55,000 per 8-hour business day for a 10×8 ft LED video wall. Custom sizes and extended hire are quoted to your event requirements.";
+/** Kept for any remaining typed rate helpers; no published size breakdown. */
+export const LedWallRates: never[] = [];

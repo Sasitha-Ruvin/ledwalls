@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
 import QuoteDialog from "@/components/layout/QuoteDialog";
 import FAQSection from "@/components/home/FAQSection";
-import { LedWallRatesPanel } from "@/components/pricing/PricingRatesGrid";
+import { LedWallStartingPriceCard } from "@/components/pricing/PricingRatesGrid";
 import { PageHero } from "@/components/shared/PageHero";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { Button } from "@/components/ui/button";
@@ -49,7 +49,7 @@ export function LedWallCityPageContent({ city }: LedWallCityPageContentProps) {
               id="city-rates-heading"
               className="text-3xl font-extrabold tracking-tight text-ink sm:text-4xl"
             >
-              LED wall rent {city.name} price
+              LED wall hire {city.name}
             </h2>
             <p className="mt-4 text-base leading-relaxed text-muted-yc">
               {city.intro}
@@ -85,7 +85,7 @@ export function LedWallCityPageContent({ city }: LedWallCityPageContentProps) {
           </div>
 
           <div className="w-full lg:sticky lg:top-24">
-            <LedWallRatesPanel />
+            <LedWallStartingPriceCard />
           </div>
         </div>
       </section>

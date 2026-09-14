@@ -67,7 +67,7 @@ export const LedWallCities: LedWallCity[] = [
       },
       {
         question: "How much does LED screen hire cost in Colombo?",
-        answer: `${LedWallRatesSummary} Colombo rates match our published pricing page with no hidden fees.`,
+        answer: `${LedWallRatesSummary} Transport to Colombo is quoted separately with your booking.`,
       },
       {
         question: "Is an operator included for LED wall hire in Colombo?",
@@ -119,7 +119,7 @@ export const LedWallCities: LedWallCity[] = [
       },
       {
         question: "How much does LED screen hire cost in Kandy?",
-        answer: `${LedWallRatesSummary} Kandy delivery is included in your quote, not billed as a separate outstation fee.`,
+        answer: `${LedWallRatesSummary} Transport to Kandy is quoted separately with your booking.`,
       },
       {
         question: "Is there an operator included for LED wall rent in Kandy?",
@@ -166,7 +166,7 @@ export const LedWallCities: LedWallCity[] = [
       },
       {
         question: "How much does LED screen hire cost in Galle?",
-        answer: `${LedWallRatesSummary} Galle delivery is included in your quote.`,
+        answer: `${LedWallRatesSummary} Transport to Galle is quoted separately with your booking.`,
       },
       {
         question: "Can you handle outdoor beachfront LED screens in Galle?",
@@ -213,7 +213,7 @@ export const LedWallCities: LedWallCity[] = [
       },
       {
         question: "How much does LED screen rent cost in Negombo?",
-        answer: `${LedWallRatesSummary} Negombo delivery is included in your quote.`,
+        answer: `${LedWallRatesSummary} Transport to Negombo is quoted separately with your booking.`,
       },
     ],
   },
@@ -255,7 +255,7 @@ export const LedWallCities: LedWallCity[] = [
       },
       {
         question: "How much does LED screen hire cost in Jaffna?",
-        answer: `${LedWallRatesSummary} Jaffna delivery timelines are confirmed at the time of your quote.`,
+        answer: `${LedWallRatesSummary} Transport to Jaffna is quoted separately with your booking.`,
       },
     ],
   },
@@ -297,7 +297,7 @@ export const LedWallCities: LedWallCity[] = [
       },
       {
         question: "How much does LED wall hire cost in Anuradhapura?",
-        answer: `${LedWallRatesSummary} Anuradhapura delivery is included in your quote.`,
+        answer: `${LedWallRatesSummary} Transport to Anuradhapura is quoted separately with your booking.`,
       },
     ],
   },
@@ -337,7 +337,7 @@ export const LedWallCities: LedWallCity[] = [
       },
       {
         question: "How much does LED screen hire cost in Kurunegala?",
-        answer: `${LedWallRatesSummary} Kurunegala delivery is included in your quote.`,
+        answer: `${LedWallRatesSummary} Transport to Kurunegala is quoted separately with your booking.`,
       },
     ],
   },
@@ -357,9 +357,9 @@ export const LedWallCities: LedWallCity[] = [
     eyebrow: "LED wall hire Matara",
     heroImage: images.wedding2,
     heroBody:
-      "LED wall rent Matara and the wider southern province for weddings, corporate events and festivals. YC Events covers Matara with the same crew and rate table used island-wide.",
+      "LED wall rent Matara and the wider southern province for weddings, corporate events and festivals. YC Events covers Matara with the same crew used island-wide.",
     intro:
-      "Matara and the southern coast host weddings and corporate functions that need dependable LED screens. LED screen hire Matara bookings include delivery, setup and an on-site operator.",
+      "Matara and the southern coast host weddings and corporate functions that need dependable LED screens. LED screen hire Matara bookings are quoted with transport and setup listed separately.",
     venues: [
       "Wedding halls and beach resort venues",
       "Corporate conference venues",
@@ -378,7 +378,7 @@ export const LedWallCities: LedWallCity[] = [
       },
       {
         question: "How much does LED screen hire cost in Matara?",
-        answer: `${LedWallRatesSummary} Matara delivery is included in your quote.`,
+        answer: `${LedWallRatesSummary} Transport to Matara is quoted separately with your booking.`,
       },
     ],
   },
@@ -399,7 +399,7 @@ function createDistrictCity(
     slug,
     name,
     title: `LED Wall Hire ${name} | YC Events`,
-    description: `LED wall hire and LED screen rental in ${name}, Sri Lanka. Delivery and operator included. Quote in 60 minutes.`,
+    description: `LED wall hire and LED screen rental in ${name}, Sri Lanka. Starts from LKR 50,000 onwards. Transport, setup and add-ons quoted separately.`,
     keywords: [
       `LED wall hire ${name}`,
       `LED screen rental ${name}`,
@@ -409,10 +409,10 @@ function createDistrictCity(
     eyebrow: `LED wall hire ${name}`,
     heroImage,
     heroBody: `LED wall hire in ${name} - indoor P3 screens for weddings and corporate events. LED screen rental in ${name} - outdoor IP65 screens for concerts and rallies.`,
-    intro: `YC Events delivers, builds and operates LED screens in ${name} with the same crew and rate table used island-wide. Indoor and outdoor panels, operator included, quote in 60 minutes.`,
+    intro: `YC Events delivers, builds and operates LED screens in ${name}. Indoor and outdoor panels available. Starts from LKR 50,000 onwards. Transport, setup and additional equipment are quoted separately.`,
     venues: [
       "Indoor & outdoor panels",
-      "Operator included",
+      "From LKR 50,000 onwards",
       "Quote in 60 minutes",
     ],
     faqs: [
@@ -422,7 +422,7 @@ function createDistrictCity(
       },
       {
         question: `How much does LED wall hire cost in ${name}?`,
-        answer: `${LedWallRatesSummary} ${name} delivery is included in your quote, not billed as a separate outstation fee.`,
+        answer: `${LedWallRatesSummary} Transport to ${name} is quoted separately with your booking.`,
       },
     ],
   };

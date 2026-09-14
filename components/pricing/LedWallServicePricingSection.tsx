@@ -2,10 +2,9 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import QuoteDialog from "@/components/layout/QuoteDialog";
 import { Button } from "@/components/ui/button";
-import { LedWallRatesPanel } from "@/components/pricing/PricingRatesGrid";
+import { LedWallStartingPriceCard } from "@/components/pricing/PricingRatesGrid";
 import { LedWallCustomSizesSection } from "@/components/pricing/LedWallCustomSizesSection";
 import {
-  LedWallRates,
   LedWallRatesFootnote,
   LedWallRatesIntro,
 } from "@/lib/data/led-wall-pricing";
@@ -35,9 +34,7 @@ export function LedWallServicePricingSection() {
               {LedWallRatesFootnote}
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <QuoteDialog
-                triggerClassName="h-11 rounded bg-brand px-5 text-sm font-semibold text-white hover:bg-brand-dark"
-              >
+              <QuoteDialog triggerClassName="h-11 rounded bg-brand px-5 text-sm font-semibold text-white hover:bg-brand-dark">
                 Get a quote
                 <ArrowRight className="size-4" aria-hidden />
               </QuoteDialog>
@@ -52,7 +49,7 @@ export function LedWallServicePricingSection() {
             </div>
           </div>
 
-          <LedWallRatesPanel rates={LedWallRates} />
+          <LedWallStartingPriceCard tone="dark" showQuoteCta={false} />
         </div>
       </section>
 

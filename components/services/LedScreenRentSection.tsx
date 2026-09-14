@@ -5,9 +5,9 @@ import { JsonLd } from "@/components/shared/JsonLd";
 import { buildLedScreenRentSchema } from "@/lib/data/services";
 
 const LedScreenRentPoints = [
-  "Delivery, setup and breakdown included",
-  "On-site operator for the full event",
-  "P2, P2.5, P3 or P4 pixel pitch options",
+  "Sized to your venue and viewing distance",
+  "Choice of P2, P2.5, P3 or P4 pixel pitch",
+  "Transport, setup and add-ons quoted separately",
 ];
 
 export function LedScreenRentSection() {

@@ -22,7 +22,7 @@ export const LOCAL_BUSINESS_ID = `${SITE_URL}/#localbusiness`;
 export const WEBSITE_ID = `${SITE_URL}/#website`;
 
 /** Published LED wall daily rates (LKR) for schema.org priceRange. */
-export const SITE_PRICE_RANGE = "LKR 55,000 - LKR 200,000";
+export const SITE_PRICE_RANGE = "From LKR 50,000";
 
 export interface LocalBusinessNodeOptions {
   url?: string;
