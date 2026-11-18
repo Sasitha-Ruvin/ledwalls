@@ -3,15 +3,15 @@ import type { ContactMethod } from "@/types/site";
 
 export const PRIMARY_PHONE_DISPLAY = "071 446 0460";
 export const SECONDARY_PHONE_DISPLAY = "070 596 0960";
-export const HOTLINE_PHONE_DISPLAY = "077 392 0312";
+export const HOTLINE_PHONE_DISPLAY = "070 3 960 960";
 
 export const PRIMARY_PHONE_E164 = "+94714460460";
 export const SECONDARY_PHONE_E164 = "+94705960960";
-export const HOTLINE_PHONE_E164 = "+94773920312";
+export const HOTLINE_PHONE_E164 = "+94703960960";
 
 export const PRIMARY_PHONE_RAW = "94714460460";
 export const SECONDARY_PHONE_RAW = "94705960960";
-export const HOTLINE_PHONE_RAW = "94773920312";
+export const HOTLINE_PHONE_RAW = "94703960960";
 
 export const PRIMARY_PHONE_HREF = `tel:${PRIMARY_PHONE_E164}`;
 export const SECONDARY_PHONE_HREF = `tel:${SECONDARY_PHONE_E164}`;

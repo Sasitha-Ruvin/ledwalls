@@ -109,12 +109,6 @@ export default function SiteFooter({ className }: SiteFooterProps) {
 
             {FooterContactLinks.map((item) => {
               const Icon = item.icon;
-              const content = (
-                <span className="flex items-center gap-2.5 text-sm text-muted-yc">
-                  <Icon className="size-3.5 shrink-0 text-brand" aria-hidden />
-                  {item.label}
-                </span>
-              );
 
               return (
                 <li key={item.label}>
@@ -123,12 +117,16 @@ export default function SiteFooter({ className }: SiteFooterProps) {
                       href={item.href}
                       target={item.external ? "_blank" : undefined}
                       rel={item.external ? "noopener noreferrer" : undefined}
-                      className="transition-colors hover:text-white"
+                      className="inline-flex items-center gap-2.5 text-sm text-muted-yc underline-offset-4 transition-colors hover:text-white hover:underline"
                     >
-                      {content}
+                      <Icon className="size-3.5 shrink-0 text-brand" aria-hidden />
+                      {item.label}
                     </a>
                   ) : (
-                    content
+                    <span className="flex items-center gap-2.5 text-sm text-muted-yc">
+                      <Icon className="size-3.5 shrink-0 text-brand" aria-hidden />
+                      {item.label}
+                    </span>
                   )}
                 </li>
               );

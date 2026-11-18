@@ -24,7 +24,7 @@ import { SITE_URL } from "@/lib/site";
 export const ContactPageMeta = {
   title: "Contact YC Events | LED Wall Rental Sri Lanka",
   description:
-    "Contact YC Events for LED wall rent in Sri Lanka. WhatsApp or call 071 446 0460, 070 596 0960 or hotline 077 392 0312. Quote within 60 minutes. Office in Kandy, island-wide delivery.",
+    "Contact YC Events for LED wall rent in Sri Lanka. WhatsApp or call 071 446 0460, 070 596 0960 or hotline 070 3 960 960. Quote within 60 minutes. Office in Kandy, island-wide delivery.",
   keywords: [
     "contact YC Events",
     "LED wall rent contact Sri Lanka",
